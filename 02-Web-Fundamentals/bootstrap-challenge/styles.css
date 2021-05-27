@@ -1,0 +1,30 @@
+/* colours used in document
+#8675a9
+#c3aed6
+#efbbcf
+#ffd5cd 
+*/
+
+[class^="con"] {
+    background-color: #ffd5cd;
+    border: 6px solid #c3aed6;
+    font-size: 12px;
+    color: #8675a9;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+
+[class^="row"] {
+    min-height: 250px;
+    border-radius: 0.25em;
+}
+
+
+[class^="col"] {
+    text-align: center;
+    min-height: 100px;
+    border: 2px solid #c3aed6;
+    border-radius: 0.25em;
+    padding: 5px 15px;
+}

@@ -1,0 +1,106 @@
+* {
+    background-color: rgb(236, 236, 236);
+  }
+
+
+.french-parent {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin: auto;
+    display: block;
+}
+
+/* a better way to center the element horizontally - rather than use pixels to guess the central position
+is by using margin: auto;
+this is responsive!
+*/
+
+.french-flag-blue {
+    height: 200px;
+    width: 100px;
+    background-color: #0055a4;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.french-flag-white {
+    height: 200px;
+    width: 100px;
+    background-color: white;
+    position: absolute;
+    left: 100px;
+    top: 0px;
+}
+
+.french-flag-red {
+    height: 200px;
+    width: 100px;
+    background-color: #EF4135;
+    position: absolute;
+    left: 200px;
+    top: 0px;
+}
+
+
+.french-parent:active .french-flag-blue {
+background-color:#169b62;
+}
+
+.french-parent:active .french-flag-red {
+    background-color: #ff8200;
+}
+
+.german-parent {
+    position: relative;
+    margin: auto;
+    top: 50px;
+    width: 300px;
+}
+
+
+.german-flag-black {
+    height: 66.6px;
+    width: 300px;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.german-flag-red {
+    height: 66.6px;
+    width: 300px;
+    background-color: #DA291C;
+    position: absolute;
+    top: 66.6px;
+    left: 0px;
+
+}
+
+.german-flag-yellow {
+    height: 66.6px;
+    width: 300px;
+    background-color: #FFCD00;
+    position: absolute;
+    top: 133.2px;
+    left: 0px;
+}
+
+/*you have to apply the pseudo class (for example :hover) to the parent element (which in this example is .german-parent) when you hover over the parent element I want to change the colour of the element with a class of .german-flag-black)
+*/
+.german-parent:hover .german-flag-black {
+    background-color: #C8102E;
+    transition: 0.4s ease;
+}
+
+.german-parent:hover .german-flag-red {
+    background-color: white;
+    transition: 0.4s ease;
+}
+
+.german-parent:hover .german-flag-yellow {
+    background-color: #00843d;
+    transition: 0.4s ease;
+}

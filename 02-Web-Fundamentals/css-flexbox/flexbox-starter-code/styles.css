@@ -1,0 +1,31 @@
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: cadetblue;
+  border: green solid 2px;
+  color: white;
+  font-size: 20px;
+}
+
+.flex-container {
+  height: 1400vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* 
+-----------------------------
+flex-direction: row;
+
+
+row | row-reverse | column | column-reverse; */
+
+-----------------------------
+/* 
+flex-wrap: wrap-reverse;
+
+nowrap | wrap | wrap-reverse; */
+-----------------------------
