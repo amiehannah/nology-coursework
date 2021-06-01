@@ -6,4 +6,8 @@
 
 // Variables
 $font-body: "Roboto" , sans-serif;              //update this
-$font-display: 'Athene', sans-serif;  //update this
+$font-display: "Athene", sans-serif;
+
+.h1 {
+    font-family: $font-display;
+}

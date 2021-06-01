@@ -1,4 +1,14 @@
-@import "./base";
-@import "./components";
-@import "./layout";
-@import "./abstracts/";
+@import 
+'base/reset',
+'base/typography';
+
+@import
+'components/button';
+
+@import
+'layout/footer',
+'layout/header',
+'layout/navigation';
+
+@import
+'abstracts/variables';
