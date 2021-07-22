@@ -3,6 +3,20 @@
 /*font-cursive*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Source+Serif+Pro:ital,wght@0,200;1,200&display=swap");
 /*import partials*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
 .header {
   width: 100%;
   height: 100vh;
