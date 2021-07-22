@@ -4,47 +4,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amie Edwards Portfolio</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
+   <script src="app.js"></script>
+    <title>Document</title>
+
+
+
 </head>
 <body>
     <header>
-        <!--add in logo here-->
+        <div class="header">
         <nav>
-            <ul>
-                <li class="work"><a href="#"></a>Work</li>
-                <!--example
-                <li class="nav-workshop"><a href="https://onepagelove.com/go/workshop" class="nav-parent" target="_blank">My Workshop</a></li>
-                    -->
-                <li class="about"><a href="#"></a>About</li>
-                <li class="contact"><a href="#"></a>Contact</li>
-            </ul>
+            <img class="logo-top" src="logo-main-ws.svg" alt="Amie Edwards">
+            <div id="nav-links">
+                <a class="nav" href="#work">work</a>
+                <a class="nav" href="#about">about</a>
+                <a class="nav" href="#contact">contact</a>
+            </div>
         </nav>
+        <div class="container-hero">
+        <!--add hero section in here-->
+        <img class="logo-hero" src="logo-main-hero.svg" alt="Amie Edwards">
+        <!--Vector - splodge -->
+        <h1 class="hero-header">Junior Software Developer</h1>
+        </div>
+        <!--<i class="arrow down"></i>-->
+        <a class ="icon" href="#arrow-down"></a>
+    </div>
     </header>
 
-    <main>
-        <h1>Amie Edwards</h1>
-        <h2>Junior Web Developers with a passion for</h2>
-        <span>design</span>
+    <!-- cool typewriter effect 
+    https://www.w3schools.com/howto/howto_js_typewriter.asp
+    -->
 
-        <div>
-            <h3>About Me</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde nemo quae aliquid quas, labore quia numquam autem corrupti in quisquam, sint nam at provident nihil optio ad? Libero, at inventore!</p>
+    <div id="about" div class="container-content">
+        <div class="container-about">
+            <h1 class="about">About <strong>Me</strong></h1>
+            <p>I've been working as a menswear designer within the fashion industry and I'm currently studying to be a junior developer with _nology. <br>
+            I want to continue making exciting products and experiences that users can engage with. 
+            </p>
+            <img class="photo" src="20FBB624AFD157BE.png" alt="picture of Amie">
         </div>
-        <div>
-            <h3>Skills</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis alias reiciendis dolor quaerat. Numquam ex maxime neque molestiae quae itaque ipsa consectetur ab, laudantium fuga et assumenda rerum. Voluptatibus, ratione?</p>
+
+    
+
+    <div class="scroll-element">
+        <div class="scroll">scroll</div>
+        <div class="scroll-line"></div>
+    </div>
+    <!--do i add something in here? picture or illustration?-->    
+  
+
+    <h2>Skills</h2>
+        
+        <div class="grid-container-skills">
+            <div class="skill-number">01</div>
+            <div class="skill-heading">Header</div>
+            <div class="skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit, deleniti, fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis adipisci mollitia harum nulla?</div>
+            <div class="skill-number">02</div>
+            <div class="skill-heading-2">Header</div>
+            <div class="skill-description-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit, deleniti, fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis adipisci mollitia harum nulla?</div>
+            <div class="skill-number">03</div>
+            <div class="skill-heading-3">Header</div>
+            <div class="skill-description-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit, deleniti, fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis adipisci mollitia harum nulla?</div>
+            <div class="skill-number">04</div>
+            <div class="skill-heading-4">Header</div>
+            <div class="skill-description-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit, deleniti, fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis adipisci mollitia harum nulla?</div>
         </div>
 
-        <!--add in grid layout for work examples-->
-    </main>
+        <div id="work" div class="project-wrapper">
+            <div class="title-project-list">Project <span>List</span></div>
+            <div class="number">1</div>
+            <a href="#work-1" class="project-title">Title 1</a>
+            <div class="line"></div>
+            <div class="number">2</div>
+            <a href="#work-2" class="project-title">Title 2</a>
+            <div class="line"></div>
+            <div class="number">3</div>
+            <a href="#work-3" class="project-title">Title 3</a>
+            <div class="line"></div>
+            <div class="number">4</div>
+            <a href="#work-4" class="project-title">Title 4</a>
+            <div class="line"></div>
+            <div class="number">5</div>
+            <a href="#work-5" class="project-title">Title 5</a>
+            <div class="line"></div>
+          </div>
 
+        <h2>Projects</h2>
+        <img class="logo-bkgrnd-fade" src="logo-fade.svg" alt="Amie Edwards">
+
+
+    <div class="grid-container-projects">
+        <figure id="work-1" class="project-1">
+            <!--<img src="pic_trulli.jpg" alt="Trulli">-->
+        </figure>
+            <h3 class="h3-project1">Header</h3>
+            <h4 class="h4-project1">Sub-heading</h4>
+            <figcaption class="figcaption-project1">description lorem ipsum lorem ipsum lorem ipsum</figcaption>
+        <figure id="work-2" class="project-2">
+                <!--<img src="pic_trulli.jpg" alt="Trulli">-->
+        </figure>
+            <h3 class="h3-project2">Header</h3>
+            <h4 class="h4-project2">Sub-heading</h4>
+            <figcaption class="figcaption-project2">description lorem ipsum lorem ipsum lorem ipsum</figcaption>
+        <figure id="work-3" class="project-3">
+                <!--<img src="pic_trulli.jpg" alt="Trulli">-->
+        </figure>
+            <h3 class="h3-project3">Header</h3>
+            <h4 class="h4-project3">Sub-heading</h4>
+            <figcaption class="figcaption-project3">description lorem ipsum lorem ipsum lorem ipsum</figcaption>
+        <figure id="work-4" class="project-4">
+                <!--<img src="pic_trulli.jpg" alt="Trulli">-->
+        </figure>
+            <h3 class="h3-project4">Header</h3>
+            <h4 class="h4-project4">Sub-heading</h4>
+            <figcaption class="figcaption-project4">description lorem ipsum lorem ipsum lorem ipsum</figcaption>
+        <figure id="work-5" class="project-5">
+                <!--<img src="pic_trulli.jpg" alt="Trulli">-->
+        </figure>
+            <h3 class="h3-project5">Header</h3>
+            <h4 class="h4-project5">Sub-heading</h4>
+            <figcaption class="figcaption-project5">description lorem ipsum lorem ipsum lorem ipsum</figcaption>
+    </div>
+
+</div>
     <footer>
-        <h3>Contact</h3>
-        <h4>Let's Talk / Get in Touch</h4>
-        <h5>hello@amie.dev [get a new dev email]</h5>
-        <!--add in social links here-->
-        <h6>AMIE EDWARDS ©2021</h6>
+        <div id="arrow-down" div class="container-footer">
+             <!--add in logo here-->
+             <img class="logo-footer" src="logo-main-ws.svg" alt="Amie Edwards">
+        <h5 id="contact">Get in <br> Touch</h5>
+
+            <div class="social-links">
+                    <a class="socials" href="mailto:amie.edwards17@gmail.com">email</a>
+                    <a class="socials" href="https://github.com/amiehannah" target="_blank">github</a>
+                    <a class="socials" href="https://www.linkedin.com/in/amie-edwards-70a19068/" target="_blank">linkedin</a>
+            </div>
+            <div class="button-up">
+            <div class="arrow"></div>
+            </div>
+            <h6>©2021. AMIE EDWARDS </h6>
+        </div>
     </footer>
+    
 </body>
 </html>
+
+<!--Amie to do:
+•make it responsive
+•what is lazyloaded images?
+-->
