@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Source+Serif+Pro:ital,wght@0,200;1,200&display=swap');
 
 /*import partials*/
-@import "base";
-@import "components";
-@import "layout";
+@import './base';
+@import './components';
+@import './layout';
 
 * {
     margin: 0;
