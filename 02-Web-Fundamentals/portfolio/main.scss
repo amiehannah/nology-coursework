@@ -23,34 +23,8 @@ nav {
     color: whitesmoke;
 }
 
-.container-hero {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 10vh;
-}
 
-.logo-top {
-width: auto;
-height: 15vh;
-padding-top: 40px;
-}
 
-.logo-hero {
-    width: auto;
-    height: 50vh;
-}
-
-.logo-bkgrnd-fade {
-    position: absolute;
-    left: 55.9%;
-    right: -37.01%;
-    top: 211.04%;
-    bottom: -217.89%;
-    opacity: 0.2;
-    /*z-index: ask the coaches about this ;*/
-}
 
 h1 {
    padding: 40px 20px;
@@ -155,11 +129,6 @@ p {
 
 
 
-.container-content {
-    width: 100%;
-    height: 760vh;
-    background: whitesmoke;
-}
 
 .container-about {
     display: grid;

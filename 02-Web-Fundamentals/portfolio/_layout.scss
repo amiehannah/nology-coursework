@@ -8,8 +8,24 @@
     background: linear-gradient(90deg, #415E6C 1.65%, #87B0B9 100%);
 }
 
+.container-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh;
+    }
 
-/*footer styling*/
+
+// main container
+.container-content {
+        width: 100%;
+        height: 760vh;
+        background: whitesmoke;
+    }
+
+
+// footer styling
 .container-footer {
     width: 100%;
     height: 100vh;
@@ -39,8 +55,3 @@
     color: whitesmoke;
 }
 
-.logo-footer{
-    width: 15vh;
-    height: 15vh;
-    padding-bottom: 20px;
-}

@@ -1,7 +1,3 @@
-/*font-main*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap");
-/*font-cursive*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Source+Serif+Pro:ital,wght@0,200;1,200&display=swap");
 /*import partials*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Source+Serif+Pro:ital,wght@0,200;1,200&display=swap");
@@ -12,13 +8,53 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.logo-top {
+  width: auto;
+  height: 15vh;
+  padding-top: 40px;
+}
+
+.logo-hero {
+  width: auto;
+  height: 50vh;
+}
+
+.logo-bkgrnd-fade {
+  position: absolute;
+  left: 55.9%;
+  right: -37.01%;
+  top: 211.04%;
+  bottom: -217.89%;
+  opacity: 0.2;
+  /*z-index: ask the coaches about this ;*/
+}
+
+.logo-footer {
+  width: 15vh;
+  height: 15vh;
+  padding-bottom: 20px;
+}
+
 .header {
   width: 100%;
   height: 100vh;
   background: linear-gradient(90deg, #415E6C 1.65%, #87B0B9 100%);
 }
 
-/*footer styling*/
+.container-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh;
+}
+
+.container-content {
+  width: 100%;
+  height: 760vh;
+  background: whitesmoke;
+}
+
 .container-footer {
   width: 100%;
   height: 100vh;
@@ -79,27 +115,6 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 10vh;
-}
-
-.logo-top {
-  width: auto;
-  height: 15vh;
-  padding-top: 40px;
-}
-
-.logo-hero {
-  width: auto;
-  height: 50vh;
-}
-
-.logo-bkgrnd-fade {
-  position: absolute;
-  left: 55.9%;
-  right: -37.01%;
-  top: 211.04%;
-  bottom: -217.89%;
-  opacity: 0.2;
-  /*z-index: ask the coaches about this ;*/
 }
 
 h1 {

@@ -1,3 +1,31 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the components.
 // -----------------------------------------------------------------------------
+
+// logos
+.logo-top {
+    width: auto;
+    height: 15vh;
+    padding-top: 40px;
+    }
+    
+    .logo-hero {
+        width: auto;
+        height: 50vh;
+    }
+    
+    .logo-bkgrnd-fade {
+        position: absolute;
+        left: 55.9%;
+        right: -37.01%;
+        top: 211.04%;
+        bottom: -217.89%;
+        opacity: 0.2;
+        /*z-index: ask the coaches about this ;*/
+    }
+    
+    .logo-footer{
+        width: 15vh;
+        height: 15vh;
+        padding-bottom: 20px;
+    }
