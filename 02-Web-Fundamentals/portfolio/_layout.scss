@@ -88,6 +88,76 @@ nav {
     color: whitesmoke;
 }
 
+
+// grid for skills section
+.grid-container-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 60px 350px;
+    grid-gap: 10px;
+    background-color: rgba(135, 176, 185, 0.1);
+    width: 85vw;
+    margin: auto;
+    padding: 20px;
+}
+
+.skill-heading, .skill-heading-2, .skill-heading-3, .skill-heading-4 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 10px;
+}
+
+.skill-description, .skill-description-2, .skill-description-3, .skill-description-4 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 10px;
+}
+
+.skill-heading-2 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 10px;
+}
+
+.skill-heading-3 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 10px;
+}
+
+.skill-heading-4 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 10px;
+}
+
+.skill-description-2 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 10px;
+}
+
+.skill-description-3 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 10px;
+}
+
+.skill-description-4 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 10px;
+}
+
+
 // grid for project list section
 .project-wrapper {
     display: grid;
@@ -97,3 +167,56 @@ nav {
     /*grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr;*/
     margin: 180px 100px;
 }
+
+// grid for project examples 
+.grid-container-projects {
+    display: grid;
+    /*grid-template-columns: [first] 600px [line2] auto [end];
+    grid-template-rows: [row1-start] 150px [row1-end] 150px [third-line] 150px [last-line];*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(50, 50px);
+    grid-row-gap: 10px;
+    width: 60vw;
+    margin: auto;
+}
+
+figure {
+    width: auto;
+    height: auto;
+    background-color: rgba(135, 176, 185, 0.15);
+}
+
+.project-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 8;
+ }
+
+ .project-2 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 10;
+    grid-row-end: 17;
+ }
+
+ .project-3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 19;
+    grid-row-end: 26; 
+ }
+
+ .project-4 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 28;
+    grid-row-end: 35;
+ }
+
+ .project-5 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 37;
+    grid-row-end: 44; 
+ }

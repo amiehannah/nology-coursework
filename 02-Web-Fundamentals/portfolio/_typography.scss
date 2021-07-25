@@ -69,7 +69,30 @@ p {
     line-height: 1.75;
 }
 
-//styling for project list
+
+// styling for skills section
+.skill-number {
+    font-size: 36px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px;
+}
+
+.skill-heading, .skill-heading-2, .skill-heading-3, .skill-heading-4 {
+    font-family: Source Serif Pro;
+    font-size: 36px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.skill-description, .skill-description-2, .skill-description-3, .skill-description-4 {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+
+// styling for project list
 .title-project-list {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -108,4 +131,34 @@ span {
     text-align: left;    
     text-decoration: none;
     color: #000000;
+}
+// need to check what this is styling??
+.h5-list {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    color: #333333;
+    padding: 20px;
+}
+
+
+//styling for work examples
+ .h3-project1, .h3-project2, .h3-project3, .h3-project4, .h3-project5 {
+    font-family: Source Serif Pro;
+    font-size: 36px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.h4-project1, .h4-project2, .h4-project3, .h4-project4, .h4-project5 {
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.figcaption-project1, .figcaption-project2, .figcaption-project3, .figcaption-project4, .figcaption-project5 {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
 }
