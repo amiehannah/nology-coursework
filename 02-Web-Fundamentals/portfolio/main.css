@@ -313,6 +313,96 @@ figure {
   grid-row-end: 44;
 }
 
+.h3-project1 {
+  grid-column-start: 4;
+  grid-row-start: 1;
+  padding: 10px;
+}
+
+.h4-project1 {
+  grid-column-start: 4;
+  grid-row-start: 2;
+  padding: 10px;
+}
+
+.figcaption-project1 {
+  grid-column-start: 4;
+  grid-row-start: 3;
+  padding: 10px;
+}
+
+.h3-project2 {
+  grid-column-start: 1;
+  grid-row-start: 10;
+  padding: 10px;
+}
+
+.h4-project2 {
+  grid-column-start: 1;
+  grid-row-start: 11;
+  padding: 10px;
+}
+
+.figcaption-project2 {
+  grid-column-start: 1;
+  grid-row-start: 12;
+  padding: 10px;
+}
+
+.h3-project3 {
+  grid-column-start: 4;
+  grid-row-start: 19;
+  padding: 10px;
+}
+
+.h4-project3 {
+  grid-column-start: 4;
+  grid-row-start: 20;
+  padding: 10px;
+}
+
+.figcaption-project3 {
+  grid-column-start: 4;
+  grid-row-start: 21;
+  padding: 10px;
+}
+
+.h3-project4 {
+  grid-column-start: 1;
+  grid-row-start: 28;
+  padding: 10px;
+}
+
+.h4-project4 {
+  grid-column-start: 1;
+  grid-row-start: 29;
+  padding: 10px;
+}
+
+.figcaption-project4 {
+  grid-column-start: 1;
+  grid-row-start: 30;
+  padding: 10px;
+}
+
+.h3-project5 {
+  grid-column-start: 4;
+  grid-row-start: 37;
+  padding: 10px;
+}
+
+.h4-project5 {
+  grid-column-start: 4;
+  grid-row-start: 38;
+  padding: 10px;
+}
+
+.figcaption-project5 {
+  grid-column-start: 4;
+  grid-row-start: 39;
+  padding: 10px;
+}
+
 /*font-main*/
 /*font-cursive*/
 h1 {
@@ -467,167 +557,4 @@ span {
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
-}
-
-/*grid for project examples*/
-.grid-container-projects {
-  display: grid;
-  /*grid-template-columns: [first] 600px [line2] auto [end];
-  grid-template-rows: [row1-start] 150px [row1-end] 150px [third-line] 150px [last-line];*/
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(50, 50px);
-  grid-row-gap: 10px;
-  width: 60vw;
-  margin: auto;
-}
-
-figure {
-  width: auto;
-  height: auto;
-  background-color: rgba(135, 176, 185, 0.15);
-}
-
-.project-1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 8;
-}
-
-.project-2 {
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 10;
-  grid-row-end: 17;
-}
-
-.project-3 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 19;
-  grid-row-end: 26;
-}
-
-.project-4 {
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 28;
-  grid-row-end: 35;
-}
-
-.project-5 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 37;
-  grid-row-end: 44;
-}
-
-/*grouped styling*/
-.h3-project1, .h3-project2, .h3-project3, .h3-project4, .h3-project5 {
-  font-family: Source Serif Pro;
-  font-size: 36px;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.h4-project1, .h4-project2, .h4-project3, .h4-project4, .h4-project5 {
-  font-size: 24px;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.figcaption-project1, .figcaption-project2, .figcaption-project3, .figcaption-project4, .figcaption-project5 {
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.h3-project1 {
-  grid-column-start: 4;
-  grid-row-start: 1;
-  padding: 10px;
-}
-
-.h4-project1 {
-  grid-column-start: 4;
-  grid-row-start: 2;
-  padding: 10px;
-}
-
-.figcaption-project1 {
-  grid-column-start: 4;
-  grid-row-start: 3;
-  padding: 10px;
-}
-
-.h3-project2 {
-  grid-column-start: 1;
-  grid-row-start: 10;
-  padding: 10px;
-}
-
-.h4-project2 {
-  grid-column-start: 1;
-  grid-row-start: 11;
-  padding: 10px;
-}
-
-.figcaption-project2 {
-  grid-column-start: 1;
-  grid-row-start: 12;
-  padding: 10px;
-}
-
-.h3-project3 {
-  grid-column-start: 4;
-  grid-row-start: 19;
-  padding: 10px;
-}
-
-.h4-project3 {
-  grid-column-start: 4;
-  grid-row-start: 20;
-  padding: 10px;
-}
-
-.figcaption-project3 {
-  grid-column-start: 4;
-  grid-row-start: 21;
-  padding: 10px;
-}
-
-.h3-project4 {
-  grid-column-start: 1;
-  grid-row-start: 28;
-  padding: 10px;
-}
-
-.h4-project4 {
-  grid-column-start: 1;
-  grid-row-start: 29;
-  padding: 10px;
-}
-
-.figcaption-project4 {
-  grid-column-start: 1;
-  grid-row-start: 30;
-  padding: 10px;
-}
-
-.h3-project5 {
-  grid-column-start: 4;
-  grid-row-start: 37;
-  padding: 10px;
-}
-
-.h4-project5 {
-  grid-column-start: 4;
-  grid-row-start: 38;
-  padding: 10px;
-}
-
-.figcaption-project5 {
-  grid-column-start: 4;
-  grid-row-start: 39;
-  padding: 10px;
 }

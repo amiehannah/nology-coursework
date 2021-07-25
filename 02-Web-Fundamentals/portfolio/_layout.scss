@@ -220,3 +220,94 @@ figure {
     grid-row-start: 37;
     grid-row-end: 44; 
  }
+
+ // project example font positioning within grid
+ .h3-project1 {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    padding: 10px;
+ }
+
+ .h4-project1 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    padding: 10px;
+ }
+
+ .figcaption-project1 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+    padding: 10px;
+ }
+
+ .h3-project2 {
+    grid-column-start: 1;
+    grid-row-start: 10;
+    padding: 10px;
+ }
+
+ .h4-project2 {
+    grid-column-start: 1;
+    grid-row-start: 11;
+    padding: 10px;
+ }
+
+ .figcaption-project2 {
+    grid-column-start: 1;
+    grid-row-start: 12;
+    padding: 10px;
+ }
+
+ .h3-project3 {
+    grid-column-start: 4;
+    grid-row-start: 19;
+    padding: 10px;
+ }
+
+ .h4-project3 {
+    grid-column-start: 4;
+    grid-row-start: 20;
+    padding: 10px;
+ }
+
+ .figcaption-project3 {
+    grid-column-start: 4;
+    grid-row-start: 21;
+    padding: 10px;
+ }
+
+ .h3-project4 {
+    grid-column-start: 1;
+    grid-row-start: 28;
+    padding: 10px;
+ }
+
+ .h4-project4 {
+    grid-column-start: 1;
+    grid-row-start: 29;
+    padding: 10px;
+ }
+
+ .figcaption-project4 {
+    grid-column-start: 1;
+    grid-row-start: 30;
+    padding: 10px;
+ }
+
+ .h3-project5 {
+    grid-column-start: 4;
+    grid-row-start: 37;
+    padding: 10px;
+ }
+
+ .h4-project5 {
+    grid-column-start: 4;
+    grid-row-start: 38;
+    padding: 10px;
+ }
+
+ .figcaption-project5 {
+    grid-column-start: 4;
+    grid-row-start: 39;
+    padding: 10px;
+ }
