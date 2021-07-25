@@ -50,7 +50,6 @@ nav {
 }
 
 
-
 // main container
 .container-content {
         width: 100%;
@@ -89,3 +88,12 @@ nav {
     color: whitesmoke;
 }
 
+// grid for project list section
+.project-wrapper {
+    display: grid;
+    background-color: rgba(135, 176, 185, 0.1);
+    width: 25vw;
+    grid-template-columns: 1fr 4fr;
+    /*grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr;*/
+    margin: 180px 100px;
+}
