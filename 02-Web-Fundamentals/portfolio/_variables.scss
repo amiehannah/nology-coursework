@@ -2,6 +2,13 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+/*font-regular*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
+
+/*font-script*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Source+Serif+Pro:ital,wght@0,200;1,200&display=swap');
+
+
 /// Regular font family
 $font-body: "Montserrat", sans-serif;
 
@@ -19,6 +26,11 @@ $color-gradient: linear-gradient(90deg, #415E6C 1.65%, #87B0B9 100%);
 
 ///colour - green transparent
 $color-green: rgba(135, 176, 185, 0.1);
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
 
 
 /*
