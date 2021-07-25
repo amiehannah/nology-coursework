@@ -37,6 +37,20 @@ nav {
 }
 
 
+// about section
+.container-about {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(2, 260px);
+    padding: 80px 80px 0px 80px;
+    grid-gap: 20px;
+    height: auto;
+    width: 75%;
+    margin: auto; 
+}
+
+
+
 // main container
 .container-content {
         width: 100%;

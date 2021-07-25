@@ -52,3 +52,30 @@
         /*might need a help with this!*/
     }
     
+
+    // scroll element
+    .scroll-element {
+        transform: rotate(90deg);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: sticky;
+        left: 80%;
+        top: 130%;
+        /*sticky positioning isn't working here - parent element issue?)*/
+    }
+    
+    .scroll {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333333;
+        letter-spacing: 0.2em;
+        padding: 12px;
+    }
+    
+    .scroll-line {
+        height: 1px;
+        background: #333333;
+        width: 200px;
+    } 
