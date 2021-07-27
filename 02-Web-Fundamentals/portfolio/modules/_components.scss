@@ -51,8 +51,10 @@
         border: solid whitesmoke;
         border-width: 1px;
         border-radius: 50%;
-        display: inline-block;
+        // how to align an item centrally within another div use this
+        display: flex;
         text-align: center;
+        align-items: center;
     }
     
     .arrow {

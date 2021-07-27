@@ -1,6 +1,29 @@
 /*import partials*/
+/*font-regular*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap");
+/*font-script*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Source+Serif+Pro:ital,wght@0,200;1,200&display=swap");
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+/*
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+*/
 * {
   margin: 0;
   padding: 0;
@@ -54,8 +77,9 @@
   border: solid whitesmoke;
   border-width: 1px;
   border-radius: 50%;
-  display: inline-block;
+  display: flex;
   text-align: center;
+  align-items: center;
 }
 
 .arrow {
@@ -411,7 +435,7 @@ h1 {
   font-weight: 10;
   text-transform: lowercase;
   font-style: italic;
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 
 .about {
@@ -436,7 +460,7 @@ h2 {
   font-size: 144px;
   font-weight: 300;
   font-style: italic;
-  color: #333333;
+  color: pink;
   margin: 100px 60px 80px 60px;
 }
 
@@ -556,27 +580,3 @@ span {
   font-weight: 400;
   font-style: normal;
 }
-
-/*font-regular*/
-/*font-script*/
-a:link,
-a:visited {
-  text-decoration: none;
-}
-
-/*
-/// Container's maximum width
-/// @type Length
-$max-width: 1180px !default;
-
-
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
-
-*/
