@@ -10,7 +10,7 @@ h1 {
     font-weight: 10;
     text-transform: lowercase;
     font-style: italic;
-    color: whitesmoke;
+    color: $color-white;
  }
  
  .about {
@@ -35,7 +35,7 @@ h2 {
     font-size: 144px;
     font-weight: 300;
     font-style: italic;
-    color: #333333;
+    color: $color-black;
     margin: 100px 60px 80px 60px;
 }
 
