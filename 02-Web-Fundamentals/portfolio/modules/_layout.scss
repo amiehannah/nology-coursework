@@ -5,7 +5,7 @@
 .header {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(90deg, #415E6C 1.65%, #87B0B9 100%);
+    background: $color-gradient;
 }
 
 .container-hero {
@@ -33,7 +33,7 @@ nav {
 .nav {
     text-decoration: none;
     padding: 0px 40px;
-    color: whitesmoke;
+    color: $color-white;
 }
 
 
@@ -42,7 +42,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: repeat(2, 260px);
-    padding: 80px 80px 0px 80px;
+    padding: 0px 80px 0px 80px;
     grid-gap: 20px;
     height: auto;
     width: 75%;
@@ -54,7 +54,7 @@ nav {
 .container-content {
         width: 100%;
         height: 760vh;
-        background: whitesmoke;
+        background: $color-white;
     }
 
 
@@ -62,7 +62,7 @@ nav {
 .container-footer {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(90deg, #415E6C 1.65%, #87B0B9 100%);
+    background: $color-gradient;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -85,7 +85,7 @@ nav {
 .socials {
     text-decoration: none;
     padding: 0px 40px;
-    color: whitesmoke;
+    color: $color-white;
 }
 
 
@@ -95,7 +95,7 @@ nav {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 40px 60px 350px;
     grid-gap: 10px;
-    background-color: rgba(135, 176, 185, 0.1);
+    background-color: $color-green;
     width: 85vw;
     margin: auto;
     padding: 20px;
@@ -161,7 +161,7 @@ nav {
 // grid for project list section
 .project-wrapper {
     display: grid;
-    background-color: rgba(135, 176, 185, 0.1);
+    background-color: $color-green;
     width: 25vw;
     grid-template-columns: 1fr 4fr;
     /*grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr;*/
@@ -183,7 +183,7 @@ nav {
 figure {
     width: auto;
     height: auto;
-    background-color: rgba(135, 176, 185, 0.15);
+    background-color: $color-green;
 }
 
 .project-1 {

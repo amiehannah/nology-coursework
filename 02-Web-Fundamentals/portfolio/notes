@@ -1,59 +1,20 @@
-   .button-up {
-        height: 60px;
-        width: 60px;
-        background-color: transparent;
-        border: solid whitesmoke;
-        border-width: 1px;
-        border-radius: 50%;
-        text-align: center;
-        // ADD SOME STYLES TO CENTER ALIGN
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
-    
+//////
+    Actions post bug fix
 
-<a href="#top" class="button-up">
-                <div class="arrow"></div>
-</a>
-
-<header id="top">
+- [ ] Not keen on the gap now where the scroll element is / before about section starts
+- [ ] Go through code again and try to change to semantic where possible. Section is better than a div, they should never contain text￼
+- [ ] Change content – container to main￼
+- [ ] Change project list to NAV component
+- [ ] Section nest a div nest a NAV bar￼
+- [ ] Section/work/padding/remove top margin (when jumping to the Work section)￼￼￼
+- [ ] Large logo Amend in illustrator and import. It’s easier to create your images outside of CSS￼ ￼
+- [ ] Transitions when jumping around the page
+- [ ] Make it responsive
+- [ ] BEM naming convention
+- [ ] what are lazyloaded images?
 
 
-
-
-<!-- HERE IS YOUR NEW SCROLL BAR THING -->
-<!-- IT GOES INSIDE YOUR CONTAINER CONTENT -->
-<div class="scroll-wrapper">
-  <div class="scroll-element">
-    <p class="scroll">scroll</p>
-    <div class="scroll-line"></div>
-  </div>
-</div>
-
-<!--styling in SCSS for the SCROLL BAR THING -->
-.scroll-wrapper {
-        display: flex;
-        justify-content: flex-end;
-        position: sticky;
-        top: 0;
-    }
-    .scroll-element {
-        writing-mode: vertical-rl;
-        display: flex;
-        align-items: center;
-    }
-    .scroll {
-        text-transform: uppercase;
-        font-size: $font-size-regular;
-        font-weight: 400;
-        color: $color-black;
-        letter-spacing: 0.2em;
-        padding: 12px;
-    }
-    .scroll-line {
-        height: 200px;
-        background: $color-black;
-        width: 1px;
-    } 
+ - [ ]cool typewriter effect 
+    https://www.w3schools.com/howto/howto_js_typewriter.asp
+could this be used on 'junior software developer in the header section?
