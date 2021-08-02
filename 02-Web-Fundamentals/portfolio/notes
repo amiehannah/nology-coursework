@@ -3,7 +3,6 @@
     Actions post bug fix
 
 - [ ] Not keen on the gap now where the scroll element is / before about section starts
-- [ ] Go through code again and try to change to semantic where possible. Section is better than a div, they should never contain text￼
 - [ ] Change project list to NAV component
 - [ ] Section nest a div nest a NAV bar￼
 - [ ] Section/work/padding/remove top margin (when jumping to the Work section)￼￼￼
