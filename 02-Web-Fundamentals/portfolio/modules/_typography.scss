@@ -12,23 +12,6 @@ h1 {
     font-style: italic;
     color: $color-white;
  }
- 
- .about {
-    transform: rotate(-90deg);
-    color: $color-black;
-    font-family: $font-script;
-    font-weight: 400;
-    font-size: $font-size-header;
-    text-transform: none;
-    margin: auto;
-    padding: 0px;
-}
-
-strong {
-    font-weight: bold;
-    font-family: $font-script;
-    font-size: $font-size-header;
-  }
 
 h2 {
     font-family: $font-script;
@@ -62,16 +45,74 @@ h6 {
     background-color: transparent;
 }
 
-.intro {
+
+//BEM SKILLS TYPOGRAPHY
+
+.skills {
+    &__p-number {
+    font-size: $font-size-header;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px;
     color: $color-black;
-    font-size: $font-size-regular;
-    text-align: center;
-    margin: auto;
-    line-height: 1.75;
+    text-align: left;
+    }
+
+    &__p-heading {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    &__p-heading-2 {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    &__p-heading-3 {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    &__p-heading-4 {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: 400;
+        font-style: italic; 
+    }
+
+    &__p-description {
+        font-family: $font-body;
+        font-size: $font-size-regular;
+        line-height: 1.75;
+    }
+
+    &__p-description-2 {
+        font-family: $font-body;
+        font-size: $font-size-regular;
+        line-height: 1.75;
+    }
+
+    &__p-description-3 {
+        font-family: $font-body;
+        font-size: $font-size-regular;
+        line-height: 1.75;
+    }
+
+    &__p-description-4 {
+        font-family: $font-body;
+        font-size: $font-size-regular;
+        line-height: 1.75;
+    }
 }
 
-
-// styling for skills section
+// original styling for skills section
+/*
 .skill-number {
     font-size: $font-size-header;
     font-weight: 400;
@@ -93,7 +134,7 @@ h6 {
     line-height: 1.75;
 }
 
-
+*/
 
 // styling for project list
 .title-project-list {

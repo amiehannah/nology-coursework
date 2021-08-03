@@ -38,6 +38,52 @@
 
 
 // about section
+//BEM INTRO
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(2, 260px);
+    padding: 0px 80px 60px 80px;
+    grid-gap: 20px;
+    height: auto;
+    width: 75%;
+    margin: auto; 
+
+    &__h1 {
+        transform: rotate(-90deg);
+        color: $color-black;
+        font-family: $font-script;
+        font-weight: 400;
+        font-size: $font-size-header;
+        text-transform: none;
+        margin: auto;
+        padding: 0px;
+    }
+
+    &__strong { 
+    font-weight: bold;
+    font-family: $font-script;
+    font-size: $font-size-header;
+    }   
+
+    &__p {
+        color: $color-black;
+        font-size: $font-size-regular;
+        text-align: center;
+        margin: auto;
+        line-height: 1.75;
+    }
+
+    &__img {
+        width: 32vh;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        justify-self: center;
+    }
+
+}
+
+/*
 .container-about {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -48,7 +94,7 @@
     width: 75%;
     margin: auto; 
 }
-
+*/
 
 // main container
 .main-content {
@@ -90,6 +136,7 @@
 
 
 // grid for skills section
+/*
 .grid-container-skills {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -102,12 +149,15 @@
     margin-bottom: 180px;
 }
 
+    
+}
 .skill-heading, .skill-heading-2, .skill-heading-3, .skill-heading-4 {
     grid-column-start: 1;
     grid-row-start: 2;
     grid-row-end: 3;
     margin: 10px;
 }
+
 
 .skill-description, .skill-description-2, .skill-description-3, .skill-description-4 {
     grid-column-start: 1;
@@ -116,58 +166,93 @@
     margin: 10px;
 }
 
-.skill-heading-2 {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin: 10px;
+*/
+
+
+
+//BEM STYLING FOR SKILLS SECTION
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 60px 350px;
+    grid-gap: 10px;
+    background-color: $color-green;
+    width: 85vw;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 180px;
+
+    &__p-heading {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 10px;
+    }
+
+    &__p-heading-2 {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 10px;
+    }
+
+    &__p-heading-3 {
+        grid-column-start: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 10px;
+    }
+
+    &__p-heading-4 {
+        grid-column-start: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 10px;
+    }
+
+    &__p-description {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin: 10px;
+    }
+    
+    &__p-description-2 {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin: 10px;
+    }
+
+    &__p-description-3 {
+        grid-column-start: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin: 10px;
+    }
+
+    &__p-description-4 {
+        grid-column-start: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin: 10px;
+    }
 }
 
-.skill-heading-3 {
-    grid-column-start: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin: 10px;
-}
 
-.skill-heading-4 {
-    grid-column-start: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin: 10px;
-}
-
-.skill-description-2 {
-    grid-column-start: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    margin: 10px;
-}
-
-.skill-description-3 {
-    grid-column-start: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    margin: 10px;
-}
-
-.skill-description-4 {
-    grid-column-start: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    margin: 10px;
-}
 
 
 // grid for project list section
 .project-list {
     display: grid;
     background-color: $color-green;
+    //width: 100vw;
     width: 25vw;
+    //grid-template-columns: 1fr 4fr 12fr;
     grid-template-columns: 1fr 4fr;
+    //margin: 40px 0px 40px 100px;
     margin: 40px 100px;
 }
-
 
 // grid for project examples 
 .grid-container-projects {

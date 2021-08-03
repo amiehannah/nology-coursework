@@ -43,11 +43,10 @@ $breakpoints: (
 }
 
 .logo-bkgrnd-fade {
+  height: 1014px;
   position: absolute;
-  left: 55.9%;
-  right: -37.01%;
   top: 211.04%;
-  bottom: -217.89%;
+  right: -6%;
   opacity: 0.2;
   /*z-index: ask the coaches about this ;*/
 }
@@ -92,41 +91,31 @@ $breakpoints: (
   /*might need a help with this!*/
 }
 
-.scroll-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  position: sticky;
-  top: 0;
-}
-
-.scroll-element {
-  writing-mode: vertical-rl;
-  display: flex;
-  align-items: center;
-}
-
-.scroll {
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 400;
-  color: #000000;
-  letter-spacing: 0.2em;
-  padding: 12px;
-}
-
-.scroll-line {
-  height: 120px;
-  background: #000000;
-  width: 1px;
-}
-
-.photo {
-  width: 32vh;
-  grid-column-start: 2;
-  grid-row-start: 2;
-  justify-self: center;
-}
-
+/*  .scroll-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            position: sticky;
+            top: 0;
+        }
+        .scroll-element {
+            writing-mode: vertical-rl;
+            display: flex;
+            align-items: center;
+        }
+        .scroll {
+            text-transform: uppercase;
+            font-size: $font-size-regular;
+            font-weight: 400;
+            color: $color-black;
+            letter-spacing: 0.2em;
+            padding: 12px;
+        }
+        .scroll-line {
+            height: 120px;
+            background: $color-black;
+            width: 1px;
+        } 
+*/
 .line {
   height: 1px;
   background: #000000;
@@ -166,7 +155,7 @@ $breakpoints: (
   color: #f5f5f5;
 }
 
-.container-about {
+.intro {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(2, 260px);
@@ -176,7 +165,47 @@ $breakpoints: (
   width: 75%;
   margin: auto;
 }
+.intro__h1 {
+  transform: rotate(-90deg);
+  color: #000000;
+  font-family: "Source Serif Pro", serif;
+  font-weight: 400;
+  font-size: 36px;
+  text-transform: none;
+  margin: auto;
+  padding: 0px;
+}
+.intro__strong {
+  font-weight: bold;
+  font-family: "Source Serif Pro", serif;
+  font-size: 36px;
+}
+.intro__p {
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  margin: auto;
+  line-height: 1.75;
+}
+.intro__img {
+  width: 32vh;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: center;
+}
 
+/*
+.container-about {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(2, 260px);
+    padding: 0px 80px 60px 80px;
+    grid-gap: 20px;
+    height: auto;
+    width: 75%;
+    margin: auto; 
+}
+*/
 .main-content {
   width: 100%;
   height: 720vh;
@@ -211,7 +240,38 @@ $breakpoints: (
   color: #f5f5f5;
 }
 
+/*
 .grid-container-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 60px 350px;
+    grid-gap: 10px;
+    background-color: $color-green;
+    width: 85vw;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 180px;
+}
+
+
+}
+.skill-heading, .skill-heading-2, .skill-heading-3, .skill-heading-4 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 10px;
+}
+
+
+.skill-description, .skill-description-2, .skill-description-3, .skill-description-4 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 10px;
+}
+
+*/
+.skills {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 40px 60px 350px;
@@ -222,57 +282,49 @@ $breakpoints: (
   padding: 20px;
   margin-bottom: 180px;
 }
-
-.skill-heading, .skill-heading-2, .skill-heading-3, .skill-heading-4 {
+.skills__p-heading {
   grid-column-start: 1;
   grid-row-start: 2;
   grid-row-end: 3;
   margin: 10px;
 }
-
-.skill-description, .skill-description-2, .skill-description-3, .skill-description-4 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  margin: 10px;
-}
-
-.skill-heading-2 {
+.skills__p-heading-2 {
   grid-column-start: 2;
   grid-row-start: 2;
   grid-row-end: 3;
   margin: 10px;
 }
-
-.skill-heading-3 {
+.skills__p-heading-3 {
   grid-column-start: 3;
   grid-row-start: 2;
   grid-row-end: 3;
   margin: 10px;
 }
-
-.skill-heading-4 {
+.skills__p-heading-4 {
   grid-column-start: 4;
   grid-row-start: 2;
   grid-row-end: 3;
   margin: 10px;
 }
-
-.skill-description-2 {
+.skills__p-description {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  margin: 10px;
+}
+.skills__p-description-2 {
   grid-column-start: 2;
   grid-row-start: 3;
   grid-row-end: 4;
   margin: 10px;
 }
-
-.skill-description-3 {
+.skills__p-description-3 {
   grid-column-start: 3;
   grid-row-start: 3;
   grid-row-end: 4;
   margin: 10px;
 }
-
-.skill-description-4 {
+.skills__p-description-4 {
   grid-column-start: 4;
   grid-row-start: 3;
   grid-row-end: 4;
@@ -438,23 +490,6 @@ h1 {
   color: #f5f5f5;
 }
 
-.about {
-  transform: rotate(-90deg);
-  color: #000000;
-  font-family: "Source Serif Pro", serif;
-  font-weight: 400;
-  font-size: 36px;
-  text-transform: none;
-  margin: auto;
-  padding: 0px;
-}
-
-strong {
-  font-weight: bold;
-  font-family: "Source Serif Pro", serif;
-  font-size: 36px;
-}
-
 h2 {
   font-family: "Source Serif Pro", serif;
   font-size: 144px;
@@ -487,15 +522,7 @@ h6 {
   background-color: transparent;
 }
 
-.intro {
-  color: #000000;
-  font-size: 14px;
-  text-align: center;
-  margin: auto;
-  line-height: 1.75;
-}
-
-.skill-number {
+.skills__p-number {
   font-size: 36px;
   font-weight: 400;
   font-style: normal;
@@ -503,19 +530,74 @@ h6 {
   color: #000000;
   text-align: left;
 }
-
-.skill-heading, .skill-heading-2, .skill-heading-3, .skill-heading-4 {
+.skills__p-heading {
   font-family: "Source Serif Pro", serif;
   font-size: 36px;
   font-weight: 400;
   font-style: italic;
 }
-
-.skill-description, .skill-description-2, .skill-description-3, .skill-description-4 {
+.skills__p-heading-2 {
+  font-family: "Source Serif Pro", serif;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: italic;
+}
+.skills__p-heading-3 {
+  font-family: "Source Serif Pro", serif;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: italic;
+}
+.skills__p-heading-4 {
+  font-family: "Source Serif Pro", serif;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: italic;
+}
+.skills__p-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.skills__p-description-2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.skills__p-description-3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.skills__p-description-4 {
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 1.75;
 }
 
+/*
+.skill-number {
+    font-size: $font-size-header;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px;
+    color: $color-black;
+    text-align: left;
+}
+
+.skill-heading, .skill-heading-2, .skill-heading-3, .skill-heading-4 {
+    font-family: $font-script;
+    font-size: $font-size-header;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.skill-description, .skill-description-2, .skill-description-3, .skill-description-4 {
+    font-size: $font-size-regular;
+    line-height: 1.75;
+}
+
+*/
 .title-project-list {
   grid-column-start: 1;
   grid-column-end: 3;

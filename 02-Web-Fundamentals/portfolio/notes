@@ -2,15 +2,15 @@
 //////
     Actions post bug fix
 
-- [ ] Not keen on the gap now where the scroll element is / before about section starts
-- [ ] Section/work/padding/remove top margin (when jumping to the Work section)￼￼￼
+- [ ] BEM naming convention
 - [ ] Large logo Amend in illustrator and import. It’s easier to create your images outside of CSS￼ ￼
 - [ ] Transitions when jumping around the page
+
+
 - [ ] Make it responsive
-- [ ] BEM naming convention
+
+
 - [ ] what are lazyloaded images? below the fold they load only when the user scrolls saving load time.
-
-
  - [ ]cool typewriter effect 
     https://www.w3schools.com/howto/howto_js_typewriter.asp
 could this be used on 'junior software developer in the header section?
