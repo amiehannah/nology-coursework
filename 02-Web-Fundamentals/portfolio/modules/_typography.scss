@@ -47,7 +47,6 @@ h6 {
 
 
 //BEM SKILLS TYPOGRAPHY
-
 .skills {
     &__p-number {
     font-size: $font-size-header;
@@ -111,71 +110,49 @@ h6 {
     }
 }
 
-// original styling for skills section
-/*
-.skill-number {
-    font-size: $font-size-header;
-    font-weight: 400;
-    font-style: normal;
-    margin: 10px;
-    color: $color-black;
-    text-align: left;
+
+//NEW BEM STYLING FOR PROJECT LIST
+.nav-project {
+    &__title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-style: italic;
+        margin: 25px;
+        text-align: left; 
+    }
+
+    &__span {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: bold;
+    }
+
+    &__number {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-style: normal;
+        font-weight: 1000;
+        line-height: 90px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #439A86;
+    }
+
+    &__heading {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 90px;
+        letter-spacing: 0em;
+        text-align: left;    
+        text-decoration: none;
+        color: $color-black;
+    }
 }
 
-.skill-heading, .skill-heading-2, .skill-heading-3, .skill-heading-4 {
-    font-family: $font-script;
-    font-size: $font-size-header;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.skill-description, .skill-description-2, .skill-description-3, .skill-description-4 {
-    font-size: $font-size-regular;
-    line-height: 1.75;
-}
-
-*/
-
-// styling for project list
-.title-project-list {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    font-family: $font-script;
-    font-size: $font-size-header;
-    font-style: italic;
-    margin: 25px;
-    text-align: left;
-}
-
-span {
-    font-family: $font-script;
-    font-size: $font-size-header;
-    font-weight: bold;
-    /*don't know if this is the right thing to use here - want to remove the italic but can't as has italic parent element)*/
-}
-
-.number {
-    font-family: $font-script;
-    font-size: $font-size-header;
-    font-style: normal;
-    font-weight: 1000;
-    line-height: 90px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #439A86;
-}
-
-.project-title {
-    font-family: $font-script;
-    font-size: $font-size-header;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 90px;
-    letter-spacing: 0em;
-    text-align: left;    
-    text-decoration: none;
-    color: $color-black;
-}
 // need to check what this is styling??
 .h5-list {
     font-family: $font-script;
@@ -187,22 +164,90 @@ span {
 }
 
 
-//styling for project examples
- .h3-project1, .h3-project2, .h3-project3, .h3-project4, .h3-project5 {
-    font-family: $font-script;
-    font-size: $font-size-header;
-    font-weight: 500;
-    font-style: italic;
-}
 
-.h4-project1, .h4-project2, .h4-project3, .h4-project4, .h4-project5 {
-    font-size: 24px;
-    font-weight: 300;
-    font-style: italic;
-}
+//styling for project examples BEM - h3 / h4 / figcaption elements
+.section-projects { 
+    &__h3 {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: 500;
+        font-style: italic;
+    }
+    &__h3-prj2 {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: 500;
+        font-style: italic;
+    }
+    &__h3-prj3 {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: 500;
+        font-style: italic;
+    }
+    &__h3-prj4 {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: 500;
+        font-style: italic;
+    }
+    &__h3-prj5 {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: 500;
+        font-style: italic;
+    }
 
-.figcaption-project1, .figcaption-project2, .figcaption-project3, .figcaption-project4, .figcaption-project5 {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
+    &__h4 {
+        font-size: 20px;
+        font-weight: 300;
+        font-style: italic; 
+    }
+
+    &__h4-prj2 {
+        font-size: 24px;
+        font-weight: 300;
+        font-style: italic; 
+    }
+    &__h4-prj3 {
+        font-size: 24px;
+        font-weight: 300;
+        font-style: italic; 
+    }
+    &__h4-prj4 {
+        font-size: 24px;
+        font-weight: 300;
+        font-style: italic; 
+    }
+    &__h4-prj5 {
+        font-size: 24px;
+        font-weight: 300;
+        font-style: italic; 
+    }
+
+    &__figcaption {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;  
+    }
+    &__figcaption2 {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+    }
+    &__figcaption3 {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+    }
+    &__figcaption4 {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+    }
+    &__figcaption5 {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+    }
 }
