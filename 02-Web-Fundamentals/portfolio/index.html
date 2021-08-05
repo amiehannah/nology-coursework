@@ -7,33 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <script src="app.js"></script>
-    <title>Document</title>
+    <title>Amie Edwards Portfolio</title>
 </head>
 
 <body>
-<!--BEM HEADER TO DO-->
+
+
+    <!--BEM HEADER-->
     <header id="top">
         <section class="header">
-            <nav class="top-nav">
-                <img class="logo-top" src="assets/logo-main-ws.svg" alt="Amie Edwards">
-                <div id="nav-links">
-                    <a class="nav" href="#work">work</a>
-                    <a class="nav" href="#about">about</a>
-                    <a class="nav" href="#contact">contact</a>
+            <nav class="header__top-nav">
+                <img class="header__logo-top" src="assets/logo-main-ws.svg" alt="Amie Edwards">
+                <div id="header__nav-links">
+                    <a class="header__nav" href="#work">work</a>
+                    <a class="header__nav" href="#about">about</a>
+                    <a class="header__nav" href="#contact">contact</a>
                 </div>
             </nav>
-            <section class="container-hero">
+            <section class="header__container-hero">
                 <!--hero logo-->
-                <img class="logo-hero" src="assets/logo-main-hero.svg" alt="Amie Edwards">
-                <h1 class="hero-header">Junior Software Developer</h1>
+                <img class="header__logo-hero" src="assets/logo-main-hero.svg" alt="Amie Edwards">
+                <h1 class="header__hero-header">Junior Software Developer</h1>
             </section>
-            <a class="icon" href="#arrow-down"></a>
+            <a class="header__icon" href="#arrow-down"></a>
         </section>
     </header>
-
-    <!-- cool typewriter effect 
-    https://www.w3schools.com/howto/howto_js_typewriter.asp
-    -->
 
     <main id="about" main class="main-content">
 
@@ -120,54 +118,61 @@
             </figure>
             <h3 class="section-projects__h3">Header</h3>
             <h4 class="section-projects__h4">Sub-heading</h4>
-            <figcaption class="section-projects__figcaption1">description lorem ipsum lorem ipsum lorem ipsum</figcaption>
+            <figcaption class="section-projects__figcaption1">description lorem ipsum lorem ipsum lorem ipsum
+            </figcaption>
             <figure id="work-2" class="section-projects__fig2">
                 <!--<img src="pic_trulli.jpg" alt="Trulli">-->
             </figure>
             <h3 class="section-projects__h3-prj2">Header</h3>
             <h4 class="section-projects__h4-prj2">Sub-heading</h4>
-            <figcaption class="section-projects__figcaption2">description lorem ipsum lorem ipsum lorem ipsum</figcaption>
+            <figcaption class="section-projects__figcaption2">description lorem ipsum lorem ipsum lorem ipsum
+            </figcaption>
             <figure id="work-3" class="section-projects__fig3">
                 <!--<img src="pic_trulli.jpg" alt="Trulli">-->
             </figure>
             <h3 class="section-projects__h3-prj3">Header</h3>
             <h4 class="section-projects__h4-prj3">Sub-heading</h4>
-            <figcaption class="section-projects__figcaption3">description lorem ipsum lorem ipsum lorem ipsum</figcaption>
+            <figcaption class="section-projects__figcaption3">description lorem ipsum lorem ipsum lorem ipsum
+            </figcaption>
             <figure id="work-4" class="section-projects__fig4">
                 <!--<img src="pic_trulli.jpg" alt="Trulli">-->
             </figure>
             <h3 class="section-projects__h3-prj4">Header</h3>
             <h4 class="section-projects__h4-prj4">Sub-heading</h4>
-            <figcaption class="section-projects__figcaption4">description lorem ipsum lorem ipsum lorem ipsum</figcaption>
+            <figcaption class="section-projects__figcaption4">description lorem ipsum lorem ipsum lorem ipsum
+            </figcaption>
             <figure id="work-5" class="section-projects__fig5">
                 <!--<img src="pic_trulli.jpg" alt="Trulli">-->
             </figure>
             <h3 class="section-projects__h3-prj5">Header</h3>
             <h4 class="section-projects__h4-prj5">Sub-heading</h4>
-            <figcaption class="section-projects__figcaption5">description lorem ipsum lorem ipsum lorem ipsum</figcaption>
+            <figcaption class="section-projects__figcaption5">description lorem ipsum lorem ipsum lorem ipsum
+            </figcaption>
         </section>
 
 
 
     </main>
-    <!--BEM FOOTER TO DO-->
-    <footer>
-        <div id="arrow-down" div class="container-footer">
-            <!--add in logo here-->
-            <img class="logo-footer" src="assets/logo-main-ws.svg" alt="Amie Edwards">
-            <h5 id="contact">Get in <br> Touch</h5>
 
-            <div class="social-links">
-                <a class="socials" href="mailto:amie.edwards17@gmail.com">email</a>
-                <a class="socials" href="https://github.com/amiehannah" target="_blank">github</a>
-                <a class="socials" href="https://www.linkedin.com/in/amie-edwards-70a19068/"
+
+    <!--BEM FOOTER EDIT-->
+    <footer>
+        <section id="arrow-down" section class="section-footer">
+            <!--add in logo here-->
+            <img class="section-footer__logo-footer" src="assets/logo-main-ws.svg" alt="Amie Edwards">
+            <h5 id="contact" class="section-footer__h5">Get in <br> Touch</h5>
+
+            <div class="section-footer__social-links">
+                <a class="section-footer__socials" href="mailto:amie.edwards17@gmail.com">email</a>
+                <a class="section-footer__socials" href="https://github.com/amiehannah" target="_blank">github</a>
+                <a class="section-footer__socials" href="https://www.linkedin.com/in/amie-edwards-70a19068/"
                     target="_blank">linkedin</a>
             </div>
-            <a href="#top" class="button-up">
-                <div class="arrow"></div>
+            <a href="#top" class="section-footer__button-up">
+                <div class="section-footer__arrow"></div>
             </a>
-            <h6>©2021. AMIE EDWARDS </h6>
-        </div>
+            <h6 class="section-footer__h6">©2021. AMIE EDWARDS </h6>
+        </section>
     </footer>
 
 </body>

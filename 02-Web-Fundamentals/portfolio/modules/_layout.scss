@@ -6,35 +6,38 @@
     width: 100%;
     height: 100vh;
     background: $color-gradient;
-}
 
-.container-hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh;
+    &__top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        width: 100%;
+        height: 15vh;
+        padding: 50px 40px;
+        font-size: 14px;
     }
 
-
-// nav 
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    width: 100%;
-    height: 15vh;
-    padding: 50px 40px;
-    font-size: 14px;
+    &__container-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10vh;
+        }
+    
+        &__nav {
+            text-decoration: none;
+            padding: 0px 40px;
+            color: $color-white;
+        }
+        
 }
 
-.nav {
-    text-decoration: none;
-    padding: 0px 40px;
-    color: $color-white;
-}
+
+
+
 
 
 
@@ -55,6 +58,7 @@
         font-family: $font-script;
         font-weight: 400;
         font-size: $font-size-header;
+        font-style: italic;
         text-transform: none;
         margin: auto;
         padding: 0px;
@@ -93,7 +97,7 @@
 
 
 // footer styling
-.container-footer {
+.section-footer {
     width: 100%;
     height: 100vh;
     background: $color-gradient;
@@ -101,26 +105,26 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    
+    &__social-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        height: 30vh;
+        margin: 0px 15px;
+        font-size: 24px;
+    }
 
+    &__socials {
+        text-decoration: none;
+        padding: 0px 40px;
+        color: $color-white;
+    }
 }
 
-.social-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    height: 30vh;
-    margin: 0px 15px;
-    font-size: 24px;
-}
-
-.socials {
-    text-decoration: none;
-    padding: 0px 40px;
-    color: $color-white;
-}
 
 
 //BEM STYLING FOR SKILLS SECTION

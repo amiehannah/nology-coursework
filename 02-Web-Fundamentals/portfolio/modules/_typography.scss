@@ -2,16 +2,19 @@
 // This file contains all typography styling.
 // -----------------------------------------------------------------------------
 
-h1 {
-    padding: 40px 20px;
-    font-family: $font-script;
-    font-size: 20px;
-    letter-spacing: .1em;
-    font-weight: 10;
-    text-transform: lowercase;
-    font-style: italic;
-    color: $color-white;
- }
+.header {
+    &__hero-header {
+        padding: 40px 20px;
+        font-family: $font-script;
+        font-size: 20px;
+        letter-spacing: .1em;
+        font-weight: 10;
+        text-transform: lowercase;
+        font-style: italic;
+        color: $color-white;
+    }
+}
+
 
 h2 {
     font-family: $font-script;
@@ -22,13 +25,17 @@ h2 {
     margin: 100px 60px 80px 60px;
 }
 
+
 h3 {
     color: $color-black;
 }
 
+
 h4 {
     color: $color-black;
 }
+
+
 
 h5 {
     font-family: $font-script;
@@ -38,12 +45,15 @@ h5 {
     color: $color-white;
 }
 
-h6 {
-    font-size: 10px;
-    color: $color-white;
-    text-align: center;
-    background-color: transparent;
+.section-footer {
+    &__h6 {
+        font-size: 10px;
+        color: $color-white;
+        text-align: center;
+        background-color: transparent;
+    }    
 }
+
 
 
 //BEM SKILLS TYPOGRAPHY
@@ -153,15 +163,6 @@ h6 {
     }
 }
 
-// need to check what this is styling??
-.h5-list {
-    font-family: $font-script;
-    font-size: $font-size-header;
-    font-style: italic;
-    font-weight: 300;
-    color: $color-black;
-    padding: 20px;
-}
 
 
 
@@ -205,22 +206,22 @@ h6 {
     }
 
     &__h4-prj2 {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 300;
         font-style: italic; 
     }
     &__h4-prj3 {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 300;
         font-style: italic; 
     }
     &__h4-prj4 {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 300;
         font-style: italic; 
     }
     &__h4-prj5 {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 300;
         font-style: italic; 
     }

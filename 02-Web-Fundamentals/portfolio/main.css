@@ -31,33 +31,16 @@ $breakpoints: (
   font-family: "Montserrat", sans-serif;
 }
 
-.logo-top {
+.header__logo-top {
   width: auto;
   height: 15vh;
   padding-top: 40px;
 }
-
-.logo-hero {
+.header__logo-hero {
   width: auto;
   height: 50vh;
 }
-
-.logo-bkgrnd-fade {
-  height: 1014px;
-  position: absolute;
-  top: 211.04%;
-  right: -6%;
-  opacity: 0.2;
-  /*z-index: ask the coaches about this ;*/
-}
-
-.logo-footer {
-  width: 15vh;
-  height: 15vh;
-  padding-bottom: 20px;
-}
-
-.icon {
+.header__icon {
   border: solid #f5f5f5;
   border-width: 0 1px 1px 0;
   display: inline-block;
@@ -69,7 +52,21 @@ $breakpoints: (
   -webkit-transform: rotate(45deg);
 }
 
-.button-up {
+.logo-bkgrnd-fade {
+  height: 1014px;
+  position: absolute;
+  top: 211.04%;
+  right: -6%;
+  opacity: 0.2;
+  /*z-index: ask the coaches about this ;*/
+}
+
+.section-footer__logo-footer {
+  width: 15vh;
+  height: 15vh;
+  padding-bottom: 20px;
+}
+.section-footer__button-up {
   height: 60px;
   width: 60px;
   background-color: transparent;
@@ -80,15 +77,13 @@ $breakpoints: (
   justify-content: center;
   align-items: center;
 }
-
-.arrow {
+.section-footer__arrow {
   border: solid #f5f5f5;
   border-width: 0 1px 1px 0;
   padding: 8px;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
   display: inline-block;
-  /*might need a help with this!*/
 }
 
 /*  .scroll-wrapper {
@@ -128,16 +123,7 @@ $breakpoints: (
   height: 100vh;
   background: linear-gradient(90deg, #415E6C 1.65%, #87B0B9 100%);
 }
-
-.container-hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10vh;
-}
-
-.top-nav {
+.header__top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -148,8 +134,14 @@ $breakpoints: (
   padding: 50px 40px;
   font-size: 14px;
 }
-
-.nav {
+.header__container-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh;
+}
+.header__nav {
   text-decoration: none;
   padding: 0px 40px;
   color: #f5f5f5;
@@ -200,7 +192,7 @@ $breakpoints: (
   background: #f5f5f5;
 }
 
-.container-footer {
+.section-footer {
   width: 100%;
   height: 100vh;
   background: linear-gradient(90deg, #415E6C 1.65%, #87B0B9 100%);
@@ -209,8 +201,7 @@ $breakpoints: (
   justify-content: space-evenly;
   align-items: center;
 }
-
-.social-links {
+.section-footer__social-links {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -221,8 +212,7 @@ $breakpoints: (
   margin: 0px 15px;
   font-size: 24px;
 }
-
-.socials {
+.section-footer__socials {
   text-decoration: none;
   padding: 0px 40px;
   color: #f5f5f5;
@@ -417,7 +407,7 @@ figure {
   padding: 10px;
 }
 
-h1 {
+.header__hero-header {
   padding: 40px 20px;
   font-family: "Source Serif Pro", serif;
   font-size: 20px;
@@ -453,7 +443,7 @@ h5 {
   color: #f5f5f5;
 }
 
-h6 {
+.section-footer__h6 {
   font-size: 10px;
   color: #f5f5f5;
   text-align: center;
@@ -549,15 +539,6 @@ h6 {
   color: #000000;
 }
 
-.h5-list {
-  font-family: "Source Serif Pro", serif;
-  font-size: 36px;
-  font-style: italic;
-  font-weight: 300;
-  color: #000000;
-  padding: 20px;
-}
-
 .section-projects__h3 {
   font-family: "Source Serif Pro", serif;
   font-size: 36px;
@@ -594,22 +575,22 @@ h6 {
   font-style: italic;
 }
 .section-projects__h4-prj2 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   font-style: italic;
 }
 .section-projects__h4-prj3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   font-style: italic;
 }
 .section-projects__h4-prj4 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   font-style: italic;
 }
 .section-projects__h4-prj5 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   font-style: italic;
 }

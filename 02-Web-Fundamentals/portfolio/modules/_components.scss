@@ -2,35 +2,19 @@
 // This file contains all styles related to the components.
 // -----------------------------------------------------------------------------
 
-// logos
-.logo-top {
-    width: auto;
-    height: 15vh;
-    padding-top: 40px;
-    }
-    
-    .logo-hero {
+.header {
+    &__logo-top {
+        width: auto;
+        height: 15vh;
+        padding-top: 40px;
+        }
+
+    &__logo-hero {
         width: auto;
         height: 50vh;
     }
-    
-    .logo-bkgrnd-fade {
-        height: 1014px;
-        position: absolute;
-        top: 211.04%;
-        right: -6%;
-        opacity: 0.2;
-        /*z-index: ask the coaches about this ;*/
-    }
-    
-    .logo-footer{
-        width: 15vh;
-        height: 15vh;
-        padding-bottom: 20px;
-    }
 
-    // buttons 
-    .icon {
+    &__icon {
         border: solid $color-white;
         border-width: 0 1px 1px 0;
         display: inline-block;
@@ -41,31 +25,49 @@
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
       }
+}
 
-
-    .button-up {
-        height: 60px;
-        width: 60px;
-        background-color: transparent;
-        border: solid $color-white;
-        border-width: 1px;
-        border-radius: 50%;
-        // how to align an item centrally within another div use this
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  
+    .logo-bkgrnd-fade {
+        height: 1014px;
+        position: absolute;
+        top: 211.04%;
+        right: -6%;
+        opacity: 0.2;
+        /*z-index: ask the coaches about this ;*/
     }
     
-    .arrow {
-        border: solid $color-white;
-        border-width: 0 1px 1px 0;
-        padding: 8px;
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-        display: inline-block;
-        /*might need a help with this!*/
+
+    .section-footer {
+        &__logo-footer {
+            width: 15vh;
+            height: 15vh;
+            padding-bottom: 20px;
+        }
+
+        &__button-up {
+            height: 60px;
+            width: 60px;
+            background-color: transparent;
+            border: solid $color-white;
+            border-width: 1px;
+            border-radius: 50%;
+            // how to align an item centrally within another div use this
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        &__arrow {
+            border: solid $color-white;
+            border-width: 0 1px 1px 0;
+            padding: 8px;
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+            display: inline-block;
+        }
     }
-    
+  
 
     // styling in SCSS for the SCROLL BAR THING
 /*  .scroll-wrapper {
