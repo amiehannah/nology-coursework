@@ -2,6 +2,7 @@
 // This file contains all styles related to the layout of the site/application.
 // -----------------------------------------------------------------------------
 
+// header
 .header {
     width: 100%;
     height: 100vh;
@@ -37,11 +38,7 @@
 
 
 
-
-
-
-
-//BEM INTRO - about section
+// intro
 .intro {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -127,7 +124,7 @@
 
 
 
-//BEM STYLING FOR SKILLS SECTION
+// skills section
 .skills {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -198,7 +195,7 @@
 
 
 
-//BEM PROJECT LIST
+// project list section
 .nav-project {
     display: grid;
     background-color: $color-green;
@@ -211,7 +208,7 @@
 }
 
 
-// BEM PROJECT SECTION 
+// project example section
 .section-projects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

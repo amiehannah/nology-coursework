@@ -2,12 +2,13 @@
 // This file contains all styles related to the components.
 // -----------------------------------------------------------------------------
 
+// header components 
 .header {
     &__logo-top {
         width: auto;
         height: 15vh;
         padding-top: 40px;
-        }
+    }
 
     &__logo-hero {
         width: auto;
@@ -24,52 +25,62 @@
         padding: 8px;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
-      }
+    }
 }
 
-  
-    .logo-bkgrnd-fade {
-        height: 1014px;
-        position: absolute;
-        top: 211.04%;
-        right: -6%;
-        opacity: 0.2;
-        /*z-index: ask the coaches about this ;*/
+
+.logo-bkgrnd-fade {
+    height: 1014px;
+    position: absolute;
+    top: 211.04%;
+    right: -6%;
+    opacity: 0.2;
+}
+
+// footer components
+.section-footer {
+    &__logo-footer {
+        width: 15vh;
+        height: 15vh;
+        padding-bottom: 20px;
     }
-    
 
-    .section-footer {
-        &__logo-footer {
-            width: 15vh;
-            height: 15vh;
-            padding-bottom: 20px;
-        }
-
-        &__button-up {
-            height: 60px;
-            width: 60px;
-            background-color: transparent;
-            border: solid $color-white;
-            border-width: 1px;
-            border-radius: 50%;
-            // how to align an item centrally within another div use this
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        &__arrow {
-            border: solid $color-white;
-            border-width: 0 1px 1px 0;
-            padding: 8px;
-            transform: rotate(-135deg);
-            -webkit-transform: rotate(-135deg);
-            display: inline-block;
-        }
+    &__button-up {
+        height: 60px;
+        width: 60px;
+        background-color: transparent;
+        border: solid $color-white;
+        border-width: 1px;
+        border-radius: 50%;
+        // how to align an item centrally within another div use this
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-  
 
-    // styling in SCSS for the SCROLL BAR THING
+    &__arrow {
+        border: solid $color-white;
+        border-width: 0 1px 1px 0;
+        padding: 8px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        display: inline-block;
+    }
+}
+
+
+// project list styling
+.nav-project {
+    &__line {
+        height: 1px;
+        background: $color-black;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+
+// styling in SCSS for the SCROLL BAR THING
 /*  .scroll-wrapper {
             display: flex;
             justify-content: flex-end;
@@ -95,14 +106,3 @@
             width: 1px;
         } 
 */
-
-    //project list styling
-    
-    .nav-project {
-        &__line {
-            height: 1px;
-            background: $color-black;
-            grid-column-start: 1;
-            grid-column-end: 3; 
-        }
-    }

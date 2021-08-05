@@ -2,6 +2,7 @@
 // This file contains all typography styling.
 // -----------------------------------------------------------------------------
 
+// styling for header
 .header {
     &__hero-header {
         padding: 40px 20px;
@@ -15,7 +16,7 @@
     }
 }
 
-
+// styling for titles
 h2 {
     font-family: $font-script;
     font-size: $font-size-title;
@@ -26,37 +27,27 @@ h2 {
 }
 
 
-h3 {
-    color: $color-black;
-}
-
-
-h4 {
-    color: $color-black;
-}
-
-
-
-h5 {
-    font-family: $font-script;
-    font-size: 25px;
-    font-style: italic;
-    font-weight: 300;
-    color: $color-white;
-}
-
+// styling for footer section
 .section-footer {
     &__h6 {
         font-size: 10px;
         color: $color-white;
         text-align: center;
         background-color: transparent;
-    }    
+    }   
+    
+    &__h5 {
+        font-family: $font-script;
+        font-size: 25px;
+        font-style: italic;
+        font-weight: 300;
+        color: $color-white;
+    }
 }
 
 
 
-//BEM SKILLS TYPOGRAPHY
+// styling for skills section
 .skills {
     &__p-number {
     font-size: $font-size-header;
@@ -121,7 +112,7 @@ h5 {
 }
 
 
-//NEW BEM STYLING FOR PROJECT LIST
+// styling for project list fonts
 .nav-project {
     &__title {
         grid-column-start: 1;
@@ -166,8 +157,16 @@ h5 {
 
 
 
-//styling for project examples BEM - h3 / h4 / figcaption elements
+// styling for project examples elements- h3 / h4 / figcaption elements
 .section-projects { 
+    h3 {
+        color: $color-black;
+    }
+    
+    h4 {
+        color: $color-black;
+    }
+    
     &__h3 {
         font-family: $font-script;
         font-size: $font-size-header;
