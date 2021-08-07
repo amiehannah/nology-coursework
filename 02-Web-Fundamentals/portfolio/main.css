@@ -31,6 +31,10 @@ $breakpoints: (
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header__logo-top {
   width: auto;
   height: 15vh;

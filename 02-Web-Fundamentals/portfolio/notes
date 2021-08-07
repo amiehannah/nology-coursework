@@ -3,12 +3,11 @@
     Actions post bug fix
 
 - [ ] Large logo Amend in illustrator and import. It’s easier to create your images outside of CSS￼ ￼
-- [ ] Transitions when jumping around the page
 - [ ] Make it responsive
 
 
 
 - [ ] what are lazyloaded images? below the fold they load only when the user scrolls saving load time.
- - [ ]cool typewriter effect 
+ - [ ] cool typewriter effect 
     https://www.w3schools.com/howto/howto_js_typewriter.asp
 could this be used on 'junior software developer in the header section?

@@ -7,3 +7,8 @@
     box-sizing: border-box;
     font-family: $font-body;
 }
+
+// scroll behaviour 
+html {
+    scroll-behavior: smooth;
+}
