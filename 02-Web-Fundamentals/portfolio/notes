@@ -4,10 +4,117 @@
 
 - [ ] Large logo Amend in illustrator and import. It’s easier to create your images outside of CSS￼ ￼
 - [ ] Make it responsive
+- [ ] In read me add description of my process / challenges / snippets i'm proud of
 
+<div class="page-transition" style="opacity: 0; visibility: hidden;"></div>
 
 
 - [ ] what are lazyloaded images? below the fold they load only when the user scrolls saving load time.
  - [ ] cool typewriter effect 
     https://www.w3schools.com/howto/howto_js_typewriter.asp
 could this be used on 'junior software developer in the header section?
+
+
+
+// mobile view comments
+- [ ] add in variables for font size amends for mobile view / tablet view / desktop view
+- [ ] build a burger menu for the mobile view
+- [ ] what am i doing about desktop view - burger menu vs. text
+
+For iPhone
+@media screen and (min-width: 480px){}
+
+For tablets
+@media screen and (min-width: 768px){}
+
+For desktop
+@media screen and (min-width: 991px) {}
+
+
+// PROJECT LIST SORTING OUT
+html:
+<p class="nav-project__number">1
+<a href="#work-1" class="nav-project__heading">Title 1</a>
+</p>
+<div class="nav-project__line"></div>
+
+.nav-project__title {
+    /* grid-column-start: 1; */
+    /* grid-column-end: 3; */
+    font-family: "Source Serif Pro", serif;
+    font-size: 2.25rem;
+    font-style: italic;
+    margin: 1.5rem;
+    text-align: left;
+
+.nav-project__number {
+    display: flex;
+    font-family: "Source Serif Pro", serif;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: 5.625rem;
+    letter-spacing: 0em;
+    /* text-align: center; */
+    color: #439A86;
+    padding: 2vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+
+.nav-project__heading {
+    /* display: flex; */
+    font-family: "Source Serif Pro", serif;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0vw 10vw;
+    /* line-height: 5.625rem; */
+    /* letter-spacing: 0em; */
+    /* text-align: center; */
+    text-decoration: none;
+    color: #191919;
+    /* flex-wrap: nowrap; */
+    /* flex-direction: column; */
+    /* align-content: space-around; */
+    /* align-items: stretch; */
+    /* justify-content: center; */
+}
+
+
+//styling for the logo-footer mobile view
+.section-footer__logo-footer {
+    width: 11vh;
+    /* height: 15vh; */
+    padding-bottom: 20px;
+}
+
+
+.section-footer__button-up {
+    height: 45px;
+    width: 45px;
+    background-color: transparent;
+    border: solid #f5f5f5;
+    border-width: 1px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-footer__arrow {
+    border: solid #f5f5f5;
+    border-width: 0 0.5px 0.5px 0;
+    padding: 5px;
+    transform: rotate(
+-135deg
+);
+    -webkit-transform: rotate(
+-135deg
+);
+    display: inline-block;

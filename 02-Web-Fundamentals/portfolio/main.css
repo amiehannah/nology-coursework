@@ -35,6 +35,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/*
+@media (min-width)
+
+@media screen and (max-width: 550px) {
+    section {
+       grid-template-columns: 1fr; //all divs will stack, one on top of each other once the screen size is reduced to 550px or less
+    }
+}
+*/
 .header__logo-top {
   width: auto;
   height: 15vh;
@@ -70,8 +79,8 @@ html {
   padding-bottom: 20px;
 }
 .section-footer__button-up {
-  height: 60px;
-  width: 60px;
+  height: 45px;
+  width: 45px;
   background-color: transparent;
   border: solid #f5f5f5;
   border-width: 1px;
@@ -83,7 +92,7 @@ html {
 .section-footer__arrow {
   border: solid #f5f5f5;
   border-width: 0 1px 1px 0;
-  padding: 8px;
+  padding: 5px;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
   display: inline-block;
@@ -165,7 +174,7 @@ html {
   color: #191919;
   font-family: "Source Serif Pro", serif;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-style: italic;
   text-transform: none;
   margin: auto;
@@ -174,11 +183,11 @@ html {
 .intro__strong {
   font-weight: bold;
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 .intro__p {
   color: #191919;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: center;
   margin: auto;
   line-height: 1.75;
@@ -424,7 +433,7 @@ figure {
 
 h2 {
   font-family: "Source Serif Pro", serif;
-  font-size: 144px;
+  font-size: 9rem;
   font-weight: 300;
   font-style: italic;
   color: #191919;
@@ -446,7 +455,7 @@ h2 {
 }
 
 .skills__p-number {
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 400;
   font-style: normal;
   margin: 10px;
@@ -455,46 +464,46 @@ h2 {
 }
 .skills__p-heading {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 400;
   font-style: italic;
 }
 .skills__p-heading-2 {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 400;
   font-style: italic;
 }
 .skills__p-heading-3 {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 400;
   font-style: italic;
 }
 .skills__p-heading-4 {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 400;
   font-style: italic;
 }
 .skills__p-description {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.75;
 }
 .skills__p-description-2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.75;
 }
 .skills__p-description-3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.75;
 }
 .skills__p-description-4 {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.75;
 }
 
@@ -502,19 +511,19 @@ h2 {
   grid-column-start: 1;
   grid-column-end: 3;
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-style: italic;
   margin: 25px;
   text-align: left;
 }
 .nav-project__span {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: bold;
 }
 .nav-project__number {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-style: normal;
   font-weight: 1000;
   line-height: 90px;
@@ -524,7 +533,7 @@ h2 {
 }
 .nav-project__heading {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-style: normal;
   font-weight: 300;
   line-height: 90px;
@@ -542,31 +551,31 @@ h2 {
 }
 .section-projects__h3 {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 500;
   font-style: italic;
 }
 .section-projects__h3-prj2 {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 500;
   font-style: italic;
 }
 .section-projects__h3-prj3 {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 500;
   font-style: italic;
 }
 .section-projects__h3-prj4 {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 500;
   font-style: italic;
 }
 .section-projects__h3-prj5 {
   font-family: "Source Serif Pro", serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 500;
   font-style: italic;
 }

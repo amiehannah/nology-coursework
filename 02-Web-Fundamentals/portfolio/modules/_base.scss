@@ -12,3 +12,16 @@
 html {
     scroll-behavior: smooth;
 }
+
+
+
+// media queries
+/*
+@media (min-width)
+
+@media screen and (max-width: 550px) {
+    section {
+       grid-template-columns: 1fr; //all divs will stack, one on top of each other once the screen size is reduced to 550px or less
+    }
+}
+*/
