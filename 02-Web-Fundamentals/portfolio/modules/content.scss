@@ -1,0 +1,502 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the content of the site/application.
+// -----------------------------------------------------------------------------
+
+// STYLING FOR THE SCROLL BAR THING
+/*  .scroll-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            position: sticky;
+            top: 0;
+        }
+        .scroll-element {
+            writing-mode: vertical-rl;
+            display: flex;
+            align-items: center;
+        }
+        .scroll {
+            text-transform: uppercase;
+            font-size: $font-size-regular;
+            font-weight: 400;
+            color: $color-black;
+            letter-spacing: 0.2em;
+            padding: 12px;
+        }
+        .scroll-line {
+            height: 120px;
+            background: $color-black;
+            width: 1px;
+        } 
+*/
+
+
+
+
+// MAIN CONTAINER STYLING
+.main-content {
+    width: 100%;
+    background: $color-white;
+    padding-bottom: 20vh;
+}
+
+
+// INTRO STYLING
+.intro {
+    display: flex;
+    // grid-template-columns: 1fr 2fr 1fr;
+    // grid-template-rows: repeat(2, 260px);
+    padding: 80px;
+    grid-gap: 50px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+        padding: 100px 150px;
+    }
+
+
+    &__h1 {
+        //transform: rotate(-90deg);
+        color: $color-black;
+        font-family: $font-script;
+        font-weight: 400;
+        font-size: $font-size-header;
+        font-style: italic;
+        text-transform: none;
+        margin: auto;
+        padding: 0px;
+    }
+
+    &__strong {
+        font-weight: bold;
+        font-family: $font-script;
+        font-size: $font-size-header;
+    }
+
+    &__p {
+        color: $color-black;
+        font-size: $font-size-regular;
+        text-align: center;
+        margin: auto;
+        line-height: 1.75;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1rem;
+        }
+    }
+
+    &__img {
+        width: 24vh;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        justify-self: center;
+
+        @media screen and (min-width: 768px) {
+            width: 26vh;
+        }
+    }
+
+}
+
+
+// STYLING FOR TITLES 
+
+h2 {
+    font-family: "Source Serif Pro", serif;
+    font-size: 4rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #191919;
+    margin: 80px 20px 40px 60px;
+
+    @media screen and (min-width: 576px) {
+       font-size: 5rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 6rem;
+    }
+}
+
+
+// BACKGROUND LOGO - Fade 
+
+.logo-bkgrnd-fade {
+    height: 924px;
+    position: absolute;
+    top: 200%;
+    //top: 211.04%;
+    right: -3%;
+    opacity: 0.1;
+    z-index: 1;
+
+    @media screen and (min-width: 992px) {
+        height: 1200px;
+    }
+}
+
+
+
+// NEW SKILLS STYLING
+
+.col {
+    width: 275px;
+    background-color: $color-green;
+    padding: 1em;
+}
+
+
+.content-skills {
+    display: flex;  
+    flex-flow: row wrap;
+    //@at-root: 75%;
+    margin: auto;
+    gap: 1em;
+    flex-direction: column;
+    align-content: center;
+    padding-bottom: 20vh;
+
+
+    @media screen and (min-width: 610px) {
+        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+
+    @media screen and (max-width: 856px) {
+// QUESTION - once it hits 857px it creates 3 boxes across in a row and then one box underneath until the screen size big enough to accomodate all 4 boxes
+//is there a way to tell flexbox to keep it in a 2x2 layout until it is able to lay all 4 boxes together?
+// Also at mobile view is there a way to create a card layout, where you click and toggle through each skill instead of displaying them as one long column?
+    }
+
+   @media screen and (min-width: 769px) {
+        flex-direction: row;
+        width: auto;
+     }
+
+
+     &__number {
+        font-size: $font-size-header;
+        font-weight: 400;
+        font-style: normal;
+        color: $color-black;
+        text-align: left;
+     }
+
+     &__header {
+        font-family: $font-script;
+        font-size: $font-size-header;
+        font-weight: 400;
+        font-style: italic;
+     }
+
+     &__description {
+        font-family: $font-body;
+        font-size: $font-size-regular;
+        line-height: 1.75;
+     }
+}
+
+
+
+
+// STYLING FOR PROJECT LIST FONTS
+.nav-project {
+    display: none; // at mobile view this is hidden
+
+    @media screen and (min-width: 768px) {
+        .nav-project {
+            display: block;
+            display: grid;
+            background-color: rgba(135, 176, 185, 0.1);
+            width: 25vw;
+            grid-template-columns: 1fr 4fr;
+            margin: 40px 100px;
+
+
+            &__title {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                font-family: $font-script;
+                font-size: $font-size-header;
+                font-style: italic;
+                margin: 25px;
+                text-align: left;
+            }
+
+            &__span {
+                font-family: $font-script;
+                font-size: $font-size-header;
+                font-weight: bold;
+            }
+
+            &__number {
+                font-family: $font-script;
+                font-size: $font-size-header;
+                font-style: normal;
+                font-weight: 1000;
+                line-height: 90px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #439A86;
+            }
+
+            &__heading {
+                font-family: $font-script;
+                font-size: $font-size-header;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 90px;
+                letter-spacing: 0em;
+                text-align: left;
+                text-decoration: none;
+                color: $color-black;
+            }
+
+            &__line {
+                height: 1px;
+                background: $color-black;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+//PROJECT SECTION
+
+//hover effect on figure element
+figure:hover h3 {
+    opacity: 0.2;
+    transition: 0.2s ease-in-out;
+}
+
+figure:hover h4 {
+    opacity: 0.2;
+    transition: 0.2s ease-in-out;
+}
+
+
+.content-projects {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: auto;
+    gap: 1em 1em;
+
+    @media screen and (min-width: 768px) {
+        width: 70%;
+        gap: 4em 1em;
+    }
+
+    @media screen and (min-width: 992px) {
+        gap: 8em 1em;
+        width: 70%;
+    }
+
+
+    &__figure {
+        background-color: $color-green;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 576px) {
+            height: 35vh;
+        }
+
+        @media screen and (min-width: 768px) {
+            height: 40vh;
+        }
+
+        @media screen and (min-width: 992px) {
+            height: 55vh;
+        }
+    }
+
+    &__caption {
+        font-size: 12px;
+        font-weight: 400;
+        font-style: normal;
+        padding-bottom: 60px;
+
+        @media screen and (min-width: 576px) {
+            font-size: $font-size-regular;
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-bottom: 0px;
+            font-size: $font-size-regular;
+        }
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+            margin: 1em;
+        }
+    }
+
+    h3 {
+        color: $color-black;
+        font-family: $font-script;
+        font-size: 2rem;
+        font-weight: 500;
+        font-style: italic;
+
+        @media screen and (min-width: 768px) {
+            font-size: $font-size-header;
+        }
+
+    }
+
+    h4 {
+        color: $color-black;
+        font-size: 18px;
+        font-weight: 300;
+        font-style: italic;
+        padding-bottom: 0.5em;
+
+        @media screen and (min-width: 576px) {
+            font-size: 20px;
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-bottom: 1em;
+            font-size: 22px;
+        }
+        
+    }
+}
+
+
+/*figure project 1*/
+.content-projects>*:nth-child(1) {
+    flex: 1 1 100%;
+
+    @media screen and (min-width:769px) {
+        flex: 1 1 65%;
+    }
+}
+/*col box 1*/
+.content-projects>*:nth-child(2) {
+    flex: 1 1 100%;
+
+    @media screen and (min-width:769px) {
+        flex: 1 1 25%;
+    }
+}
+
+
+
+/*col box 2*/
+.content-projects>*:nth-child(3) {
+    flex: 1 1 100%;
+
+    @media screen and (min-width:769px) {
+        flex: 1 1 25%;
+    }
+}
+
+/*figure project 2*/
+.content-projects>*:nth-child(4) {
+    flex: 1 1 100%;
+
+    @media screen and (min-width:769px) {
+        flex: 1 1 65%;
+    }
+}
+
+/*figure project 3*/
+.content-projects>*:nth-child(5) {
+    flex: 1 1 100%;
+
+    @media screen and (min-width:769px) {
+        flex: 1 1 65%;
+    }
+}
+
+/*col box 3*/
+.content-projects>*:nth-child(6) {
+    flex: 1 1 100%;
+
+    @media screen and (min-width:769px) {
+        flex: 1 1 25%;
+    }
+}
+
+/*col box 4*/
+.content-projects>*:nth-child(7) {
+    flex: 1 1 100%;
+
+    @media screen and (min-width:769px) {
+        flex: 1 1 25%;
+    }
+}
+
+/*figure project 4*/
+.content-projects>*:nth-child(8) {
+    flex: 1 1 100%;
+
+    @media screen and (min-width:769px) {
+        flex: 1 1 65%;
+    }
+}
+
+/*figure project 5*/
+.content-projects>*:nth-child(9) {
+    flex: 1 1 100%;
+
+    @media screen and (min-width:769px) {
+        flex: 1 1 65%;
+    }
+}
+
+/*col box 5*/
+.content-projects>*:nth-child(10) {
+    flex: 1 1 100%;
+
+    @media screen and (min-width:769px) {
+        flex: 1 1 25%;
+    }
+}
+
+// ORDERING BOX ELEMENTS AT TABLET AND MOBILE VIEW
+.content-projects :nth-child(1) { order: 1; }
+.content-projects :nth-child(2) { order: 2; }
+.content-projects :nth-child(3) { order: 4; }
+.content-projects :nth-child(4) { order: 3; }
+.content-projects :nth-child(5) { order: 5; }
+.content-projects :nth-child(6) { order: 6; }
+.content-projects :nth-child(7) { order: 8; }
+.content-projects :nth-child(8) { order: 7; }
+.content-projects :nth-child(9) { order: 9; }
+.content-projects :nth-child(10) { order: 10; }
+
+@media screen and (min-width:769px) {
+    .content-projects :nth-child(1) { order: 1; }
+    .content-projects :nth-child(2) { order: 2; }
+    .content-projects :nth-child(3) { order: 3; }
+    .content-projects :nth-child(4) { order: 4; }
+    .content-projects :nth-child(5) { order: 5; }
+    .content-projects :nth-child(6) { order: 6; }
+    .content-projects :nth-child(7) { order: 7; }
+    .content-projects :nth-child(8) { order: 8; }
+    .content-projects :nth-child(9) { order: 9; }
+    .content-projects :nth-child(10) { order: 10; }
+}
+
+
