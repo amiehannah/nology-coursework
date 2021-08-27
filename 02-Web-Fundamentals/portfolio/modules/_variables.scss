@@ -22,39 +22,26 @@ $font-script: "Source Serif Pro", serif;
 $font-size-header: 2.25rem;
 
 /// Title font size 144px
-$font-size-title: 9rem;
+$font-size-title: 5rem;
 
-/// colour - white
+/// Colour - white
 $color-white: #f5f5f5;
 
-/// colour - black
+/// Colour - black
 $color-black: #191919;
 
-/// colour - linear gradient
+/// Colour - linear gradient
 $color-gradient: linear-gradient(90deg, #415E6C 1.65%, #87B0B9 100%); 
 
-///colour - green transparent
+/// Colour - green transparent
 $color-green: rgba(135, 176, 185, 0.1);
 
 a:link,
 a:visited {
-    text-decoration: none;
+     text-decoration: none;
 }
 
-
-/*
-/// Container's maximum width
-/// @type Length
-$max-width: 1180px !default;
-
-
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
-
-*/
+a:hover {
+  opacity: 0.25;
+  transition: 0.2s ease-in;
+}

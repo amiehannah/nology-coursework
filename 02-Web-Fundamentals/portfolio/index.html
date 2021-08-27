@@ -11,27 +11,29 @@
 </head>
 
 <body>
-
-   
-    <!--Header-->
-    <header id="top">
-        <section class="header">
-            <nav class="header__top-nav">
-                <img class="header__logo-top" src="assets/logo-main-ws.svg" alt="Amie Edwards">
-                <div id="header__nav-links">
-                    <a class="header__nav" href="#work">work</a>
-                    <a class="header__nav" href="#about">about</a>
-                    <a class="header__nav" href="#contact">contact</a>
-                </div>
+ 
+    <!--Header and navigation-->
+    <section class="section-wrapper-header">
+        <header id="top" class="header">
+            <img class="header__logo-top" src="assets/logo-main-ws.svg" alt="Amie Edwards">
+            <nav>
+                <ul>
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
             </nav>
-            <section class="header__container-hero">
-                <!--hero logo-->
-                <img class="header__logo-hero" src="assets/logo-main-hero.svg" alt="Amie Edwards">
-                <h1 class="header__hero-header">Junior Software Developer</h1>
-            </section>
-            <a class="header__icon" href="#arrow-down"></a>
+        </header>
+
+        <section class="hero__container-hero">
+            <!--hero logo-->
+            <img class="hero__logo-hero" src="assets/logo-main-hero.svg" alt="Amie Edwards">
+            <h1 class="hero__hero-header">Junior Software Developer</h1>
+            <a class="hero__icon" href="#arrow-down"></a>
         </section>
-    </header>
+    </section>
+
+
 
     <main id="about" main class="main-content">
 
@@ -45,7 +47,7 @@
     -->
 
         <!--Intro-->
-        <section class="intro">
+        <section id="arrow-down" class="intro">
             <h1 class="intro__h1">About <strong class="intro__strong">Me</strong></h1>
             <p class="intro__p">I've been working as a menswear designer within the fashion industry and I'm currently
                 studying to be a junior developer with _nology. <br>
@@ -53,40 +55,56 @@
             <img class="intro__img" src="assets/20FBB624AFD157BE.png" alt="picture of Amie">
         </section>
 
-
+    
         <h2>Skills</h2>
+        <!--Skills section -->
+         <section class="content-flow">
+            <section class="content-skills">
+                <div class="col">
+                    <p class="content-skills__number">01</p>
+                    <p class="content-skills__header">Header</p>
+                    <p class="content-skills__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+                        dolor
+                        sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit, deleniti,
+                        fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis adipisci
+                        mollitia harum nulla?</p>
+                </div>
+                <div class="col">
+                    <p class="content-skills__number">02</p>
+                    <p class="content-skills__header">Header</p>
+                    <p class="content-skills__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+                        dolor
+                        sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit, deleniti,
+                        fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis adipisci
+                        mollitia harum nulla?</p>
+                </div>
+                <div class="col">
+                    <p class="content-skills__number">03</p>
+                    <p class="content-skills__header">Header</p>
+                    <p class="content-skills__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+                        dolor
+                        sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit, deleniti,
+                        fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis adipisci
+                        mollitia harum nulla?</p>
+                </div>
+                <div class="col">
+                    <p class="content-skills__number">04</p>
+                    <p class="content-skills__header">Header</p>
+                    <p class="content-skills__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+                        dolor
+                        sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit, deleniti,
+                        fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis adipisci
+                        mollitia harum nulla?</p>
+                </div>
+            </section>
+        </section> 
 
-        <!--Skills-->
-        <section class="skills">
-            <p class="skills__p-number">01</p>
-            <p class="skills__p-heading">Header</p>
-            <p class="skills__p-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor
-                sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit, deleniti,
-                fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis adipisci
-                mollitia harum nulla?</p>
-            <p class="skills__p-number">02</p>
-            <p class="skills__p-heading-2">Header</p>
-            <p class="skills__p-description-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit,
-                deleniti, fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis
-                adipisci mollitia harum nulla?</p>
-            <p class="skills__p-number">03</p>
-            <p class="skills__p-heading-3">Header</p>
-            <p class="skills__p-description-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit,
-                deleniti, fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis
-                adipisci mollitia harum nulla?</p>
-            <p class="skills__p-number">04</p>
-            <p class="skills__p-heading-4">Header</p>
-            <p class="skills__p-description-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. <br> Eveniet perspiciatis distinctio cum vero sit,
-                deleniti, fuga, dolorum possimus doloribus eos eligendi. Provident impedit ad aspernatur blanditiis
-                adipisci mollitia harum nulla?</p>
-        </section>
+
+       
 
 
-        <!--Project list-->
-        <nav id="work" nav class="nav-project">
+        <!--Project list - REMOVED IN MOBILE VIEW -->
+        <nav class="nav-project">
             <p class="nav-project__title">Project <span class="nav-project__span">List</span></p>
             <p class="nav-project__number">1</p>
             <a href="#work-1" class="nav-project__heading">Title 1</a>
@@ -106,48 +124,62 @@
         </nav>
 
 
-        <h2>Projects</h2>
-        <!--logo fade was here-->
+
+        <h2 id="work">Projects</h2>
+        <!--Background logo - fade-->
         <img class="logo-bkgrnd-fade" src="assets/half-logo-fade-01.svg" alt="Amie Edwards">
 
 
-        <!--Project Section-->
-        <section class="section-projects">
-            <figure id="work-1" class="section-projects__fig1">
-                <!--<img src="pic_trulli.jpg" alt="Trulli">-->
-            </figure>
-            <h3 class="section-projects__h3">Header</h3>
-            <h4 class="section-projects__h4">Sub-heading</h4>
-            <figcaption class="section-projects__figcaption1">description lorem ipsum lorem ipsum lorem ipsum
-            </figcaption>
-            <figure id="work-2" class="section-projects__fig2">
-                <!--<img src="pic_trulli.jpg" alt="Trulli">-->
-            </figure>
-            <h3 class="section-projects__h3-prj2">Header</h3>
-            <h4 class="section-projects__h4-prj2">Sub-heading</h4>
-            <figcaption class="section-projects__figcaption2">description lorem ipsum lorem ipsum lorem ipsum
-            </figcaption>
-            <figure id="work-3" class="section-projects__fig3">
-                <!--<img src="pic_trulli.jpg" alt="Trulli">-->
-            </figure>
-            <h3 class="section-projects__h3-prj3">Header</h3>
-            <h4 class="section-projects__h4-prj3">Sub-heading</h4>
-            <figcaption class="section-projects__figcaption3">description lorem ipsum lorem ipsum lorem ipsum
-            </figcaption>
-            <figure id="work-4" class="section-projects__fig4">
-                <!--<img src="pic_trulli.jpg" alt="Trulli">-->
-            </figure>
-            <h3 class="section-projects__h3-prj4">Header</h3>
-            <h4 class="section-projects__h4-prj4">Sub-heading</h4>
-            <figcaption class="section-projects__figcaption4">description lorem ipsum lorem ipsum lorem ipsum
-            </figcaption>
-            <figure id="work-5" class="section-projects__fig5">
-                <!--<img src="pic_trulli.jpg" alt="Trulli">-->
-            </figure>
-            <h3 class="section-projects__h3-prj5">Header</h3>
-            <h4 class="section-projects__h4-prj5">Sub-heading</h4>
-            <figcaption class="section-projects__figcaption5">description lorem ipsum lorem ipsum lorem ipsum
-            </figcaption>
+        
+    
+ <!--Project Section-->
+        <section class="content-projects-wrapper">
+            <div class="content-projects">
+                <figure class="content-projects__figure">
+                    <h3>Header</h3>
+                </figure>
+                <div class="content-projects__col">
+                    <h4>Sub-heading</h4>
+                    <figcaption class="content-projects__caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ab itaque?
+                    </figcaption>
+                </div>
+
+                <div class="content-projects__col">
+                    <h4>Sub-heading</h4>
+                    <figcaption class="content-projects__caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ab itaque?
+                    </figcaption>
+                </div>
+                <figure class="content-projects__figure">
+                    <h3>Header</h3>
+                </figure>
+
+                <figure class="content-projects__figure">
+                    <h3>Header</h3>
+                </figure>
+                <div class="content-projects__col">
+                    <h4>Sub-heading</h4>
+                    <figcaption class="content-projects__caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ab itaque?
+                    </figcaption>
+                </div>
+
+                <div class="content-projects__col">
+                    <h4>Sub-heading</h4>
+                    <figcaption class="content-projects__caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ab itaque?
+                    </figcaption>
+                </div>
+                <figure class="content-projects__figure">
+                    <h3>Header</h3>
+                </figure>
+
+                <figure class="content-projects__figure">
+                    <h3>Header</h3>
+                </figure>
+                <div class="content-projects__col">
+                    <h4>Sub-heading</h4>
+                    <figcaption class="content-projects__caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ab itaque?
+                    </figcaption>
+                </div>
+            </div>
         </section>
 
 
@@ -157,10 +189,11 @@
 
     <!--Footer-->
     <footer>
-        <section id="arrow-down" section class="section-footer">
+        <section class="section-footer">
             <!--add in logo here-->
             <img class="section-footer__logo-footer" src="assets/logo-main-ws.svg" alt="Amie Edwards">
-            <h5 id="contact" class="section-footer__h5">Get in <br> Touch</h5>
+            <h5 id="contact" class="section-footer__h5">Get in touch</h5>
+            <div class="section-footer__line"></div>
 
             <div class="section-footer__social-links">
                 <a class="section-footer__socials" href="mailto:amie.edwards17@gmail.com">email</a>
@@ -178,3 +211,4 @@
 </body>
 
 </html>
+   
