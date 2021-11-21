@@ -1,0 +1,69 @@
+/* 
+NOTES 
+
+/* MAKE MOBILE FIRST DESIGN
+@media screen and (min-width: 768px) {
+  .intro {
+    flex-direction: column;
+    padding: 100px 150px;
+  }
+}
+
+
+/* styles */
+* {
+ margin: 0px;
+ padding: 0px; 
+ box-sizing: border-box;
+ font-family: 'Work Sans', sans-serif;
+font-size: 1.25rem;
+}
+
+.calculator__wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.calculator__container{
+  background-color: cornflowerblue;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  height: 75vh;
+  width: 55%;
+  border-radius: 30px;
+  /* GLASS EFFECT
+background-color: #ffffff10; 
+backdrop-filter: blur(12px); 
+-webkit-backdrop-filter: blur(12px);
+*/
+}
+
+.calculator__display{
+ grid-column-start: 1;
+ grid-column-end: 5;
+ height: 15vh;
+ border: 2px solid lightgray;
+ background-color: whitesmoke;
+ border-radius: 8px;
+}
+
+.span__two{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  ;
+}
+
+ .calculator__grid {
+   display: grid;
+   grid-gap:23px 12px;
+   align-content: center;
+   justify-content: center;
+   /* min-height: 100vh; */
+   grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 40px);
+}
+
