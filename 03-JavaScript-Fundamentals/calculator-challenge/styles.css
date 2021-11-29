@@ -1,3 +1,6 @@
+/* linking to external styles */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+
 /* 
 NOTES 
 
@@ -9,6 +12,10 @@ NOTES
   }
 }
 
+/* BUTTON STYLING - ON HOVER */
+/* RESPONSIVE DESIGN */
+/* FINALISE BACKGROUND */
+/* FINALISE BUTTON COLOURS / COLOUR SCHEME */
 
 /* styles */
 * {
@@ -17,6 +24,16 @@ NOTES
  box-sizing: border-box;
  font-family: 'Work Sans', sans-serif;
 font-size: 1.25rem;
+}
+
+body {
+  background: radial-gradient(circle, rgba(174,238,220,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+
+header h1 {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .calculator__wrapper{
@@ -28,30 +45,30 @@ font-size: 1.25rem;
 }
 
 .calculator__container{
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   display: flex;
 	align-items: center;
 	justify-content: center;
   height: 75vh;
   width: 55%;
   border-radius: 30px;
-  /* GLASS EFFECT
-background-color: #ffffff10; 
-backdrop-filter: blur(12px); 
--webkit-backdrop-filter: blur(12px);
-*/
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  background-color: #ffffff10; 
+  backdrop-filter: blur(12px); 
 }
 
 .calculator__display{
  grid-column-start: 1;
  grid-column-end: 5;
- height: 15vh;
- border: 2px solid lightgray;
+ /* height: 15vh; */
+ height: 5em;
+ /* border: 2px solid lightgray; */
  background-color: whitesmoke;
  border-radius: 8px;
+ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
 }
 
-.span__two{
+#zero {
   grid-column-start: 1;
   grid-column-end: 3;
   ;
@@ -64,6 +81,37 @@ backdrop-filter: blur(12px);
    justify-content: center;
    /* min-height: 100vh; */
    grid-template-columns: repeat(4, 80px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 40px);
+   grid-template-rows: minmax(120px, auto) repeat(5, 40px);
+
+  /* @media screen and (min-width: 768px) {
+   
+
+  } */
 }
 
+.calculator__btn, .calculator__btn-num {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #3e68ff;
+  color: E5E5E5;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+
+  padding: 0.25em 0.75em;
+  /* min-width: 10ch;
+  min-height: 44px; */
+  text-align: center;
+  line-height: 1.1;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
+}

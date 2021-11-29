@@ -4,46 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator Challenge</title>
+    <title> JS Calculator Challenge </title>
+    <!-- linking to style sheet -->
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap"
-      rel="stylesheet"
-    />
     <script src="script.js" async defer></script>
   </head>
   <body>
-    <section class="calculator__wrapper">
-      <section class="calculator__container">
-        <section class="calculator__grid">
-          <div class="calculator__display"></div>
-          <button>C</button>
-          <button>+/-</button>
-          <button>%</button>
-          <button>÷</button>
+    <main>
 
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>x</button>
+      <header>
+        <h1>JS Calculator Challenge</h1>
+      </header>
 
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>-</button>
+      <section class="calculator__wrapper">
+        <section class="calculator__container">
+          <section class="calculator__grid">
+            <div class="calculator__display">
+              <p class="calculator__output"></p>
+            </div>
+           
+            <button type="button" class="calculator__btn" id="clear">C</button>
+            <button type="button" class="calculator__btn" id="plus-minus">+/-</button>
+            <button type="button" class="calculator__btn" id="percentage">%</button>
+            <button type="button" class="calculator__btn" id="divide">÷</button>
 
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>+</button>
+            <button type="button" class="calculator__btn-num" id="seven">7</button>
+            <button type="button" class="calculator__btn-num" id="eight">8</button>
+            <button type="button" class="calculator__btn-num" id="nine">9</button>
+            <button type="button" class="calculator__btn" id="multiply">x</button>
 
-          <button class="span__two">0</button>
-          <button>.</button>
-          <button>=</button>
+            <button type="button" class="calculator__btn-num" id="four">4</button>
+            <button type="button" class="calculator__btn-num" id="five">5</button>
+            <button type="button" class="calculator__btn-num" id="six">6</button>
+            <button type="button" class="calculator__btn" id="subtract">-</button>
+
+            <button type="button" class="calculator__btn-num" id="one">1</button>
+            <button type="button" class="calculator__btn-num" id="two">2</button>
+            <button type="button" class="calculator__btn-num" id="three">3</button>
+            <button type="button" class="calculator__btn" id="add">+</button>
+
+            <button type="button" class="calculator__btn-num" id="zero">0</button>
+            <button type="button" class="calculator__btn" id="decimal">.</button>
+            <button type="button" class="calculator__btn" id="equals">=</button>
+          </section>
         </section>
       </section>
-    </section>
+    </main>
   </body>
 </html>
