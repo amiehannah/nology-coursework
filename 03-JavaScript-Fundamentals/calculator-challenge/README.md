@@ -3,14 +3,14 @@ To build a calculator using HTML, CSS and JavaScript. This calculator should acc
 
 
 Breaking down the problem:
-Essential functionality needed -->
-Addition
-Subtraction
-Division
-Multiplication
-Delete/Clear
-Visually display the answer / output
-Also work with decimals
+- Essential functionality needed -->
+- Addition
+- Subtraction
+- Division
+- Multiplication
+- Delete/Clear
+- Visually display the answer / output
+- Also work with decimals
 
 
 Logic:
