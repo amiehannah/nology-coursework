@@ -1,5 +1,6 @@
-/* linking to external styles */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+/* linking to external styles */ 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap');
+
 
 /* 
 NOTES 
@@ -12,84 +13,112 @@ NOTES
   }
 }
 
-/* BUTTON STYLING - ON HOVER */
 /* RESPONSIVE DESIGN */
 /* FINALISE BACKGROUND */
-/* FINALISE BUTTON COLOURS / COLOUR SCHEME */
 
 /* styles */
 * {
- margin: 0px;
- padding: 0px; 
- box-sizing: border-box;
- font-family: 'Work Sans', sans-serif;
-font-size: 1.25rem;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.25rem;
 }
 
 body {
-  background: radial-gradient(circle, rgba(174,238,220,1) 0%, rgba(148,187,233,1) 100%);
+  background-image: url(./assets/blur-02.svg);
+  background-size: cover;
+  /* 100% auto; */
+  /* background-color: radial-gradient(circle, rgba(174,238,220,1) 0%, rgba(148,187,233,1) 100%); */
+}
+
+header {
+  display: flex;
+}
+
+header h1 {
+  display: flex;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100%;
+  margin: 1rem;
+  letter-spacing: 0.1rem;
+  color: rgb(19, 53, 85);
 }
 
 
-header h1 {
-  text-align: center;
+.calculator__display {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  height: 4.5em;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 0 7px 9px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 11px;
+margin-bottom: 12px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous__value {
+  opacity: 0.25;
+  color: rgb(19, 53, 85);
   font-size: 1.5rem;
 }
 
-.calculator__wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-}
-
-.calculator__container{
-  /* background-color: cornflowerblue; */
-  display: flex;
-	align-items: center;
-	justify-content: center;
-  height: 75vh;
-  width: 55%;
-  border-radius: 30px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-  background-color: #ffffff10; 
-  backdrop-filter: blur(12px); 
-}
-
-.calculator__display{
- grid-column-start: 1;
- grid-column-end: 5;
- /* height: 15vh; */
- height: 5em;
- /* border: 2px solid lightgray; */
- background-color: whitesmoke;
- border-radius: 8px;
- box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+.current__value {
+  color: rgb(19, 53, 85);
+  font-size: 2rem;
 }
 
 #zero {
   grid-column-start: 1;
-  grid-column-end: 3;
-  ;
+  grid-column-end: 2;
 }
 
- .calculator__grid {
-   display: grid;
-   grid-gap:23px 12px;
-   align-content: center;
-   justify-content: center;
-   /* min-height: 100vh; */
-   grid-template-columns: repeat(4, 80px);
-   grid-template-rows: minmax(120px, auto) repeat(5, 40px);
-
-  /* @media screen and (min-width: 768px) {
-   
-
-  } */
+#clear {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+#divide {
+  grid-column-start: 4;
+  grid-column-end: 5;
 }
 
-.calculator__btn, .calculator__btn-num {
+#equals {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.calculator__grid {
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.6);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 15px;
+  height: 500px;
+  width: 325px;
+  margin: 0px auto;
+  margin-top: 40px; 
+  align-content: center;
+  justify-content: center;
+  padding: 40px;
+  border-radius: 20px; 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18); 
+  background-color: #ffffff91;
+  backdrop-filter: blur(12px);
+}
+
+.calculator__btn,
+.calculator__btn-num {
   border: none;
   background-color: transparent;
   font-family: inherit;
@@ -100,18 +129,23 @@ header h1 {
   align-items: center;
   justify-content: center;
 
-  background-color: #3e68ff;
-  color: E5E5E5;
-  border-radius: 8px;
+  background-color: rgb(19, 53, 85);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
 
   padding: 0.25em 0.75em;
-  /* min-width: 10ch;
-  min-height: 44px; */
   text-align: center;
   line-height: 1.1;
+  font-weight: 200;
 
-  @media screen and (-ms-high-contrast: active) {
-    border: 2px solid currentcolor;
-  }
 }
+
+.calculator__btn-num:hover {
+  background-color: rgba(19, 53, 85, 0.75);
+}
+
+.calculator__btn:hover {
+  background-color: rgba(19, 53, 85, 0.75);
+}
+
