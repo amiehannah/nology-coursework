@@ -22,3 +22,8 @@ link to figma wireframe:
 https://www.figma.com/file/ovMIiLiBaMPCwlsSqC0zO1/VERSION-2?node-id=0%3A1
 
 
+I believe I've completed the challenges in the Web Fundamentals module and have finally got to a point with my portfolio. Things I would like to review are mainly portfolio related: 
+- Responsive design, have I managed this ok with the Portfolio? 
+- Next steps for adding interactivity - is it too basic (i'm guessing this is where JS comes in?) 
+- At mobile view I did want to change my nav to become a burger menu - but again researched into it looked like JS would be needed here and wasn't sure of the best approach. 
+- How can I stop my portfolio from scrolling horizontally (past the 100% vw) - it's only a small glitch I think but wonder if the logo in the background is impacting this? 

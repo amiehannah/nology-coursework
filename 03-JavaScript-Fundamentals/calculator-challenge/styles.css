@@ -13,8 +13,6 @@ NOTES
   }
 }
 
-/* RESPONSIVE DESIGN */
-/* FINALISE BACKGROUND */
 
 /* styles */
 * {
@@ -26,9 +24,12 @@ NOTES
 }
 
 body {
-  background-image: url(./assets/blur-02.svg);
+  background-image: url(./assets/blur-02.svg); 
   background-size: cover;
-  /* 100% auto; */
+  background-repeat: no-repeat;
+  /* background-position: center center; */
+  background-attachment: fixed;
+
   /* background-color: radial-gradient(circle, rgba(174,238,220,1) 0%, rgba(148,187,233,1) 100%); */
 }
 
@@ -60,24 +61,24 @@ header h1 {
   box-shadow: 0 7px 9px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   /* justify-content: space-between; */
   align-items: flex-end;
-  padding: 11px;
-margin-bottom: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
   word-wrap: break-word;
   word-break: break-all;
 }
 
-.previous__value {
+.display__value1 {
   opacity: 0.25;
   color: rgb(19, 53, 85);
   font-size: 1.5rem;
 }
 
-.current__value {
+.display__value2 {
   color: rgb(19, 53, 85);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #zero {
