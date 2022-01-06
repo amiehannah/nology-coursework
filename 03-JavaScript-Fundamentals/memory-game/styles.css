@@ -13,9 +13,6 @@
 body {
   background-color: #082e45;
   /* IMAGE ALTERNTATIVE BACKGROUND*/
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 header {
@@ -24,20 +21,38 @@ header {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height: 12vh;
+  height: 10vh;
   width: 100%;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+@media screen and (min-width: 375px) {
+  header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding-top: 30px;
+  }
 }
 
 header h1 {
-  font-size: 1.75rem;
+  font-size: 22px;
   text-transform: uppercase;
   font-weight: 200;
   letter-spacing: 0.1rem;
+  text-align: center;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 414px) {
   header h1 {
-    font-size: 1.25rem;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header h1 {
+    font-size: 28px;
   }
 }
 
@@ -50,13 +65,20 @@ header h1 {
 
 section p {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 11px;
   padding-left: 20px;
   padding-right: 20px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 375px) {
   section p {
-    font-size: 0.7rem;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  section p {
+    font-size: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -65,11 +87,24 @@ header h1:hover {
   /*rgba(255, 121, 102, 0.9)*/
 }
 
+.instructions {
+  display: flex;
+}
+
 p.no__underline {
   box-shadow: none;
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
   text-transform: uppercase;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  p.no__underline {
+    font-size: 12px;
+  }
 }
 
 .moves:hover {
@@ -92,15 +127,28 @@ button {
   background-color: #ff7966;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  padding: 15px 24px;
-  font-size: 10px;
+  padding: 10px 14px;
+  font-size: 9px;
   letter-spacing: 0.15em;
   line-height: 1.5em;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 375px) {
   button {
-    padding: 18px 34px;
+    font-size: 9px;
+    padding: 12px 16px;
+  }
+}
+@media screen and (min-width: 414px) {
+  button {
+    padding: 16px 20px;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  button {
+    padding: 18px 28px;
+    font-size: 11px;
   }
 }
 
@@ -112,54 +160,92 @@ button:hover {
   transition: 0.1s;
 }
 
+.grid__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+@media screen and (min-width: 375px) {
+  .grid__footer {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 414px) {
+  .grid__footer {
+    margin-top: 25px;
+  }
+}
+
 .game__container {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 15px;
+}
+@media screen and (min-width: 375px) {
+  .game__container {
+    margin-top: 40px;
+  }
 }
 
 .grid__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 8px;
   margin: 0px auto;
   margin-top: 20px;
-  width: 400px;
-  height: 425px;
-  padding: 15px;
+  width: 275px;
+  height: 300px;
+  padding: 8px;
   background-color: #ff7966;
-  /* add in media query for ipad size and above - change width to 500px? */
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 375px) {
   .grid__container {
-    width: 300px;
-    height: 325px;
-    /*300px;*/
+    width: 325px;
+    height: 350px;
     grid-gap: 10px;
     padding: 10px;
   }
 }
+@media screen and (min-width: 414px) {
+  .grid__container {
+    width: 375px;
+    height: 400px;
+  }
+}
 @media screen and (min-width: 550px) {
+  .grid__container {
+    width: 450px;
+    height: 475px;
+    padding: 15px;
+    grid-gap: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
   .grid__container {
     width: 475px;
     height: 500px;
+    padding: 15px;
+    grid-gap: 15px;
   }
-}
-
-.grid__footer {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
 }
 
 div {
   background-color: #f7d1f7;
   border-radius: 4px;
+  display: flex;
 }
 
 div:hover {
   background-color: #edeeb4;
   transition: 0.5s;
   cursor: pointer;
+}
+
+.central {
+  background-color: #346b6d;
+}
+
+.central:hover {
+  /* want to remove hover off this central card*/
 }
