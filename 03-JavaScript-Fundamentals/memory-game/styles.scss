@@ -57,7 +57,7 @@ header {
 }
 
 header h1 {
-  font-size: 22px; //1.75rem
+  font-size: 20px; //1.75rem
   text-transform: uppercase;
   font-weight: 200;
   letter-spacing: 0.1rem;
@@ -94,11 +94,18 @@ section p {
    @media screen and (min-width: 375px) {
     font-size: 12px;
   }
+
+    //iphone 6/7/8 plus
+    @media screen and (min-width: 414px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
   // ipad
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -113,10 +120,11 @@ header h1:hover {
 
 p.no__underline {
   box-shadow: none;
-  font-size: 10px;
+  font-size: 9px;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 30px;
+  padding-top: 40px;
+  padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
   margin: 0 auto;
@@ -183,17 +191,13 @@ button:hover {
 .grid__footer {
   display: flex;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 25px;
 
   //media queries
-  //iphone 5/SE
-  @media screen and (min-width: 375px) {
-    margin-top: 20px;
-  }
 
   //iphone 6/7/8 plus
   @media screen and (min-width: 414px) {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 
 }
@@ -201,9 +205,9 @@ button:hover {
 .game__container {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 10px;
   @media screen and (min-width: 375px) {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
 }
@@ -214,7 +218,7 @@ button:hover {
   grid-template-rows: repeat(5, 1fr);
   grid-gap: 8px;
   margin: 0px auto;
-  margin-top: 20px;
+  margin-top: 10px;
   width: 275px;
   height: 300px;
   padding: 8px;
@@ -252,23 +256,39 @@ button:hover {
   }
 }
 
-div {
+.card {
   background-color: $lilac;
   border-radius: 4px;
   display: flex;
 }
 
-div:hover {
+.card:hover {
   background-color: $lemon;
   transition: 0.5s;
   cursor: pointer;
 }
 
-.central {
-  background-color: $teal;
+#central {
+  display: flex;
+  border-radius: 4px;
+  background-color: $navy;
+  cursor: default;
 }
 
-.central:hover {
-  /* want to remove hover off this central card*/
-  // to be a moon or star image
+// .central:hover {
+//   /* want to remove hover off this central card*/
+//   // to be a moon or star image
+// }
+
+
+// TOGGLE CARD ELEMENTS HIDDEN/VISIBLE
+// visibility: visible;
+// visibility: hidden;
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }
