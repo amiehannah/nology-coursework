@@ -256,24 +256,15 @@ button:hover {
   }
 }
 
-.card {
+img {
   background-color: $lilac;
   border-radius: 4px;
   display: flex;
 }
 
-.card:hover {
-  background-color: $lemon;
-  transition: 0.5s;
-  cursor: pointer;
-}
 
-// .card.isFlipped{
-//   transform: rotateY(180deg);
-// }
-
-#central {
-  display: flex;
+.central {
+  // display: flex;
   border-radius: 4px;
   background-color: $navy;
   cursor: default;
@@ -286,10 +277,20 @@ button:hover {
 // visibility: hidden;
 
 .hidden {
-  display: none;
-  // visibility: hidden;
+  // display: none;
+  visibility: hidden;
 }
 
 .visible {
   visibility: visible;
+}
+
+// img {
+//   // background-color: $;
+// }
+
+img:hover {
+  background-color: $lemon;
+  transition: 0.5s;
+  cursor: pointer;
 }

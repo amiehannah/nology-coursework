@@ -1,25 +1,7 @@
 "use strict";
 
-//PSEUDOCODE
-// at the start of the game the cards values are hidden
-// game begins when user clicks on a card
-// movesCounter function is activated upon the first click and keep track of each move the user makes - Y
-// timer function is also activated upon the first click - Y
-// first card is selected, then second card is selected
-// these are compared to see if they match - if they match cards remain visible, if no match is found, they remain hidden until it's matching pair is found
-// FLIP ANIMATION
-// once all pairs have been matched, game ends and timer stops
-// to restart the game - user clicks on restart game button
-// this hides all the cards again
-// this shuffles the images 
-// this returns moveCounter and timer functions to zero so the game can start again - Y
-// on clicking a card, need to change styling and reveal what is on the reverse
-// needs to check the subsequent card selected by the user
-// if these two cards match
-// styling changes so that they are remain visible - face side up
-// then card checking function runs again
-// checking first card then checking second card and repeat in this fashion
-// until all matching pairs have been found
+var _this = void 0;
+
 // -----------------------------------------------------------------------------
 // SELECTING DOM ELEMENTS
 // -----------------------------------------------------------------------------
@@ -28,10 +10,15 @@ var movesCounter = document.querySelector(".moves"); // selecting timer counter
 
 var timerCounter = document.querySelector(".timer"); // restart game button
 
-var restartBtn = document.querySelector(".restart");
+var restartBtn = document.querySelector(".restart"); // selecting the grid container
+
+var gridContainer = document.querySelector(".grid__container");
 var moves = 0;
 var minutes = 0;
-var seconds = 0; // Need to store the images inside a data structure
+var seconds = 0; // let createDiv;
+
+var firstCardSelected;
+var secondCardSelected; // Need to store the images inside a data structure
 
 var cardsArr = [{
   name: "aries",
@@ -133,7 +120,9 @@ var cardsArr = [{
   name: "central",
   img: "images/central-img.svg",
   className: "central"
-}]; // -----------------------------------------------------------------------------
+}];
+var cardsChosen = [];
+var cardsMatched = []; // -----------------------------------------------------------------------------
 // FUNCTIONS
 // -----------------------------------------------------------------------------
 //on page load - randomise it & on restart game
@@ -142,9 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var randomiseCards = cardsArr.sort(function () {
     return 0.5 - Math.random();
   });
-}); // const cards = document.querySelectorAll('.card') //produces a nodelist
-
-var gridContainer = document.querySelector(".grid__container");
+});
 
 var createBoard = function createBoard() {
   cardsArr.forEach(function (card) {
@@ -154,36 +141,52 @@ var createBoard = function createBoard() {
     createDiv.appendChild(createImg); //add img to div
 
     gridContainer.appendChild(createDiv); //add div to grid container
+    // default - hide images
+    // createDiv.classList.toggle("hidden");
+    // createDiv.classList.add("hidden");
 
     createDiv.addEventListener('click', clickOutcome);
   });
+}; // cardsArr.filter
+// if (cardsMatched.length === cardsArr.length/2) {
+//   alert("Congratulation! You've found all matching pairs.")
+
+
+var displayCard = function displayCard() {
+  _this.classList.add("visible");
+
+  _this.classList.add("hidden");
 };
 
+var checkForMatch = function checkForMatch() {
+  var cards = document.querySelectorAll('img');
+  var cardOptionOne = cardsChosen[0];
+  var cardOptionTwo = cardsChosen[1];
+  cards.addEventListener('click', displayCard);
+}; // img.addEventListener('click', () => {
+//   if(cards.style.display === 'none') {
+//     cards.style.display = 'block';
+// } else {
+// cards.style.display = 'none';
+// }
+// });
+
+
 function clickOutcome() {
-  // alert('I have been clicked!')
+  // createDiv.classList.add("visible")
   calculateMoves();
 } // SHUFFLE CARD FUNCTION
+// I want the card selected to be random -> generate random number
+// assign cardsArr a new random index
+// move the cards in a random fashion on the board
 // const shuffleCards = () => {
+// restartBtn.addEventListener("click", () => {
 
 
 var randomiseCards = cardsArr.sort(function () {
   return 0.5 - Math.random();
-});
-console.log(randomiseCards); // }
-// SHUFFLE CARDS
-// I want the card selected to be random
-// generate random number
-// assign cardsArr a new random index
-// move the cards in a random fashion on the board
-//
-// const shuffleCards = () => {
-//   const randomNumber = Math.floor(Math.random() * cardsArr.length);
-// }
-//   cards.style.backgroundImage = `url(${cardsArr[randomNumber][1]})`
-//   //the element we want to change = [randomNumber][]
-//   // cardSelected.style.backgroundImage = [randomNumber][0];
-// };
-// shuffleCards();
+}); // console.log(randomiseCards)
+// });
 // CALCULATE MOVES FUNCTION
 // this tracks the moves the user takes and starts the timer
 // increments by 1 every time user clicks on a card
@@ -233,16 +236,11 @@ var resetTimer = function resetTimer() {
   moves = 0;
   movesCounter.innerHTML = "0 Move(s)";
   clearInterval(timerId);
-  shuffleCards(); // reset the board styling
-  // shuffles position of cards - using math.random?
+  /* TO ADD TO RESET BTN FUNCTION
+  SHUFFLE CARDS
+  RESET BOARD STYLING
+   */
 };
 
 restartBtn.addEventListener("click", resetTimer);
-createBoard(); // cardsArr[0].classList.toggle(".hidden")
-// cards.addEventListener('click', () => {
-//   if(cards.style.display === 'none') {
-//     cards.style.display = 'block';
-// } else {
-// cards.style.display = 'none';
-// }
-// });
+createBoard();

@@ -1,28 +1,3 @@
-//PSEUDOCODE
-
-// at the start of the game the cards values are hidden
-// game begins when user clicks on a card
-// movesCounter function is activated upon the first click and keep track of each move the user makes - Y
-// timer function is also activated upon the first click - Y
-// first card is selected, then second card is selected
-// these are compared to see if they match - if they match cards remain visible, if no match is found, they remain hidden until it's matching pair is found
-// FLIP ANIMATION
-// once all pairs have been matched, game ends and timer stops
-// to restart the game - user clicks on restart game button
-// this hides all the cards again
-// this shuffles the images 
-// this returns moveCounter and timer functions to zero so the game can start again - Y
-
-
-// on clicking a card, need to change styling and reveal what is on the reverse
-// needs to check the subsequent card selected by the user
-// if these two cards match
-// styling changes so that they are remain visible - face side up
-// then card checking function runs again
-// checking first card then checking second card and repeat in this fashion
-// until all matching pairs have been found
-
-
 // -----------------------------------------------------------------------------
 // SELECTING DOM ELEMENTS
 // -----------------------------------------------------------------------------
@@ -30,18 +5,21 @@
 const movesCounter = document.querySelector(".moves");
 
 // selecting timer counter
-
 const timerCounter = document.querySelector(".timer");
 
 // restart game button
 const restartBtn = document.querySelector(".restart");
 
+// selecting the grid container
+const gridContainer = document.querySelector(".grid__container")
 
 
 let moves = 0;
 let minutes = 0;
 let seconds = 0;
-
+// let createDiv;
+let firstCardSelected;
+let secondCardSelected;
 
 
 // Need to store the images inside a data structure
@@ -174,6 +152,9 @@ const cardsArr = [
 
 ];
 
+var cardsChosen = [];
+var cardsMatched = [];
+
 
 
 // -----------------------------------------------------------------------------
@@ -183,13 +164,9 @@ const cardsArr = [
 //on page load - randomise it & on restart game
 document.addEventListener('DOMContentLoaded', () => {
   const randomiseCards = cardsArr.sort(()=> 0.5 - Math.random());
-
-
 })
 
 
-// const cards = document.querySelectorAll('.card') //produces a nodelist
-const gridContainer = document.querySelector(".grid__container")
 
 const createBoard =() => {
 cardsArr.forEach(card => {
@@ -199,44 +176,58 @@ createImg.src = `${card.img}`;
 createDiv.appendChild(createImg); //add img to div
 gridContainer.appendChild(createDiv); //add div to grid container
 
-  createDiv.addEventListener('click', clickOutcome);
+// default - hide images
+// createDiv.classList.toggle("hidden");
+// createDiv.classList.add("hidden");
+createDiv.addEventListener('click', clickOutcome);
 
 })
 }
+
+// cardsArr.filter
+// if (cardsMatched.length === cardsArr.length/2) {
+//   alert("Congratulation! You've found all matching pairs.")
+
+
+
+const displayCard =() => {
+  this.classList.add("visible");
+  this.classList.add("hidden");
+}
+
+const checkForMatch = () => {
+  const cards = document.querySelectorAll('img');
+  const cardOptionOne = cardsChosen[0];
+  const cardOptionTwo = cardsChosen[1];
+  cards.addEventListener('click', displayCard);
+};
+
+
+
+// img.addEventListener('click', () => {
+//   if(cards.style.display === 'none') {
+//     cards.style.display = 'block';
+// } else {
+// cards.style.display = 'none';
+// }
+// });
+
+
 function clickOutcome() {
-  // alert('I have been clicked!')
+// createDiv.classList.add("visible")
   calculateMoves();
 }
 
 // SHUFFLE CARD FUNCTION
-// const shuffleCards = () => {
-  const randomiseCards = cardsArr.sort(()=> 0.5 - Math.random());
-  console.log(randomiseCards)
-// }
-
-
-
-
-
-
-// SHUFFLE CARDS
-// I want the card selected to be random
-// generate random number
+// I want the card selected to be random -> generate random number
 // assign cardsArr a new random index
 // move the cards in a random fashion on the board
-//
+
 // const shuffleCards = () => {
-//   const randomNumber = Math.floor(Math.random() * cardsArr.length);
-
-// }
-
-//   cards.style.backgroundImage = `url(${cardsArr[randomNumber][1]})`
-//   //the element we want to change = [randomNumber][]
-//   // cardSelected.style.backgroundImage = [randomNumber][0];
-// };
-// shuffleCards();
-
-
+  // restartBtn.addEventListener("click", () => {
+    const randomiseCards = cardsArr.sort(()=> 0.5 - Math.random());
+    // console.log(randomiseCards)
+  // });
 
 
 
@@ -289,25 +280,17 @@ const resetTimer = () => {
   moves = 0;
   movesCounter.innerHTML = "0 Move(s)";
   clearInterval(timerId);
-  shuffleCards();
-// reset the board styling
-// shuffles position of cards - using math.random?
+
+/* TO ADD TO RESET BTN FUNCTION
+SHUFFLE CARDS
+RESET BOARD STYLING
+ */
+
 };
 
 restartBtn.addEventListener("click", resetTimer);
 
 
-
 createBoard();
 
-// cardsArr[0].classList.toggle(".hidden")
 
-
-
-// cards.addEventListener('click', () => {
-//   if(cards.style.display === 'none') {
-//     cards.style.display = 'block';
-// } else {
-// cards.style.display = 'none';
-// }
-// });

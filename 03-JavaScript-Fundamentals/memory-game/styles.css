@@ -232,29 +232,28 @@ button:hover {
   }
 }
 
-.card {
+img {
   background-color: #f7d1f7;
   border-radius: 4px;
   display: flex;
 }
 
-.card:hover {
-  background-color: #edeeb4;
-  transition: 0.5s;
-  cursor: pointer;
-}
-
-#central {
-  display: flex;
+.central {
   border-radius: 4px;
   background-color: #082e45;
   cursor: default;
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .visible {
   visibility: visible;
+}
+
+img:hover {
+  background-color: #edeeb4;
+  transition: 0.5s;
+  cursor: pointer;
 }
