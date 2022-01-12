@@ -36,8 +36,7 @@ const timerCounter = document.querySelector(".timer");
 // restart game button
 const restartBtn = document.querySelector(".restart");
 
-// const gridContainer = document.querySelector(".grid__container")
-// do i need this?
+
 
 let moves = 0;
 let minutes = 0;
@@ -46,166 +45,177 @@ let seconds = 0;
 
 
 // Need to store the images inside a data structure
-// store cards images in an array
-// or would it be better to put it in an object
-// const cardsArr = [
-//   "./images/aries.svg",
-//   "./images/taurus.svg",
-//   "./images/gemini.svg",
-//   "./images/cancer.svg",
-//   "./images/leo.svg",
-//   "./images/virgo.svg",
-//   "./images/libra.svg",
-//   "./images/scorpio.svg",
-//   "./images/sagittarius.svg",
-//   "./images/capricorn.svg",
-//   "./images/aquarius.svg",
-//   "./images/pisces.svg",
-//   "./images/aries.svg",
-//   "./images/taurus.svg",
-//   "./images/gemini.svg",
-//   "./images/cancer.svg",
-//   "./images/leo.svg",
-//   "./images/virgo.svg",
-//   "./images/libra.svg",
-//   "./images/scorpio.svg",
-//   "./images/sagittarius.svg",
-//   "./images/capricorn.svg",
-//   "./images/aquarius.svg",
-//   "./images/pisces.svg",
-// ];
-
 const cardsArr = [
   {
     name: "aries",
     img: "images/aries.svg",
+    className: "card",
   },
   {
     name: "aries",
     img: "images/aries.svg",
+    className: "card",
   },
   {
     name: "taurus",
     img: "images/taurus.svg",
+    className: "card",
   },
   {
     name: "taurus",
     img: "images/taurus.svg",
+    className: "card",
   },
   {
     name: "gemini",
     img: "images/gemini.svg",
+    className: "card",
   },
   {
     name: "gemini",
     img: "images/gemini.svg",
+    className: "card",
   },
   { 
     name: "cancer", 
     img: "images/cancer.svg",
+    className: "card",
   },
   {
     name: "cancer", 
-    img: "images/cancer.svg",
+    img: "images/cancer.svg", 
+    className: "card",
   },
   {
     name: "leo", 
     img: "images/leo.svg",
+    className: "card",
   },
   {
     name: "leo", 
     img: "images/leo.svg",
+    className: "card",
   },
    {
     name: "virgo", 
     img: "images/virgo.svg",
+    className: "card",
    },
    {
     name: "virgo", 
     img: "images/virgo.svg",
+    className: "card",
    },
    {
     name: "libra", 
     img: "images/libra.svg",
+    className: "card",
    },
    {
     name: "libra", 
     img: "images/libra.svg",
+    className: "card",
    },
    {
     name: "scorpio", 
     img: "images/scorpio.svg",
+    className: "card",
    },
    {
     name: "scorpio", 
     img: "images/scorpio.svg",
+    className: "card",
    },
    {
     name: "sagittarius", 
     img: "images/sagittarius.svg",
+    className: "card",
    },
    {
     name: "sagittarius", 
     img: "images/sagittarius.svg",
+    className: "card",
    },
    {
     name: "capricorn", 
     img: "images/capricorn.svg",
+    className: "card",
    },
    {
     name: "capricorn", 
     img: "images/capricorn.svg",
+    className: "card",
    },
    {
     name: "aquarius", 
     img: "images/aquarius.svg",
+    className: "card",
    },
    {
     name: "aquarius", 
     img: "images/aquarius.svg",
+    className: "card",
    },
    {
      name: "pisces",
      img: "images/pisces.svg",
+     className: "card",
    },
    {
     name: "pisces",
     img: "images/pisces.svg",
+    className: "card",
+  },
+  {
+    name: "central",
+    img: "images/central-img.svg",
+    className: "central",
   }
+
 ];
 
-// console.log(cardsArr.length)
+
 
 // -----------------------------------------------------------------------------
 // FUNCTIONS
 // -----------------------------------------------------------------------------
 
+//on page load - randomise it & on restart game
+document.addEventListener('DOMContentLoaded', () => {
+  const randomiseCards = cardsArr.sort(()=> 0.5 - Math.random());
 
 
-const cards = document.querySelectorAll('.card') //produces a nodelist
-
-
-cards.forEach(card => {
-  card.addEventListener('click', clickOutcome);
 })
 
+
+// const cards = document.querySelectorAll('.card') //produces a nodelist
+const gridContainer = document.querySelector(".grid__container")
+
+const createBoard =() => {
+cardsArr.forEach(card => {
+const createDiv = document.createElement("div")
+const createImg = document.createElement("img");
+createImg.src = `${card.img}`;
+createDiv.appendChild(createImg); //add img to div
+gridContainer.appendChild(createDiv); //add div to grid container
+
+  createDiv.addEventListener('click', clickOutcome);
+
+})
+}
 function clickOutcome() {
   // alert('I have been clicked!')
   calculateMoves();
 }
 
 // SHUFFLE CARD FUNCTION
-
-for(let i=0; i< cardsArr.length; i++) {
-  console.log(cardsArr[i]) //print each card to the console [i] every index;
-  // cardsArr[i].style = "display: none";
-  const randomNumber = Math.floor(Math.random() * cardsArr.length);
-  console.log(randomNumber)
-  cardsArr[i] = [randomNumber];
-  // append each zodiac element to the grid
+// const shuffleCards = () => {
+  const randomiseCards = cardsArr.sort(()=> 0.5 - Math.random());
+  console.log(randomiseCards)
+// }
 
 
-}
+
 
 
 
@@ -279,7 +289,7 @@ const resetTimer = () => {
   moves = 0;
   movesCounter.innerHTML = "0 Move(s)";
   clearInterval(timerId);
-
+  shuffleCards();
 // reset the board styling
 // shuffles position of cards - using math.random?
 };
@@ -288,7 +298,7 @@ restartBtn.addEventListener("click", resetTimer);
 
 
 
-
+createBoard();
 
 // cardsArr[0].classList.toggle(".hidden")
 
