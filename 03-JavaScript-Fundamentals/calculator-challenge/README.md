@@ -35,3 +35,7 @@ Approach:
 - Instead by using querySelectorAll on numberBtns and operatorBtns (to select these elements) I realised I can later iterate over them, as this returns a node list and will be far more useful in some of the functionality.
 
 - The array iterator I used to iterate over the numberBtns/operatorBtns was forEach(). By adding an event listener, listening out for the click event 
+
+
+UI:
+- Created a mesh gradient in Illustrator which I've then applied to the background of the webpage

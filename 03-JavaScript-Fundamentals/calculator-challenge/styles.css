@@ -70,13 +70,13 @@ header h1 {
   word-break: break-all;
 }
 
-.display__value1 {
+.display__valueA {
   opacity: 0.25;
   color: rgb(19, 53, 85);
   font-size: 1.5rem;
 }
 
-.display__value2 {
+.display__valueB {
   color: rgb(19, 53, 85);
   font-size: 1.5rem;
 }
@@ -122,7 +122,8 @@ header h1 {
 .calculator__btn,
 .calculator__btn-num,
 .calculator__btn-sum,
-.calculator__btn-clr {
+.calculator__btn-clr,
+.calculator__btn-dec {
   border: none;
   background-color: transparent;
   font-family: inherit;
@@ -150,6 +151,15 @@ header h1 {
 }
 
 .calculator__btn:hover {
+  background-color: rgba(19, 53, 85, 0.75);
+}
+
+.calculator__btn-clr:hover{
+  background-color: rgba(19, 53, 85, 0.75);
+}
+
+
+.calculator__btn-sum:hover {
   background-color: rgba(19, 53, 85, 0.75);
 }
 

@@ -5,8 +5,8 @@ const clearBtn = document.querySelector("#clear");
 const equalsBtn = document.querySelector("#equals");
 const numberBtns = document.querySelectorAll(".calculator__btn-num");
 const operatorBtns = document.querySelectorAll(".calculator__btn");
-const topCalcDisplay = document.querySelector(".display__value1");
-const btmCalcDisplay = document.querySelector(".display__value2");
+const topCalcDisplay = document.querySelector(".display__valueA");
+const btmCalcDisplay = document.querySelector(".display__valueB");
 const decimalBtn = document.querySelector("#decimal");
 
 let firstValue = "";
@@ -16,7 +16,6 @@ let operator = "";
 let sum = 0;
 let operatorClicked = false;
 let hasSumBeenDisplayed = false;
-let decimalClicked = false;
 
 // -----------------------------------------------------------------------------
 // FUNCTIONS
@@ -112,30 +111,16 @@ const clearDisplay = () => {
 
 clearBtn.addEventListener("click", clearDisplay);
 
-/* HELP */
-// - [ ] How to stop user from adding more than one decimal point
-// - [ ] if user was to use a floating point number smaller than 1 - to add the 0 in front of it
-// - [ ] How to contiue calculations once equals has been pressed and visually move it into the right display box
-
 
 /* DECIMAL BUTTON FUNCTIONALITY */
-const checkDecimal = () => {
-  decimalClicked = true;
-
-// if it's been clicked once don't add further decimals
-if(!firstValue) {
-
-  firstValue = "0.";
-
-} else {
-  firstValue += /* not sure what we wanted to add here? */ "";
-}
-
-// add 0 before the decimal point
-}
+// How to stop user from adding more than one decimal point
+decimalBtn.addEventListener('click', () => {
+  if (!firstValue.includes('.')) {
+      firstValue += '.';
+      updateDisplay(firstValue);
+  }
+})
 
 
-
-decimalBtn.addEventListener("click", checkDecimal);
-
-// let decimalClicked = false;
+/* HELP */
+// - [ ] How to contiue calculations once equals has been pressed and visually move it into the right display box
