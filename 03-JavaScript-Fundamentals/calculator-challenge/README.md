@@ -37,7 +37,7 @@ Approach:
 
 
 - The array iterator I used to loop over the numberBtns/operatorBtns was forEach(). By adding an event listener, listening out for the click event I was able to capture the value of these buttons. 
-For the number buttons I stored the number selected inside a variable to use later in the sums. I then updated the display of the calculator to reflect the chosen firstValue.
+For the number buttons I stored the number selected inside a variable to use later in the calculations. I then updated the display of the calculator to reflect the chosen firstValue.
 
 
 - After the firstValue has been selected, I then set up an event listener to capture the value of the operator clicked by the user.   
@@ -48,15 +48,15 @@ Once the firstValue has been selected and an operator, update the innerHTML of t
 The bottom display will show the sum of the calculation.
 
 
-- Calculate total functionality.
+- Calculate total functionality --> 
 I used an if/else if statement to work through the operators and return the value computed by the operator selected. Then updating the calculator display with the sum. I then reset the variables used to store my number values to allow the user to make additional calculations should they wish to.
 
 
-- Clear button functionality.
+- Clear button functionality --> 
 On pressing the clear button all variables are reset and the display is cleared, ready for the next user.
 
 
-- Decimal button functionality. 
+- Decimal button functionality --> 
 To prevent the user from adding more than one decimal point, I have added an event listener and used the method includes(".") to determine whether the firstValue includes this character and if so only add one.
 
 
