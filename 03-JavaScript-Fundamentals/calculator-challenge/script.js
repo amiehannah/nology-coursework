@@ -10,12 +10,9 @@ const btmCalcDisplay = document.querySelector(".display__valueB");
 const decimalBtn = document.querySelector("#decimal");
 
 let firstValue = "";
-// let secondValue = "";
 let storedValue = "";
 let operator = "";
 let sum = 0;
-let operatorClicked = false;
-let hasSumBeenDisplayed = false;
 
 // -----------------------------------------------------------------------------
 // FUNCTIONS
@@ -53,7 +50,11 @@ operatorBtns.forEach((operatorBtn) => {
       // parseFloat -> contains a decimal place/floating point number
       storedValue = parseFloat(firstValue);
       firstValue = "";
-    
+    }
+  // if the user wants to continue to make additional calculations - move sum to the top display and let the bottom display return to blank to accept further values
+    if (sum) {
+      topCalcDisplay.innerHTML = sum + " " + operator;
+      btmCalcDisplay.innerHTML = "";
     }
   });
 });
@@ -73,34 +74,15 @@ const calculateTotal = () => {
   topCalcDisplay.innerHTML = "";
   updateDisplay(sum);
 
-hasSumBeenDisplayed = true;
-
-
   // if the user wants to continue to make additional calculations
   storedValue = sum;
   firstValue = "";
-
-  
-  console.log(firstValue, storedValue, sum)
-
-  operatorClicked = true;
-  operator = "";
-    if (operatorClicked && hasSumBeenDisplayed) {
-      topCalcDisplay.innerHTML = storedValue + " " + operator;
-      btmCalcDisplay.innerHTML = "";
-  };
-
-      //if sum is being calculated further
-      // on clicking a operator
-      // move sum to the top display and bottom display blank to accept further values
-
 };
 
 equalsBtn.addEventListener("click", calculateTotal);
 
-/* CLEAR BUTTON FUNTIONALITY */
+/* CLEAR BUTTON FUNTIONALITY - reset all values */
 const clearDisplay = () => {
-  // reset all values
   firstValue = "";
   storedValue = "";
   operator = "";
@@ -111,16 +93,11 @@ const clearDisplay = () => {
 
 clearBtn.addEventListener("click", clearDisplay);
 
-
 /* DECIMAL BUTTON FUNCTIONALITY */
 // How to stop user from adding more than one decimal point
-decimalBtn.addEventListener('click', () => {
-  if (!firstValue.includes('.')) {
-      firstValue += '.';
-      updateDisplay(firstValue);
+decimalBtn.addEventListener("click", () => {
+  if (!firstValue.includes(".")) {
+    firstValue += ".";
+    updateDisplay(firstValue);
   }
-})
-
-
-/* HELP */
-// - [ ] How to contiue calculations once equals has been pressed and visually move it into the right display box
+});
