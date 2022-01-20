@@ -1,18 +1,5 @@
-/* linking to external styles */ 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap');
-
-
-/* 
-NOTES 
-
-/* MAKE MOBILE FIRST DESIGN
-@media screen and (min-width: 768px) {
-  .intro {
-    flex-direction: column;
-    padding: 100px 150px;
-  }
-}
-
+/* linking to external styles */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap");
 
 /* styles */
 * {
@@ -24,13 +11,10 @@ NOTES
 }
 
 body {
-  background-image: url(./assets/blur-02.svg); 
+  background-image: url(./assets/blur-02.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: center center; */
   background-attachment: fixed;
-
-  /* background-color: radial-gradient(circle, rgba(174,238,220,1) 0%, rgba(148,187,233,1) 100%); */
 }
 
 header {
@@ -51,7 +35,6 @@ header h1 {
   color: rgb(19, 53, 85);
 }
 
-
 .calculator__display {
   grid-column-start: 1;
   grid-column-end: 5;
@@ -62,7 +45,6 @@ header h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* justify-content: space-between; */
   align-items: flex-end;
   padding: 15px;
   margin-bottom: 12px;
@@ -109,12 +91,12 @@ header h1 {
   height: 500px;
   width: 325px;
   margin: 0px auto;
-  margin-top: 40px; 
+  margin-top: 40px;
   align-content: center;
   justify-content: center;
   padding: 40px;
-  border-radius: 20px; 
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18); 
+  border-radius: 20px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
   background-color: #ffffff91;
   backdrop-filter: blur(12px);
 }
@@ -143,7 +125,6 @@ header h1 {
   text-align: center;
   line-height: 1.1;
   font-weight: 200;
-
 }
 
 .calculator__btn-num:hover {
@@ -154,12 +135,10 @@ header h1 {
   background-color: rgba(19, 53, 85, 0.75);
 }
 
-.calculator__btn-clr:hover{
+.calculator__btn-clr:hover {
   background-color: rgba(19, 53, 85, 0.75);
 }
-
 
 .calculator__btn-sum:hover {
   background-color: rgba(19, 53, 85, 0.75);
 }
-
