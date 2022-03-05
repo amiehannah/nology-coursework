@@ -1,0 +1,49 @@
+.button__container {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    }
+    
+    
+    button { 
+        color: $light-beige;
+        background-color: $navy;
+        /* #B6C6EB; */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        line-height: 1.1;
+        font-weight: 300;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        padding: 10px 18px;
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        line-height: 1.5em;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    } 
+
+    button:hover {
+        background-color: $light-beige-opacity;
+    }
+
+    .input__text, .output__text {
+        width: 50vw;
+        height: 30vh;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $light-beige-opacity;
+        border: none;
+        font-size: 16px;
+        color: $light-beige;
+    }
+
+    // .input__box:focus {
+    //     background-color: $yellow;
+    // }
+    
+    

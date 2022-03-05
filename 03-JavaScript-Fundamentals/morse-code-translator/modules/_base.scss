@@ -1,0 +1,45 @@
+
+/* linking to external styles */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap");
+
+$light-beige: #F9EFD9; 
+$light-beige-opacity: rgba(249, 239, 217, 0.2);
+$sage-green: #4B9A8E;
+$aqua: #CAE5E3;
+$yellow: rgba(221, 184, 83, 0.2);
+$mint: #E2E9D5;
+$sage: #8DB49A;
+$pink: #DFABC7;
+$navy: #040336;
+
+
+
+/* reset styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.25rem;
+  }
+  
+
+
+main {
+    background-image:url("./Artboard\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.main__wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+
+
