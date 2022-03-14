@@ -1,11 +1,10 @@
 /*
 
-1. Set up event listeners 
-2. Build an object class containing morse code letters, in Object key:value pairs
-3. Able to translate word/s (parameter to pass in)
-4. Take word/input -> break it up into an array
-5. Format morse code -> contains spaces between each letter and a slash / to separate words
-6. Loop through array to convert characters
+1. Build an object class containing morse code letters, in Object key:value pairs
+2. Able to translate word/s (parameter to pass in)
+3. Take word/input -> break it up into an array
+4. Format morse code -> contains spaces between each letter and a slash / to separate words
+5. Loop through array to convert characters
 
 */
 
@@ -16,11 +15,10 @@ const clearButton = document.querySelector(".clear__button");
 const translateButton = document.querySelector(".translate__button");
 
 
-
 // STORE MORSE CODE CHARACTERS IN OBJECT KEY:VALUE PAIRS
-class EnglishToMorseCodeChars {
+class EnglishLettersToMorseCode {
     constructor() {
-       this.a = "• -" ,
+        this.a = "• -" ,
         this.b = "- • • •" ,
         this.c = "- • - •",
         this.d = "- • •",
@@ -45,18 +43,43 @@ class EnglishToMorseCodeChars {
         this.w = "• - -",
         this.x = "- • • -",
         this.y = "- • - -",
-        this.z = "- - • •"
+        this.z = "- - • •",
+        this.wordToTranslate = [];
     }
+// METHODS GO HERE
+getUsersInput() {
+    return this.wordToTranslate;
 }
 
-// BUILD A CLASS OF TRANSLATOR
+addWordToTranslate(){
+  
+}
+breakDownWord(){
+    // const wordArr = word.split();
+    // console.log(wordArr);
+    // }
+}
+}
 
+let newTranslation = new EnglishLettersToMorseCode();
+
+newTranslation.getUsersInput();
+
+// BREAK DOWN WORD
+// Array method - split() breaks down word into an array
+
+
+
+
+
+// INHERTIANCE 
 
 
 // GET INPUT FROM THE USER
 const displayTranslation = () => {
     const usersInputValue  = document.querySelector(".input__text").value;
-    outputDisplay.innerHTML = usersInputValue;
+    const wordArr = usersInputValue.split();
+    outputDisplay.innerHTML = wordArr;
 }
 
 translateButton.addEventListener("click", displayTranslation);
@@ -71,3 +94,11 @@ const resetTranslator = () => {
 
 clearButton.addEventListener("click", resetTranslator);
 
+
+
+/* 
+const displayTranslation = () => {
+    const usersInputValue  = document.querySelector(".input__text").value;
+    outputDisplay.innerHTML = usersInputValue;
+}
+*/

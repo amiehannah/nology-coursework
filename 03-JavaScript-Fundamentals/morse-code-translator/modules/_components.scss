@@ -40,7 +40,13 @@
         border: none;
         font-size: 16px;
         color: $light-beige;
+        letter-spacing: 0.05em;
     }
+
+    .output__text {
+        font-size: 18px;
+    }
+
 
     // .input__box:focus {
     //     background-color: $yellow;

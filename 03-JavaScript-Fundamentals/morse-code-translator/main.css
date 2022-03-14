@@ -184,5 +184,10 @@ button:hover {
   border: none;
   font-size: 16px;
   color: #F9EFD9;
+  letter-spacing: 0.1em;
+}
+
+.output__text {
+  font-size: 18px;
 }
 /*# sourceMappingURL=main.css.map */
