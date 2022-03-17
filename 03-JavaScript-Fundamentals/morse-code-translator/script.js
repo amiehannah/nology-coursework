@@ -1,104 +1,119 @@
-/*
-
-1. Build an object class containing morse code letters, in Object key:value pairs
-2. Able to translate word/s (parameter to pass in)
-3. Take word/input -> break it up into an array
-4. Format morse code -> contains spaces between each letter and a slash / to separate words
-5. Loop through array to convert characters
-
-*/
-
-
+// // DOM ELEMENTS
 const userInput = document.querySelector(".input__text");
 const outputDisplay = document.querySelector(".output__text");
 const clearButton = document.querySelector(".clear__button");
 const translateButton = document.querySelector(".translate__button");
+const userInputValue = document.querySelector(".input__text").value;
 
+class Translator {
+  constructor() {
+      this.a = "•-",
+      this.b = "-•••",
+      this.c = "-•-•",
+      this.d = "-••",
+      this.e = "•",
+      this.f = "••-•",
+      this.g = "--•",
+      this.h = "••••",
+      this.i = "••",
+      this.j = "•---",
+      this.k = "-•-",
+      this.l = "•-••",
+      this.m = "--",
+      this.n = "-•",
+      this.o = "---",
+      this.p = "•--•",
+      this.q = "--•-",
+      this.r = "•-•",
+      this.s = "•••",
+      this.t = "-",
+      this.u = "••-",
+      this.v = "•••-",
+      this.w = "•--",
+      this.x = "-••-",
+      this.y = "-•--",
+      this.z = "--••",
+      this.translationArr = [],
+      this.translation = "",
+      this.output = ""
+  }
 
-// STORE MORSE CODE CHARACTERS IN OBJECT KEY:VALUE PAIRS
-class EnglishLettersToMorseCode {
-    constructor() {
-        this.a = "• -" ,
-        this.b = "- • • •" ,
-        this.c = "- • - •",
-        this.d = "- • •",
-        this.e = "•",
-        this.f = "• • - •",
-        this.g = "- - •",
-        this.h = "• • • •",
-        this.i = "• •",
-        this.j = "• - - -",
-        this.k = "- • -",
-        this.l = "• - • •",
-        this.m = "- -",
-        this.n = "- •",
-        this.o = "- - -",
-        this.p = "• - - •",
-        this.q = "- - • -",
-        this.r = "• - •",
-        this.s = "• • •",
-        this.t = "-",
-        this.u = "• • -",
-        this.v = "• • • -",
-        this.w = "• - -",
-        this.x = "- • • -",
-        this.y = "- • - -",
-        this.z = "- - • •",
-        this.wordToTranslate = [];
-    }
-// METHODS GO HERE
-getUsersInput() {
-    return this.wordToTranslate;
-}
+  getWordToTranslate(wordToTranslate) {
+    // console.log(wordToTranslate);
+    return this.wordToTranslate = wordToTranslate;
+  }
 
-addWordToTranslate(){
+  breakDownWord() {
+    // console.log(this.wordToTranslate);
+    const translationArr = this.wordToTranslate.toLowerCase().split(""); // The split() method splits a string into an array of substrings.
+    // console.log(translationArr);
+    return this.translationArr = translationArr; // returns an array
+  }
+
+  translateInput() {
+    const translation = this.translationArr.map((letter) => {
+        if (letter !== " ") {
+          // console.log(letter);
+          return this[letter];
+        }
+        return "/";
+      })
+      .join(" ");
+
+    // console.log(translation);
+    outputDisplay.innerHTML = translation;
+
+    return this.translation = translation;
+  }
   
-}
-breakDownWord(){
-    // const wordArr = word.split();
-    // console.log(wordArr);
-    // }
-}
-}
+// NEXT STEP IS DISPLAY THE TRANSLATION IN THE OUTPUT BOX
+  displayTranslation() {
+    return this.output = this.translation;
+  }  
 
-let newTranslation = new EnglishLettersToMorseCode();
-
-newTranslation.getUsersInput();
-
-// BREAK DOWN WORD
-// Array method - split() breaks down word into an array
+} // this is the end of the class
 
 
 
 
+// // CLEAR THE USER INPUT
+const resetTranslator = (ev) => {
+  userInput.value = "";
+  outputDisplay.innerHTML = "";
+};
 
-// INHERTIANCE 
-
-
-// GET INPUT FROM THE USER
-const displayTranslation = () => {
-    const usersInputValue  = document.querySelector(".input__text").value;
-    const wordArr = usersInputValue.split();
-    outputDisplay.innerHTML = wordArr;
-}
-
-translateButton.addEventListener("click", displayTranslation);
-
-
-
-// CLEAR THE USER INPUT
-const resetTranslator = () => {
-    userInput.value = "";
-    outputDisplay.innerHTML = "";
-}
-
+// EVENT LISTENER - CLEAR BTN
 clearButton.addEventListener("click", resetTranslator);
 
 
+// EVENT LISTENER - TRANSLATE BTN
+translateButton.addEventListener("click", () => {
+  const userInputValue = document.querySelector(".input__text").value;   //store input text value in variable 
 
-/* 
-const displayTranslation = () => {
-    const usersInputValue  = document.querySelector(".input__text").value;
-    outputDisplay.innerHTML = usersInputValue;
-}
-*/
+  // create a new translator object
+  const translator = new Translator();
+  translator.getWordToTranslate(userInputValue);
+  translator.breakDownWord();
+  translator.translateInput();
+  translator.displayTranslation();
+  
+  return outputDisplay.innerHTML = `${translator.output}`;
+})
+
+
+// /////////////////////////////////////////////////////////
+
+// const translator = new Translator();
+
+// WRAP THIS IN A FUNCTION WHICH TRIGGERS ALL METHODS ON THE CLASS
+// translator.getWordToTranslate("bye");
+// translator.breakDownWord();
+// translator.translateInput();
+// translator.displayTranslation();
+
+
+//!//!//!//!//!//!//!//!//!//!//!//!//!//!//!//!//!//!//!//!//!
+// TO DO 
+// TIDY UP FILES
+// PUSH IT TO GITHUB
+// HOW TO EXTEND THE CLASS TO CATER TO MORSE CODE INPUT OR OTHER LANGUAGES (FRENCH?)

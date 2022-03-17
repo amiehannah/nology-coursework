@@ -4,12 +4,7 @@
 
 $light-beige: #F9EFD9; 
 $light-beige-opacity: rgba(249, 239, 217, 0.2);
-$sage-green: #4B9A8E;
-$aqua: #CAE5E3;
-$yellow: rgba(221, 184, 83, 0.2);
-$mint: #E2E9D5;
-$sage: #8DB49A;
-$pink: #DFABC7;
+// $yellow: rgba(221, 184, 83, 0.2);
 $navy: #040336;
 
 
@@ -20,7 +15,7 @@ $navy: #040336;
     padding: 0px;
     box-sizing: border-box;
     font-family: "Work Sans", sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   
 
@@ -39,7 +34,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
-    
+}
+
 
 

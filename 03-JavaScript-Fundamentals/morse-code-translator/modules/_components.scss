@@ -1,14 +1,18 @@
 .button__container {
-    width: 50vw;
+    width: 65vw; //50vw
     display: flex;
     justify-content: space-around;
+
+    @media screen and (min-width: 576px) {
+        max-width: 425px;
+        }
+   
     }
     
     
     button { 
         color: $light-beige;
         background-color: $navy;
-        /* #B6C6EB; */
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -16,14 +20,20 @@
         border-radius: 2px;
         cursor: pointer;
         line-height: 1.1;
-        font-weight: 300;
+        font-weight: 200;
         letter-spacing: 0.1rem;
         text-transform: uppercase;
-        padding: 10px 18px;
-        font-size: 12px;
+        font-size: 10px;
+        padding: 7px 15px;
         letter-spacing: 0.15em;
         line-height: 1.5em;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+
+    //media queries
+        @media screen and (min-width: 576px) {
+        padding: 8px 16px;
+        font-size: 12px;
+        }
     } 
 
     button:hover {
@@ -32,24 +42,33 @@
 
     .input__text, .output__text {
         width: 50vw;
-        height: 30vh;
+        height: 28vh;
         padding: 10px;
         display: flex;
         flex-wrap: wrap;
         background-color: $light-beige-opacity;
         border: none;
-        font-size: 16px;
+        font-size: 14px; //16px
         color: $light-beige;
         letter-spacing: 0.05em;
+        min-width: 250px;
+
+  //media queries
+  @media screen and (min-width: 576px) {
+    min-width: 280px;
+    max-width: 425px;
+    height: 30vh;
+    }
+
+    
+
+
     }
 
     .output__text {
-        font-size: 18px;
+        font-size: 16px;
     }
 
 
-    // .input__box:focus {
-    //     background-color: $yellow;
-    // }
-    
-    
+
+    // 320px — 480px: Mobile devices
