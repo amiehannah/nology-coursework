@@ -2,7 +2,20 @@ console.log("it's working");
 
 const button = document.querySelector("button");
 const textOutput = document.querySelector("#text-output");
-const scoreBoard = document.querySelector(".score-board");
+const motherShipScore = document.querySelector("#m-ship-score");
+const defenceShipScore = document.querySelector("#d-ship-score");
+const attackShipScore = document.querySelector("#a-ship-score");
+const startButton = document.querySelector(".start-button");
+const modal = document.querySelector("#modal");
+
+// motherShipScore.innerHTML = "20";
+// defenceShipScore.innerHTML = "20";
+// attackShipScore.innerHTML = "20";
+
+startButton.addEventListener('click', () => {
+  modal.classList.add("hidden");
+})
+
 
 /* 
 TEXT ONLY BASED GAME 
@@ -24,12 +37,12 @@ TDD and Unit Testing, OOP concepts, and Pure Functions
 solve this in under 150 lines including comments - NO MORE
 */
 
-class alienShips {
+class alienShip {
   constructor(shipName, currentPoints, hitPoints) {
     this.shipName = shipName;
     this.currentPoints = currentPoints;
     this.hitPoints = hitPoints;
-    this.alienShipFleet = []
+    this.alienShipFleetArr = []
   }
   getCurrentScore() {
       return this.currentPoints;
@@ -48,17 +61,35 @@ class alienShips {
 } // end of class
 
 
+const createFleet = () => {
+    alienMotherShip = new alienShip("motherShip", 100, 9);
+    alienDefenceShip = new alienShip("defenceShip", 80, 10);
+    alienDefenceShip2 = new alienShip("defenceShip", 80, 10);
+    alienDefenceShip3 = new alienShip("defenceShip", 80, 10);
+    alienDefenceShip4 = new alienShip("defenceShip", 80, 10);
+    alienDefenceShip5 = new alienShip("defenceShip", 80, 10);
+    alienAttackShip = new alienShip("attackShip", 45, 12);
+    alienAttackShip2 = new alienShip("attackShip", 45, 12);
+    alienAttackShip3 = new alienShip("attackShip", 45, 12);
+    alienAttackShip4 = new alienShip("attackShip", 45, 12);
+    alienAttackShip5 = new alienShip("attackShip", 45, 12);
+    alienAttackShip6 = new alienShip("attackShip", 45, 12);
+    alienAttackShip7 = new alienShip("attackShip", 45, 12);
+    alienAttackShip8 = new alienShip("attackShip", 45, 12);
+}
 
-textOutput.innerHTML = "Shoot to Start";
 
-button.addEventListener("click", () => {
-  // Math.floor(Math.random() * 10);
-  scoreBoard.innerHTML = `
-    <h3> Mothership </h3>
-    <h3> Defence Ship </h3>
-    <h3> Attack Ship </h3>
-`;
-});
+
+//textOutput.innerHTML = "Shoot to Start";
+
+// button.addEventListener("click", () => {
+//   // Math.floor(Math.random() * 10);
+//   scoreBoard.innerHTML = `
+//     <h3> Mothership </h3>
+//     <h3> Defence Ship </h3>
+//     <h3> Attack Ship </h3>
+// `;
+// });
 
 // STORE THE SHIPS IN AN ARRAY? or how to store in OOP?
 // ON STARTING THE GAME RANDOMISE THE SEQUENCE OF SHIPS

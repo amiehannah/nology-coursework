@@ -6,23 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" async defer></script>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/vvo3bbu.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vvo3bbu.css" />
     <title>Hostile Aliens Game</title>
   </head>
   <body>
     <main>
- 
       <header>
-        <h1>Hostile Aliens Game</h1> 
-        <div class="score-board"> dynamically add scores in here? </div>
+        <h1>Hostile Aliens Game</h1>
+        <h2> 🚀👾 Shoot to attack the Alien ships 👾🚀 </h2>
       </header>
-      <section class="game-section">
-        <p id="text-output"></p>
-      </section>
-      <div class="button-container">
-        <button>Click to Play</button>
-      </div>
 
+      <!-- MODAL SECTION -->
+     <dialog class="modal" id="modal">
+      <h5 class="modal-title">play</h5>
+      <h5 class="modal-title">hostile aliens</h5>
+      <h5>*** score table ***</h5>
+      <div>
+        <p>mothership = 9 points</p>
+        <p>defence ship = 10 points</p>
+        <p>attack ship = 12 points</p>
+      </div>
+      <h5 class="warning-msg">all ships are destroyed if the mothership is destroyed</h5>
+      <button class="start-button">click to play</button>
+    </dialog>
+
+
+      <!-- GRID FOR SCORE BOARD -->
+      <section class="grid-container">
+        <div class="grid-item grid-item-1">*** scores ***</div>
+        <div class="grid-item grid-item-2">mothership</div>
+        <div class="grid-item grid-item-3">defence ship</div>
+        <div class="grid-item grid-item-4">attack ship</div>
+        <div class="grid-item grid-item-5" id="m-ship-score">100</div>
+        <div class="grid-item grid-item-6" id="d-ship-score">80</div>
+        <div class="grid-item grid-item-7" id="a-ship-score">45</div>
+      </section>
+
+
+
+      <!-- GAME SECTION -->
+      <section class="game-section">
+        <section class="mothership-section">
+          <h3 class="mother-ship">mothership</h3>
+        </section>
+
+        <section class="defence-section">
+          <h3 class="defence-ship">defence ship</h3>
+          <h3 class="defence-ship">defence ship</h3>
+          <h3 class="defence-ship">defence ship</h3>
+          <h3 class="defence-ship">defence ship</h3>
+          <h3 class="defence-ship">defence ship</h3>
+        </section>
+
+        <section class="attack-section">
+          <h3 class="attack-ship" id="">attack ship</h3>
+          <h3 class="attack-ship">attack ship</h3>
+          <h3 class="attack-ship">attack ship</h3>
+          <h3 class="attack-ship">attack ship</h3>
+          <h3 class="attack-ship">attack ship</h3>
+          <h3 class="attack-ship">attack ship</h3>
+          <h3 class="attack-ship">attack ship</h3>
+          <h3 class="attack-ship">attack ship</h3>
+        </section>
+      </section>
+     
+
+      <div class="button-container">
+        <button>Shoot! 🚀</button>
+  
+      </div>
     </main>
   </body>
 </html>
