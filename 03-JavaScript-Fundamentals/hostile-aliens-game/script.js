@@ -1,6 +1,4 @@
-console.log("it's working");
-
-const button = document.querySelector("button");
+const shootButton = document.querySelector(".shoot");
 const textOutput = document.querySelector("#text-output");
 const motherShipScore = document.querySelector("#m-ship-score");
 const defenceShipScore = document.querySelector("#d-ship-score");
@@ -18,15 +16,11 @@ startButton.addEventListener('click', () => {
 
 
 /* 
-TEXT ONLY BASED GAME 
-// SINGLE BUTTON
-HITS RANDOM ALIEN SHIP
 EACH TIME BUTTON IS PRESSED, RANDOM ALIEN SHIP IS HIT AND POINTS ARE REDUCED
-ONE THE ALIEN SHIPS POINT HAVE HIT ZERO THE SHIP IS DESTROYED AND CAN'T BE HIT AGAIN
+ONCE THE ALIEN SHIPS POINT HAVE HIT ZERO THE SHIP IS DESTROYED AND CAN'T BE HIT AGAIN
 GAME OVER WHEN ALL ALIEN SHIPS HAVE BEEN HIT
-
 GAME OVER - GAME RESTARTS
-TEXT VISUALISATION OF THE SHIPS AND THEIR HIT POINTS
+
 GAME SHOULD CONTAIN: 
 1X MOTHERSHIP (100 Hit Points - Loses 9 hit points every time it is hit - All ships are destroyed if the Mother ship is destroyed )
 5X DEFENCE SHIPS (Each one starts with 80 hit points - Each one Loses 10 hit points each time it is hit)
@@ -35,6 +29,9 @@ GAME SHOULD CONTAIN:
 The main task is to create a game - HOW YOU BREAK DOWN A PROBLEM
 TDD and Unit Testing, OOP concepts, and Pure Functions
 solve this in under 150 lines including comments - NO MORE
+
+WHEN IT IS HIT - TEXT CSS TO BLINK
+
 */
 
 class alienShip {

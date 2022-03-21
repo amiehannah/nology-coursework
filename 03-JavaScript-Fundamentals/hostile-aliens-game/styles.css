@@ -6,18 +6,12 @@
   --black: #000000;
   --green: rgb(49, 255, 0);
   --azure: #f0ffff;
-  --cyan: rgb(0,239,255);
-  --pink: rgb(254,40,255);
+  --cyan: rgb(0, 239, 255);
+  --pink: rgb(254, 40, 255);
   --red: rgb(255, 23, 0);
   --title-font-family: bd-geminis, sans-serif;
   --secondary-font-family: lores-12, sans-serif;
 }
-
-/* POTENTIAL FONT FAMILIES
-font-family: 'DotGothic16', sans-serif;
-font-family: 'Geo', sans-serif;
- --main-font-family: 'DotGothic16', sans-serif;
-*/
 
 * {
   margin: 0px;
@@ -47,24 +41,48 @@ h1 {
   color: var(--azure);
   letter-spacing: 0.05em;
   font-weight: 50;
-  font-size: 36px;
+  font-size: 26px;
   display: flex;
   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 576px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
 }
 
 h2 {
   font-family: var(--secondary-font-family);
   color: var(--azure);
   letter-spacing: 0.1em;
-  font-size: 16px;
+  font-size: 14px;
   margin: 20px;
   font-weight: 100;
 }
 
+@media screen and (min-width: 576px) {
+  h2 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+
+
 .line {
-    width: 75vw;
-    border: 1px dashed var(--azure);
-    margin: auto;
+  width: 75vw;
+  border: 1px dashed var(--azure);
+  margin: auto;
 }
 
 /* 
@@ -74,7 +92,8 @@ GRID
 */
 .grid-container {
   display: grid;
-  width: 75vw;
+  align-content: center;
+  width: 80vw;
   height: 100px;
   margin: 10px auto 20px auto;
   padding: 4px;
@@ -82,6 +101,7 @@ GRID
   grid-template-rows: repeat(3, 1fr);
   border: 1px dashed var(--azure);
 }
+
 
 .grid-item {
   display: flex;
@@ -100,10 +120,10 @@ GRID
   color: var(--green);
 }
 
-.grid-item-5, 
+.grid-item-5,
 .grid-item-6,
 .grid-item-7 {
-    color: var(--azure);
+  color: var(--azure);
 }
 
 /* ====================== */
@@ -114,46 +134,82 @@ h3 {
   flex-direction: column;
 }
 
+
+
+
+
 .game-section {
-  width: 75vw;
-  margin: 25px auto;
+  width: 80vw;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   border: 1px dashed var(--azure);
-  grid-gap: 50px;
+  grid-gap: 30px;
   justify-items: center;
   justify-content: center;
   text-align: center;
   padding: 20px 10px;
 }
 
-.mothership-section{
+@media screen and (max-width: 375px) {
+  .game-section{
+    grid-gap: 15px;
+    margin: 25px auto;
+  }
+}
+
+@media screen and (min-width: 710px) {
+  .game-section {
+    grid-gap: 40px;
+    margin: 25px auto;
+  }
+}
+
+.mothership-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
   color: var(--pink);
 }
+@media screen and (min-width: 576px) {
+  .mothership-section {
+    font-size: 28px;
+  }
+}
+
 
 .defence-section {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  font-size: 24px;
+  font-size: 18px;
   grid-gap: 12px;
   color: var(--cyan);
+}
+
+@media screen and (min-width: 576px) {
+  .defence-section {
+    font-size: 24px;
+  }
 }
 
 .attack-section {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  font-size: 20px;
+  font-size: 18px;
   grid-gap: 12px;
   color: var(--ltyellow);
+}
+
+@media screen and (min-width: 576px) {
+  .attack-section {
+    font-size: 20px;
+  }
 }
 
 /* BUTTON STYLING */
@@ -170,50 +226,84 @@ button {
   font-family: var(--secondary-font-family);
   color: var(--black);
   background-color: var(--green);
-  padding: 10px 18px;
-  font-size: 20px;
+  padding: 8px 14px;
+  font-size: 12px;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 480px) {
+  button {
+    font-size: 16px;
+    padding: 9px 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  button {
+    font-size: 19px;
+    padding: 10px 17px;
+  }
 }
 
 button:hover {
   background-color: var(--azure);
 }
 
-.hidden {
-    display: none;
-}
-
 /* MODAL STYLING */
 dialog {
-    padding: 1em;
-    color: var(--azure);
-    font-family: var(--secondary-font-family);
-    font-size: 36px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    height: 70vh;
-    letter-spacing: 2px;
-    text-align: center;
-    width: 100vw;
- 
+  padding: 1em;
+  color: var(--azure);
+  font-family: var(--secondary-font-family);
+  font-size: 32px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  height: 80vh;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100vw;
 }
+@media screen and (min-width: 480px) {
+  dialog {
+    height: 70vh;
+    justify-content: space-between;
+    font-size: 36px;
+  }
+}
+
+
 .modal-title:nth-child(1) {
-    color: var(--green);
+  color: var(--green);
 }
 .modal-title:nth-child(2) {
-    color: var(--pink);
+  color: var(--pink);
 }
 .warning-msg {
+  font-size: 16px;
+  color: var(--ltyellow);
+}
+@media screen and (min-width: 768px) {
+  .warning-msg {
     font-size: 20px;
-    color: var(--ltyellow);
+  }
 }
 
 p {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  p {
     font-size: 28px;
+  }
+}
+
+/* DYNAMIC STYLING */
+.hidden {
+  display: none;
 }
