@@ -1,45 +1,46 @@
 const shootButton = document.querySelector(".shoot");
-const textOutput = document.querySelector("#text-output");
 const motherShipScore = document.querySelector("#m-ship-score");
 const defenceShipScore = document.querySelector("#d-ship-score");
 const attackShipScore = document.querySelector("#a-ship-score");
 const startButton = document.querySelector(".start-button");
 const modal = document.querySelector("#modal");
+const gameOver = document.querySelector(".game-over");
+const restartGame = document.querySelector(".restart-button");
+
+ gameOver.classList.add("hidden"); // DO SOMETHING WITH THIS LATER
+// restartGame.addEventListener('click', () => {
+  
+// })
 
 // motherShipScore.innerHTML = "20";
 // defenceShipScore.innerHTML = "20";
 // attackShipScore.innerHTML = "20";
 
-startButton.addEventListener('click', () => {
-  modal.classList.add("hidden");
-})
-
-
 /* 
-EACH TIME BUTTON IS PRESSED, RANDOM ALIEN SHIP IS HIT AND POINTS ARE REDUCED
-ONCE THE ALIEN SHIPS POINT HAVE HIT ZERO THE SHIP IS DESTROYED AND CAN'T BE HIT AGAIN
-GAME OVER WHEN ALL ALIEN SHIPS HAVE BEEN HIT
-GAME OVER - GAME RESTARTS
-
-GAME SHOULD CONTAIN: 
-1X MOTHERSHIP (100 Hit Points - Loses 9 hit points every time it is hit - All ships are destroyed if the Mother ship is destroyed )
-5X DEFENCE SHIPS (Each one starts with 80 hit points - Each one Loses 10 hit points each time it is hit)
-8X ATTACKSHIP ( Each starts with 45 hit points - Each loses 12 hit points each time it is hit. )
-
-The main task is to create a game - HOW YOU BREAK DOWN A PROBLEM
-TDD and Unit Testing, OOP concepts, and Pure Functions
-solve this in under 150 lines including comments - NO MORE
-
-WHEN IT IS HIT - TEXT CSS TO BLINK
+// ON STARTING THE GAME RANDOMISE THE SEQUENCE OF SHIPS
+// ON USER CLICKING THE BUTTON -> GENERATE A RANDOM NUMBER
+// USING THE RANDOM NUMBER GENERATED FIND THE SHIP AT THAT RANDOM NUMBER INDEX
+// CALL THE METHOD - shipIsHit() ON EACH BUTTON CLICK, RANDOM ALIEN SHIP IS HIT AND POINTS ARE REDUCED
+// REDUCE THE SCORE VISUALLY ON SCORE BOARD + ONCE HIT ADD A CSS EFFECT
+// ONCE THE ALIEN SHIPS POINT HAVE HIT ZERO THE SHIP IS DESTROYED AND CAN'T BE HIT AGAIN
+// STORE HIT SHIPS IN A NEW ARRAY (PUSH IT)? ADD CLASS LIST OF HIDDEN?
+// GAME OVER WHEN ALL ALIEN SHIPS HAVE BEEN HIT or MOTHERSHIP = 0
+// GAME OVER - GAME RESTARTS
 
 */
+// TO DO:
+// HOW TO CREATE THE ALIEN FLEET EASILY - IS THERE A BETTER WAY OF DOING THIS?
+// HOW DO YOU LINK THE ARRAY TO THE HTML EQUIVALENTS?
+// ONCE HIT ADD CSS EFFECT - BLINK OR CHANGE COLOUR
+// ONCE HIT REDUCE TOTAL SCORE (NEED TO RELOOK AT MY SCORE TABLE)
+// RANDOMISE ARRAY ON GAME LOAD
+// ADD GAME OVER MODAL
 
 class alienShip {
   constructor(shipName, currentPoints, hitPoints) {
     this.shipName = shipName;
     this.currentPoints = currentPoints;
     this.hitPoints = hitPoints;
-    this.alienShipFleetArr = []
   }
   getCurrentScore() {
       return this.currentPoints;
@@ -49,7 +50,8 @@ class alienShip {
    // when button is pressed random alien ship is hit
    // points are reduced
    const alienShipScore = this.currentPoints - this.hitPoints;
-   return alienShipScore;
+   this.currentPoints = alienShipScore;
+   return this.currentPoints;
   }
 
   gameOver() {
@@ -58,7 +60,8 @@ class alienShip {
 } // end of class
 
 
-const createFleet = () => {
+
+const createAlienFleet = () => {
     alienMotherShip = new alienShip("motherShip", 100, 9);
     alienDefenceShip = new alienShip("defenceShip", 80, 10);
     alienDefenceShip2 = new alienShip("defenceShip", 80, 10);
@@ -75,38 +78,52 @@ const createFleet = () => {
     alienAttackShip8 = new alienShip("attackShip", 45, 12);
 }
 
+createAlienFleet();
+
+console.log(createAlienFleet);
+
+console.log(alienAttackShip2.getCurrentScore());
+console.log(alienAttackShip2.shipIsHit()); //shipIsHit method works
 
 
-//textOutput.innerHTML = "Shoot to Start";
 
-// button.addEventListener("click", () => {
-//   // Math.floor(Math.random() * 10);
-//   scoreBoard.innerHTML = `
-//     <h3> Mothership </h3>
-//     <h3> Defence Ship </h3>
-//     <h3> Attack Ship </h3>
-// `;
-// });
 
-// STORE THE SHIPS IN AN ARRAY? or how to store in OOP?
-// ON STARTING THE GAME RANDOMISE THE SEQUENCE OF SHIPS
-// ON USER CLICKING THE BUTTON
-// GENERATE A RANDOM NUMBER
-// LOOP THROUGH THE ARRAY AND USING THE RANDOM NUMBER GENERATED FIND THE SHIP AT THAT INDEX
-// THIS SHIP IS NOW 'HIT'
-// REDUCE THE SCORE VISUALLY ON SCREEN
-// STORE THIS HIT SHIP IN A NEW ARRAY (PUSH IT)
+// START GAME CLICK HIDES MODAL
+startButton.addEventListener('click', () => {
+  modal.classList.add("hidden");
 
-// HITS RANDOM ALIEN SHIP
-// generate a random number within an array
-// hit this ship
-function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
-  }
+// ON LOAD DO I NEED TO RANDOMISE ARRAY EACH TIME?
+// loadGame(); function?
+})
+
+// STORE ALIEN SHIPS IN ARRAY
+
+let alienShipFleetArr = [];
+alienShipFleetArr
+.push(
+  alienMotherShip,
+  alienDefenceShip,
+  alienDefenceShip2,
+  alienDefenceShip3,
+  alienDefenceShip4,
+  alienDefenceShip5,
+  alienAttackShip,
+  alienAttackShip2,
+  alienAttackShip3,
+  alienAttackShip4,
+  alienAttackShip5,
+  alienAttackShip6,
+  alienAttackShip7,
+  alienAttackShip8
+);
+console.log(alienShipFleetArr);
+
+
+
+shootButton.addEventListener("click", () => {
+  let randomShip = alienShipFleetArr[Math.floor(Math.random()*alienShipFleetArr.length)];
+  console.log(randomShip);
+  randomShip.shipIsHit();
+  return randomShip;
+  })
   
-
-
-// const shuffleCards = (array) => {
-//     let randomiseCards = array.sort(() => 0.5 - Math.random());
-//     return randomiseCards;
-//   };

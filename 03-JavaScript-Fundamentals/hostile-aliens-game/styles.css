@@ -307,3 +307,8 @@ p {
 .hidden {
   display: none;
 }
+
+.hit {
+  color: var(--red);
+  /* OR BLINK CSS STYLING? */
+}

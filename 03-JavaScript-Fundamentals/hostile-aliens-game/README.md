@@ -55,3 +55,8 @@ unit tests) and any more than that is a sign you have over complicated the probl
 • You can use basic HTML and CSS to tidy up the output but no more
 • Try to use a TDD approach by writing your tests first, but at least make sure
 everything is tested
+
+
+The main task is to create a game - HOW YOU BREAK DOWN A PROBLEM
+TDD and Unit Testing, OOP concepts, and Pure Functions
+solve this in under 150 lines including comments - NO MORE
