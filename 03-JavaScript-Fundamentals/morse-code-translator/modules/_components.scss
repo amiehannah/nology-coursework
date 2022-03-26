@@ -1,74 +1,78 @@
 .button__container {
-    width: 65vw; //50vw
-    display: flex;
-    justify-content: space-around;
+  width: 65vw; //50vw
+  display: flex;
+  justify-content: space-around;
 
-    @media screen and (min-width: 576px) {
-        max-width: 425px;
-        }
-   
-    }
-    
-    
-    button { 
-        color: $light-beige;
-        background-color: $navy;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        border-radius: 2px;
-        cursor: pointer;
-        line-height: 1.1;
-        font-weight: 200;
-        letter-spacing: 0.1rem;
-        text-transform: uppercase;
-        font-size: 10px;
-        padding: 7px 15px;
-        letter-spacing: 0.15em;
-        line-height: 1.5em;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  @media screen and (min-width: 576px) {
+    max-width: 425px;
+  }
+}
 
-    //media queries
-        @media screen and (min-width: 576px) {
-        padding: 8px 16px;
-        font-size: 12px;
-        }
-    } 
+button {
+  color: $light-beige;
+  background-color: $navy;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  line-height: 1.1;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 7px 15px;
+  letter-spacing: 0.15em;
+  line-height: 1.5em;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
 
-    button:hover {
-        background-color: $light-beige-opacity;
-    }
+  //media queries
+  @media screen and (min-width: 576px) {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
 
-    .input__text, .output__text {
-        width: 50vw;
-        height: 28vh;
-        padding: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        background-color: $light-beige-opacity;
-        border: none;
-        font-size: 14px; //16px
-        color: $light-beige;
-        letter-spacing: 0.05em;
-        min-width: 250px;
+button:hover {
+  background-color: $light-beige-opacity;
+}
+
+.input__text,
+.output__text {
+  width: 50vw;
+  height: 28vh;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $light-beige-opacity;
+  border: none;
+  font-size: 14px; //16px
+  color: $light-beige;
+  letter-spacing: 0.05em;
+  min-width: 250px;
+
 
   //media queries
   @media screen and (min-width: 576px) {
     min-width: 280px;
     max-width: 425px;
     height: 30vh;
-    }
+  }
+  @media screen and (min-width: 780px) {
+    max-width: 550px;
+  }
+}
 
-    
+.input__text::placeholder { 
+  color: $light-beige;
+  padding: 0px;
+  font-style: italic;
+  opacity: 0.5;
+}
 
-
-    }
-
-    .output__text {
-        font-size: 16px;
-    }
-
-
-
-    // 320px — 480px: Mobile devices
+.output__text {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+}

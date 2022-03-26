@@ -138,7 +138,8 @@ button:hover {
   background-color: rgba(249, 239, 217, 0.2);
 }
 
-.input__text, .output__text {
+.input__text,
+.output__text {
   width: 50vw;
   height: 28vh;
   padding: 10px;
@@ -152,13 +153,29 @@ button:hover {
   min-width: 250px;
 }
 @media screen and (min-width: 576px) {
-  .input__text, .output__text {
+  .input__text,
+.output__text {
     min-width: 280px;
     max-width: 425px;
     height: 30vh;
   }
 }
+@media screen and (min-width: 780px) {
+  .input__text,
+.output__text {
+    max-width: 550px;
+  }
+}
+
+.input__text::placeholder {
+  color: #F9EFD9;
+  padding: 0px;
+  font-style: italic;
+  opacity: 0.5;
+}
 
 .output__text {
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
 }
