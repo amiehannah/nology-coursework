@@ -2,31 +2,46 @@ Task:
 To create a morse code translator using OOP.
 The classes used should store all the information needed to translate between Morse code and English (and back again) including alphabets, the word to translate and the eventual output.
 
-Breaking down the problem --> Essential functionality needed:
-• Data structure to store morse code characters in JS 
-• 
+Breaking down the problem -->
+- The user needs to be able to input a value
+- This input needs to be broken down to be able to 
+- On clicking the translate button 
+- Researched Morse Code alphabet, 
+- Data structure to store morse code characters in JS 
+- 
+- Additionally if user adds Morse code, translator should be able to translate this back to English equivalent
 
 
-- Build a Class of Translator – this will be extended multiple times for lots of different types of translators.
-- Build 2 further Classes (Morse & French/Spanish/German etc) that extend from the translator class and inherit any properties/methods you think it should have.
-- Build these translators out to be fully functioning.
-- The definition of done is when I (the user) can visit you hosted site, input something in English and receive back the equivalent in, for example, Morse Code.
+
+- Stored the alphabets in objects, with key value pairs
+- Created a class of Translator, binding the alphabets to the class
+- Created methods for each step of the translation
+- Firstly getting the word to translate
+- Breaking down the word, turning it into an array to enable it to be looped over.
+- Translate input method, uses map() to iterate over the translation array and returning the values from the alphabet object.
+- 
+- Display the translation in the output box
+
+Extend from the translator class and inherit any properties/methods you think it should have.
+
+Next Steps 
+• Extend the classes to be able to translate other languages.
 
 
 
-// /////////////////////////////////////////////////////////
-// STEPS
-// 1. WHEN TRANSLATE BUTTON IS CLICKED - event listener
-// 2. GET THE INPUT TYPED INTO THE INPUT__TEXT BOX AND STORE THIS IN VARIABLE 'wordToTranslate'
-// 3. Validation check? IS there an input to get - (i.e. if you click translate and input is empty display an error message - ask user to enter their input to translate)
-// 4. Work out translation - DONE
-// 5. Display the translation in the output box
-// 7. ONCE this is working -> look to add a further method which translates from morse back to english
 
-// /////////////////////////////////////////////////////////
 // TRANSLATION
 // 1. GET WORD
 // 2. BREAK DOWN WORD TO BE ABLE TO TRANSLATE
 // 3. TRANSLATE INPUT
 // 4. DISPLAY TRANSLATION IN THE OUTPUT BOX
+
+
+
+
+use keyword 'extends' which gives us access to properties/methods that the Vehicle class holds, so we don't have to repeat them
+
+
+
+UI - I created a textured gradient in Illustrator which I've then applied to the background of the webpage and added a horizontal ticker
 
