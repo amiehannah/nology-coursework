@@ -170,8 +170,9 @@ class MorseToEnglish extends Translator {
     .join("");
        
   console.log(translation);
-  outputDisplay.innerHTML = translation;
-
-  return (this.translation = translation);
+  const capitaliseStr = translation.charAt(0).toUpperCase() + translation.slice(1);
+  outputDisplay.innerHTML = capitaliseStr;
+  return (this.translation = capitaliseStr);
   }
 }
+
