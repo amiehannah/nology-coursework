@@ -47,7 +47,7 @@ button:hover {
   flex-wrap: wrap;
   background-color: $light-beige-opacity;
   border: none;
-  font-size: 15px; 
+  font-size: 16px; 
   color: $light-beige;
   letter-spacing: 0.05em;
   min-width: 250px;
@@ -72,7 +72,5 @@ button:hover {
 }
 
 .output__text {
-  font-size: 16px;
   font-weight: 500;
-
-} 
+}
