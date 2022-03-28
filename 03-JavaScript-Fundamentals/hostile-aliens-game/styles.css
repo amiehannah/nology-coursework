@@ -303,6 +303,34 @@ p {
   }
 }
 
+
+.game-over {
+  position: relative;
+  top: -500px;
+  height: 62vh;
+  padding: 50px;
+  color: var(--azure);
+}
+
+@media screen and (min-width: 480px) {
+  .game-over {
+    top: -530px;
+    height: 70vh;
+    font-size: 40px;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+h6 {
+  font-size: 40px;
+}
+
+.oddcol {
+  color: var(--cyan);
+}
+
+
 /* DYNAMIC STYLING */
 .hidden {
   display: none;
@@ -311,4 +339,42 @@ p {
 .hit {
   color: var(--red);
   /* OR BLINK CSS STYLING? */
+}
+
+.outOfPlay {
+  color: var(--black);
+}
+
+
+/* dynamically adding in divs */
+.gameContainer {
+  height: 300px;
+  background-color: aliceblue;
+}
+
+/* .gameContainer div {
+  background-color: aqua;
+  height: 20px;
+  border: 1px solid yellow;
+} */
+
+.motherShip {
+  background-color: aqua;
+  height: 20px;
+  width: 20px;
+  border: 1px solid yellow;
+}
+
+.attackShip {
+  background-color: aqua;
+  height: 20px;
+  width: 20px;
+  border: 1px solid yellow;
+}
+
+.defenceShip {
+  background-color: aqua;
+  height: 20px;
+  width: 20px;
+  border: 1px solid yellow;
 }

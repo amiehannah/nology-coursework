@@ -1,0 +1,180 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Geo:ital@0;1&family=Press+Start+2P&family=VT323&display=swap");
+
+:root {
+  --purple: rgb(66, 54, 118);
+  --ltyellow: rgb(253, 255, 182);
+  --black:  #010102;
+  --green: rgb(49, 255, 0);
+  --azure: #f0ffff;
+  --cyan: rgb(0, 239, 255);
+  --pink: rgb(254, 40, 255);
+  --red: rgb(255, 23, 0);
+  --title-font-family: bd-geminis, sans-serif;
+  --secondary-font-family: lores-12, sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: var(--secondary-font-family)
+}
+
+
+body {
+    background-color: var(--black);
+}
+
+.title-container {
+    text-align: center;
+    width: 510px;
+    /* border-bottom: solid 1px #3a3a3c; */
+    padding-top: 4vh;
+}
+
+.game-container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.score-container {
+    width: 330px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px;
+    border: 1px dashed var(--azure);
+}
+
+.score-container .scores-0 {
+    color: var(--green);
+    width: 100%;
+}
+
+.score-container .scores-1,
+.score-container .scores-2,
+.score-container .scores-3 {
+    color: var(--ltyellow);
+    width: 33%;
+}
+
+.score-container .scores-4, 
+.score-container .scores-5,
+.score-container .scores-6  {
+    color: var(--azure);
+    padding: 3px;
+}
+
+.alien-container {
+    margin: 0 auto;
+    width: 330px;
+    height: 275px;
+    border: 1px dashed var(--azure);
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+div {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 3px;
+    color: var(--azure);
+}
+
+.mothership {
+    color: var(--pink);
+    width: 100%;
+    font-size: 20px;
+}
+
+.defence-ship {
+    color: var(--cyan);
+}
+
+.attack-ship {
+    color: var(--ltyellow);
+}
+
+.alien-container div:nth-child(5) {
+    padding-left: 30px;
+    width: 50%;
+}
+ 
+.alien-container div:nth-child(6) {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.alien-container div:nth-child(13) {
+    padding-left: 30px;
+    width: 50%;
+}
+
+.alien-container div:nth-child(14) {
+    padding-right: 30px;
+    width: 50%;
+}
+
+
+/* OLD STYLING */
+h1 { 
+    font-family: var(--title-font-family);
+    color: var(--azure);
+    letter-spacing: 0.05em;
+    font-weight: 50;
+    font-size: 26px;
+}
+h2 {
+    color: var(--azure);
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    margin: 20px;
+    font-weight: 100;
+}
+
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+button {
+    font-family: var(--secondary-font-family);
+    color: var(--black);
+    background-color: var(--green);
+    padding: 8px 14px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--azure);
+  }
+
+.shipIsSunk {
+  color: var(--black);
+}
+
+.hit {
+    color: red;
+}
