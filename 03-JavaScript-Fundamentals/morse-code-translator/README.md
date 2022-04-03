@@ -28,6 +28,14 @@ UI:
 - I created a textured gradient mesh in Illustrator which I've then applied to the background and added a horizontal ticker.
 
 
+Unit Testing:
+- Unit Testing to check my methods on the class of Translator.
+- I've written tests to check if my translator could successfully translate: characters, words and sentences.
+- My initial code was then refactored to enable it to handle some basic punctuation and numerical values 0-9, as my test initially revealed that these hadn't been accounted for.
+- Hopefully this has enabled my translator to be more robust.
+
 Next Steps:
 - Extend the classes to be able to translate other languages.
-- Unit Testing.
+- Format the text outputs, ensuring that capitalised values are structured after every full stop and that values such as 'I' are capitalised etc.
+
+

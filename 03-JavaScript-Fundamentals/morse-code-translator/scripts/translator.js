@@ -1,134 +1,167 @@
-const alphabet = {
-    a: ".-",
-    b: "-...",
-    c: "-.-.",
-    d: "-..",
-    e: ".",
-    f: "..-.",
-    g: "--.",
-    h: "....",
-    i: "..",
-    j: ".---",
-    k: "-.-",
-    l: ".-..",
-    m: "--",
-    n: "-.",
-    o: "---",
-    p: ".--.",
-    q: "--.-",
-    r: ".-.",
-    s: "...",
-    t: "-",
-    u: "..-",
-    v: "...-",
-    w: ".--",
-    x: "-..-",
-    y: "-.--",
-    z: "--..",
-  };
 
-  const morseAlphabet = {
-    ".-": "a",
-    "-...": "b",
-    "-.-.": "c",
-    "-..": "d",
-    ".": "e",
-    "..-.": "f",
-    "--.": "g",
-    "....": "h",
-    "..": "i",
-    ".---": "j",
-    "-.-": "k",
-    ".-..": "l",
-    "--": "m",
-    "-.": "n",
-    "---": "o",
-    ".--.": "p",
-    "--.-": "q",
-    ".-.": "r",
-    "...": "s",
-    "-": "t",
-    "..-": "u",
-    "...-": "v",
-    ".--": "w",
-    "-..-": "x",
-    "-.--": "y",
-    "--..": "z",
-  };
-  
-  class Translator {
-    constructor() {
-      this.alphabet = alphabet,
-      this.morseAlphabet = morseAlphabet,
-      this.translationArr = [],
-      this.translation = "",
-      this.output = "",
-      this.wordToTranslate = ""
-    }
-  
-    getWordToTranslate(word) {
-      this.wordToTranslate = word;
-      return this.wordToTranslate;
-    }
-  
-    breakDownWord() {
-      // console.log(this.wordToTranslate);
-      const translationArr = this.wordToTranslate.toLowerCase().split(""); // The split() method splits a string into an array of substrings.
-      // console.log(translationArr);
-      return (this.translationArr = translationArr); // returns an array
-    }
-  
-    translateInput() {
-      console.log(this.translationArr);
-      const translation = this.translationArr
-        .map((letter) => {
-          // console.log(alphabet[letter]);
-          if (letter !== " ") {
-            return alphabet[letter];
-          }
-          return "/";
-        })
-        .join(" ");
-  
-      console.log(translation);
-      // outputDisplay.innerHTML = translation;
-  
-      return (this.translation = translation);
-    }
-  
-    displayTranslation() {
-      return (this.output = this.translation);
-    }
+const alphabet = {
+  a: ".-",
+  b: "-...",
+  c: "-.-.",
+  d: "-..",
+  e: ".",
+  f: "..-.",
+  g: "--.",
+  h: "....",
+  i: "..",
+  j: ".---",
+  k: "-.-",
+  l: ".-..",
+  m: "--",
+  n: "-.",
+  o: "---",
+  p: ".--.",
+  q: "--.-",
+  r: ".-.",
+  s: "...",
+  t: "-",
+  u: "..-",
+  v: "...-",
+  w: ".--",
+  x: "-..-",
+  y: "-.--",
+  z: "--..",
+  1: ".----",
+  2: "..---",
+  3: "...--",
+  4: "....-",
+  5: ".....",
+  6: "-....",
+  7: "--...",
+  8: "---..",
+  9: "----.",
+  0: "-----",
+  ".": ".-.-.-",
+  ",": "--..--",
+  "?": "..--..",
+  "!": "-.-.--",
+  ":": "---...",
+  ";": "-.-.-.",
+  "/": "-..-.",
+  " ": "/",
+  "-": "-....-",
+  "(": "-.--.",
+  ")": "-.--.-",
+  "&": ".-...",
+  "'": ".----."
+};
+
+const morseAlphabet = {
+  ".-": "a",
+  "-...": "b",
+  "-.-.": "c",
+  "-..": "d",
+  ".": "e",
+  "..-.": "f",
+  "--.": "g",
+  "....": "h",
+  "..": "i",
+  ".---": "j",
+  "-.-": "k",
+  ".-..": "l",
+  "--": "m",
+  "-.": "n",
+  "---": "o",
+  ".--.": "p",
+  "--.-": "q",
+  ".-.": "r",
+  "...": "s",
+  "-": "t",
+  "..-": "u",
+  "...-": "v",
+  ".--": "w",
+  "-..-": "x",
+  "-.--": "y",
+  "--..": "z",
+  ".----": "1",
+  "..---": "2",
+  "...--": "3",
+  "....-": "4",
+  ".....": "5",
+  "-....": "6",
+  "--...": "7",
+  "---..": "8",
+  "----.": "9",
+  "-----": "0",
+  ".-.-.-": ".",
+  "--..--": ",",
+  "..--..": "?",
+  "---...": ":",
+  "-.-.-.": ";",
+  "-.-.--": "!",
+  "-....-": "-",
+  "/": " ", 
+  "-.--.": "(",
+  "-.--.-": ")",
+  ".-...": "&",
+  ".----.": "'"
+};
+
+export class Translator {
+  constructor() {
+    (this.alphabet = alphabet),
+      (this.morseAlphabet = morseAlphabet),
+      (this.translationArr = []),
+      (this.translation = ""),
+      (this.output = ""),
+      (this.wordToTranslate = "");
   }
 
+  // getWordToTranslate(word) {
+  //   this.wordToTranslate = word;
+  //   return this.wordToTranslate;
+  // }
 
-  // EXTEND CLASS TO TRANSLATE MORSE CODE
-class MorseToEnglish extends Translator {
-    constructor() {
-      super();
-    }
-    breakDownMorseWord() {
-      // console.log(this.wordToTranslate);
-      const translationArr = this.wordToTranslate.split(" ");
-      // console.log(translationArr);
-      return (this.translationArr = translationArr); // returns an array
-    }
-  
-    translateMorseToEng() {
-      // console.log(this.translationArr);
-  
-      const translation = this.translationArr.map((element) => {
-        console.log(element);
-        if (element !== "/") {
-          return morseAlphabet[element];
-        }
-        return " ";
+  translateInput(userInputValue) {
+    this.wordToTranslate = userInputValue;
+    const translationArr = this.wordToTranslate.toLowerCase().split("");
+    this.translationArr = translationArr;
+    console.log(this.translationArr);
+    const translation = this.translationArr
+      .map((character) => {
+        return alphabet[character] ? alphabet[character] : character;
+      })
+      .join(" ");
+
+    console.log(translation);
+    this.translation = translation;
+    return (this.output = this.translation);
+  }
+}
+
+
+// EXTEND CLASS TO TRANSLATE MORSE CODE
+export class MorseToEnglish extends Translator {
+  constructor() {
+    super();
+  }
+
+  translateMorseToEng(userInputValue) {
+    this.wordToTranslate = userInputValue;
+    const translationArr = this.wordToTranslate.split(" ");
+    console.log(translationArr);
+    this.translationArr = translationArr;
+    const translation = this.translationArr
+      .map((element) => {
+      //   console.log(element);
+      //   if (element !== "/") {
+      //     return morseAlphabet[element];
+      //   }
+      //   return " ";
+      // })
+      return morseAlphabet[element] ? morseAlphabet[element] : element;
       })
       .join("");
-         
+
     console.log(translation);
-    const capitaliseStr = translation.charAt(0).toUpperCase() + translation.slice(1);
-    // outputDisplay.innerHTML = capitaliseStr;
-    return (this.translation = capitaliseStr);
-    }
+    const capitaliseStr =
+      translation.charAt(0).toUpperCase() + translation.slice(1);
+    this.translation = capitaliseStr;
+    return (this.output = this.translation);
   }
+}

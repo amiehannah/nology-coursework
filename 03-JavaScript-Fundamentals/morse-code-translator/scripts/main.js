@@ -33,6 +33,29 @@ const alphabet = {
   x: "-..-",
   y: "-.--",
   z: "--..",
+  1: ".----",
+  2: "..---",
+  3: "...--",
+  4: "....-",
+  5: ".....",
+  6: "-....",
+  7: "--...",
+  8: "---..",
+  9: "----.",
+  0: "-----",
+  ".": ".-.-.-",
+  ",": "--..--",
+  "?": "..--..",
+  "!": "-.-.--",
+  ":": "---...",
+  ";": "-.-.-.",
+  "/": "-..-.",
+  " ": "/",
+  "-": "-....-",
+  "(": "-.--.",
+  ")": "-.--.-",
+  "&": ".-...",
+  "'": ".----."
 };
 
 const morseAlphabet = {
@@ -62,49 +85,57 @@ const morseAlphabet = {
   "-..-": "x",
   "-.--": "y",
   "--..": "z",
+  ".----": "1",
+  "..---": "2",
+  "...--": "3",
+  "....-": "4",
+  ".....": "5",
+  "-....": "6",
+  "--...": "7",
+  "---..": "8",
+  "----.": "9",
+  "-----": "0",
+  ".-.-.-": ".",
+  "--..--": ",",
+  "..--..": "?",
+  "---...": ":",
+  "-.-.-.": ";",
+  "-.-.--": "!",
+  "-....-": "-",
+  "/": " ", 
+  "-.--.": "(",
+  "-.--.-": ")",
+  ".-...": "&",
+  ".----.": "'"
 };
-
 class Translator {
   constructor() {
-    this.alphabet = alphabet,
-    this.morseAlphabet = morseAlphabet,
-    this.translationArr = [],
-    this.translation = "",
-    this.output = "",
-    this.wordToTranslate = ""
+    (this.alphabet = alphabet),
+      (this.morseAlphabet = morseAlphabet),
+      (this.translationArr = []),
+      (this.translation = ""),
+      (this.output = ""),
+      (this.wordToTranslate = "");
   }
 
-  getWordToTranslate(word) {
-    this.wordToTranslate = word;
-    return this.wordToTranslate;
-  }
+  // getWordToTranslate(word) {
+  //   this.wordToTranslate = word;
+  //   return this.wordToTranslate;
+  // }
 
-  breakDownWord() {
-    // console.log(this.wordToTranslate);
-    const translationArr = this.wordToTranslate.toLowerCase().split(""); // The split() method splits a string into an array of substrings.
-    // console.log(translationArr);
-    return (this.translationArr = translationArr); // returns an array
-  }
-
-  translateInput() {
+  translateInput(userInputValue) {
+    this.wordToTranslate = userInputValue;
+    const translationArr = this.wordToTranslate.toLowerCase().split("");
+    this.translationArr = translationArr;
     console.log(this.translationArr);
     const translation = this.translationArr
-      .map((letter) => {
-        // console.log(alphabet[letter]);
-        if (letter !== " ") {
-          return alphabet[letter];
-        }
-        return "/";
+      .map((character) => {
+        return alphabet[character] ? alphabet[character] : character;
       })
       .join(" ");
 
     console.log(translation);
-    // outputDisplay.innerHTML = translation;
-
-    return (this.translation = translation);
-  }
-
-  displayTranslation() {
+    this.translation = translation;
     return (this.output = this.translation);
   }
 }
@@ -121,27 +152,24 @@ clearButton.addEventListener("click", resetTranslator);
 // // EVENT LISTENER - TRANSLATE BTN
 translateButton.addEventListener("click", () => {
   const userInputValue = document.querySelector(".input__text").value; //store input text value in variable
-  
-if (userInputValue === "") {
-  userInput.innerHTML = "Please add message to translate";
+
+  if (userInputValue === "") {
+    userInput.innerHTML = "Please add message to translate!";
   } else {
-// VALIDATE INPUT 
-const checkInputRegEx =  /[a-zA-Z]/gm;
-if(checkInputRegEx.test(userInputValue)) {
-  const englishTranslateToMorse = new Translator();
-  englishTranslateToMorse.getWordToTranslate(userInputValue);
-  englishTranslateToMorse.breakDownWord();
-  englishTranslateToMorse.translateInput();
-  englishTranslateToMorse.displayTranslation();
-    return (outputDisplay.innerHTML = `${englishTranslateToMorse.output}`);
-} else {
-  const morseTranslateToEnglish = new MorseToEnglish();
-  morseTranslateToEnglish.getWordToTranslate(userInputValue);
-  morseTranslateToEnglish.breakDownMorseWord();
-  morseTranslateToEnglish.translateMorseToEng();
-  morseTranslateToEnglish.displayTranslation();
-  return (outputDisplay.innerHTML = `${morseTranslateToEnglish.output}`);
-}
+    // const checkInputRegEx = /[^\s0-9a-zA-Z]+/g;
+    const checkInputRegEx = /[^\s0-9a-zA-Z'\/(,:;&?!)-]/gm;
+    console.log(checkInputRegEx.test(userInputValue));
+    if (checkInputRegEx.test(userInputValue)) {
+      const morseTranslateToEnglish = new MorseToEnglish();
+      // morseTranslateToEnglish.getWordToTranslate(userInputValue);
+      morseTranslateToEnglish.translateMorseToEng(userInputValue);
+      return (outputDisplay.innerHTML = `${morseTranslateToEnglish.output}`);
+    } else {
+      const englishTranslateToMorse = new Translator();
+      // englishTranslateToMorse.getWordToTranslate(userInputValue);
+      englishTranslateToMorse.translateInput(userInputValue);
+      return (outputDisplay.innerHTML = `${englishTranslateToMorse.output}`);
+    }
   }
 });
 
@@ -150,31 +178,29 @@ class MorseToEnglish extends Translator {
   constructor() {
     super();
   }
-  breakDownMorseWord() {
-    // console.log(this.wordToTranslate);
+
+  translateMorseToEng(userInputValue) {
+    this.wordToTranslate = userInputValue;
     const translationArr = this.wordToTranslate.split(" ");
-    // console.log(translationArr);
-    return (this.translationArr = translationArr); // returns an array
-  }
+    console.log(translationArr);
+    this.translationArr = translationArr;
+    const translation = this.translationArr
+      .map((element) => {
+        // console.log(element);
+        // if (element !== "/") {
+        //   return morseAlphabet[element];
+        // }
+        // return " ";
 
-  translateMorseToEng() {
-    // console.log(this.translationArr);
+        return morseAlphabet[element] ? morseAlphabet[element] : element;
 
-    const translation = this.translationArr.map((element) => {
-      console.log(element);
-      if (element !== "/") {
-        return morseAlphabet[element];
-      }
-      return " ";
-    })
-    .join("");
-       
-  console.log(translation);
-  const capitaliseStr = translation.charAt(0).toUpperCase() + translation.slice(1);
-  // outputDisplay.innerHTML = capitaliseStr;
-  return (this.translation = capitaliseStr);
+      })
+      .join("");
+
+    console.log(translation);
+    const capitaliseStr =
+      translation.charAt(0).toUpperCase() + translation.slice(1);
+    this.translation = capitaliseStr;
+    return (this.output = this.translation);
   }
 }
-
-// translatorOutput.innerHTML += translator.translateToEnglish();
-
