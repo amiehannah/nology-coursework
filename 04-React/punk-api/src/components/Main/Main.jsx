@@ -1,15 +1,24 @@
 import React from "react";
 import styles from "./Main.module.scss";
 import Card from "../Card";
+import NavBar from "../NavBar";
 
+import beers from "../../data/beers";
 
+const Main = () => {
+  // const getCardFrontJsx = (beer) => <Card beer={beer} key={beer.id} />;
 
-const Main = (props) => {
+  const getCardJsx = (beer) => (
+    <div className={styles.card} key={beer.idMeal}>
+      <Card beer={beer} />
+    </div>
+  )
 
   return (
-    <div className={styles.main}>
-    
-    </div>
+    <>
+      {/* <NavBar  /> */}
+      <div className={styles.main}>{beers.map(getCardJsx)}</div>
+    </>
   );
 };
 

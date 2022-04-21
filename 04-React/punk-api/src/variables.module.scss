@@ -1,12 +1,26 @@
-$dk-blue: #01335F;
-$blue: #00A2CF;
-$aqua: #77B4C3;
-$off-white: #F4F3F4;
-$bright-white: #FFFFFF;
-$dark-grey-hover: #282828;
+$dk-blue: #01335f;
+$blue: #00a2cf;
+$aqua: #77b4c3;
+$off-white: #f4f3f4;
+$bright-white: #ffffff;
+$dark-grey-hover: rgba(40, 40, 40, 0.4);
 $black: #111111;
 $soft-grey: #f5f5f5d6;
-$grey: #E0DEDC;
+$grey: #e0dedc;
 
 $base-spacing: 5px;
 
+%card {
+  max-height: 455px;
+  max-width: 300px;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  background-color: white;
+  position: absolute;
+
+  &:hover {
+    background-color: white;
+    cursor: pointer;
+  }
+}

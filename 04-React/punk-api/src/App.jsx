@@ -6,7 +6,8 @@ import { fetchBeers } from "./services/beer.service";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Main from "./components/Main";
-import Card from "./components/Card"
+import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 import beers from "./data/beers";
 
@@ -30,20 +31,13 @@ const App = () => {
   //   addBeers();
   // }, []);
 
-  const getCardFrontJsx = (beer) => (
-    <Card beer = {beer} key={beer.id}/>
-  )
-
 
   return (
     <>
       <div className={styles.main}>
         <Header />
         <div className={styles.content}>
-          {/* <NavBar /> */}
-          {/* <Main /> */}
-          {/* <Card beer={beersData[0]} /> */}
-          {beers.map(getCardFrontJsx)}
+          <Main />
         </div>
 
         {/* {beers.map((beer) => {
@@ -57,7 +51,7 @@ const App = () => {
         );
       })} */}
       </div>
-    
+    <Footer />
     </>
   );
 };

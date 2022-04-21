@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import logo from "../../assets/Brewdog-Logo-Background-PNG-Image-1.png";
+import Button from "../Button";
 
-const Header = () => {
+const Header = (props) => {
+  const { clicked } = props;
+
   return (
     <>
-    <section className={styles.header}>
-      <div className={styles.btnWrapper}>
-      <button className={styles.button}>Filter</button>
-      </div>
-      <div className={styles.title}>
-        <img className={styles.logo} src={logo} alt="Logo" />
-      </div>
+      <section className={styles.header}>
+        <div className={styles.btnWrapper}>
+         <Button />
+        </div>
+
+        <div className={styles.title}>
+          {/* <button className={styles.button}>Filter</button> */}
+
+
+          <img className={styles.logo} src={logo} alt="Logo" />
+        </div>
       </section>
     </>
   );

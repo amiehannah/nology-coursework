@@ -1,55 +1,26 @@
 @import "../../variables.module.scss";
 
-.card {
-      // height: 340px;
-      // width: 240px;
-      height: 455px;
-      width: 300px;
-      border-radius: 0.5rem;
-      background-color : $soft-grey;
-      border: 2px solid $soft-grey;
-      
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: $base-spacing;
-      justify-content: space-around;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+.mainCard {
+  height: 100%;
+  width: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  position: relative;
+  // z-index: 0;
 
-      img {
-            max-height: 55%;
-            // width: 100%;
-            border-radius: 2px 2px 0 0;
-      }
+  &.faceDown {
+    transform: rotateY(180deg);
+  }
 
-      h2 {
-            color: $black;
-            font-size: 24px;
-            font-weight: 600;
-            font-family: 'Antonio', sans-serif;
-            // letter-spacing: 0.05rem;
-            text-transform: uppercase;
+  .front {
+    @extend %card;
+  }
 
-      }
-
-
-      .beerDetails {
-            border-top: 0.75px solid $dark-grey-hover;
-
-      }
-      p {
-            padding: $base-spacing * 2; 
-            font-size: 14px;  
-            line-height: 1rem;
-            font-style: italic; 
-          
-      }   
-
-      h3 {
-           font-size: 12px;
-      
-      }
-
+  .back {
+    @extend %card;
+    transform: rotateY(180deg);
+  }
 }
+
+

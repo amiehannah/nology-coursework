@@ -1,21 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Card.module.scss";
 
-const Card = (props) => {
-  const { name, tagline, image_url, abv } = props.beer;
+import CardFront from "../CardFront";
+import CardBack from "../CardBack";
 
+const Card = (props) => {
+  const [isFaceDown, setIsFaceDown] = useState(false);
+  const { beer } = props;
+
+  const flipStyles = isFaceDown ? styles.faceDown : "";
   
   return (
-    <div className={styles.card}>
-      <h2>{name}</h2>
-      <img src={image_url} alt="{name}" />
+    <section
+      className={`${styles.mainCard} ${flipStyles}`}
+      onClick={() => setIsFaceDown(!isFaceDown)}
+    >
+      <div className={styles.front}>
+        <CardFront beer={beer} />
+      </div>
+      <div className={styles.back}>
+        <CardBack beer={beer} />
+      </div>
+    </section>
 
-      <section className={styles.beerDetails}>
-        <p>{tagline}</p>
-        <h3>{abv} %</h3>
-        {/* <button>Discover More</button> */}
-      </section>
-    </div>
   );
 };
 
