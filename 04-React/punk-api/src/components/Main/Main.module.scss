@@ -1,0 +1,9 @@
+@import "../../variables.module.scss";
+
+.main {
+    height: 90vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, $dk-blue, $aqua);
+    padding: 10px;
+    
+}

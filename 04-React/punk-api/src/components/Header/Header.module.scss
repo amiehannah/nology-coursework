@@ -1,0 +1,35 @@
+@import "../../variables.module.scss";
+
+
+.header {
+    // justify-content: space-around;
+    // height: 10vh;
+}
+
+.title {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    font-family: 'Antonio', sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    border-bottom: 1px solid #E0DEDC;
+}
+
+.logo {
+    max-width: 175px;
+}
+
+.btnWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    padding: 8px 26px;
+    border-radius: $base-spacing * 10;
+    border: 1px solid $grey;
+    flex: inline-flex;
+}

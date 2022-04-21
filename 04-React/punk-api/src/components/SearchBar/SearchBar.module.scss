@@ -1,0 +1,20 @@
+@import "../../variables.module.scss";
+
+
+.search {
+    input {
+      height: 100%;
+      width: 100px;
+      vertical-align: top;
+      margin-right: $base-spacing * 2;
+      font-size: 15px;
+      // padding-left: $base-spacing;
+      border: none;
+
+    }
+.smlLogo {
+    padding: 10px;
+    width: 50px;
+    cursor: pointer;
+}
+}
