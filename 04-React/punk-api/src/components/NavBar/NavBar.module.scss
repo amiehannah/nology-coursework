@@ -6,7 +6,6 @@
 }
 
 .search {
-  
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -25,7 +24,7 @@
   }
 
   .inputBar {
-    width: 99%;
+    width: 30%;
     font-size: 15px;
     height: 25px;
     border: none;
@@ -33,7 +32,13 @@
     padding: $base-spacing;
   }
 
+
+  ul {
+    width: 50vw;
+  }
   .list {
+    display: flex;
+    justify-content: space-between;
     list-style: none;
     font-size: 14px;
     padding: $base-spacing * 2;

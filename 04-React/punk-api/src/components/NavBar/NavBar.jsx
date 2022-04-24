@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./NavBar.module.scss";
 // import SearchBar from "../SearchBar";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const { searchText, setSearchText } = props;
 
   return (
     <>
@@ -12,6 +13,8 @@ const NavBar = () => {
             className={styles.inputBar}
             type="text"
             placeholder="Search for a beer..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
           />
           <section className={styles.filter}>
             <ul className={styles.list}>

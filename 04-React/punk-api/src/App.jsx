@@ -6,31 +6,15 @@ import { fetchBeers } from "./services/beer.service";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Main from "./components/Main";
-import Card from "./components/Card";
 import Footer from "./components/Footer";
 
 import beers from "./data/beers";
 
-const App = () => {
-  // const [beers, setBeers] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+const App = (props) => {
+  const {beers} = props;
+  
+  const [searchText, setSearchText] = useState("");
 
-  // const addBeers = async () => {
-  //   const apiBeers = await fetchBeers();
-  //   setBeers(apiBeers);
-  //   console.log(beers);
-  // }
-  // const {
-  //   name,
-  //   tagline,
-  //   image_url,
-  //   abv,
-  // } = props.beers;
-
-  // useEffect(() => {
-  //   console.log("I will only run once");
-  //   addBeers();
-  // }, []);
 
 
   return (
@@ -38,10 +22,11 @@ const App = () => {
       <div className={styles.main}>
         <Header />
         <div className={styles.content}>
+          <NavBar searchTerm={searchText} setSearchText={setSearchText} />
           <Main />
         </div>
       </div>
-    <Footer />
+      <Footer />
     </>
   );
 };

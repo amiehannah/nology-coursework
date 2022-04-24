@@ -5,7 +5,7 @@ const CardBack = (props) => {
   const { description, food_pairing} = props.beer;
 
   const foodListItems = food_pairing.map((food) =>
-  <li>- {food}</li>
+  <li key={food}>- {food}</li>
 );
   return (
     <div className={styles.cardBack}>

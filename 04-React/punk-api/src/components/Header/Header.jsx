@@ -6,11 +6,12 @@ import Button from "../Button";
 const Header = (props) => {
   const { clicked } = props;
 
+  
   return (
     <>
       <section className={styles.header}>
         <div className={styles.btnWrapper}>
-         <Button />
+         <Button clicked={clicked}/>
         </div>
 
         <div className={styles.title}>
