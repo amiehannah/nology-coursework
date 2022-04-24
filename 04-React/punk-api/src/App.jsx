@@ -13,6 +13,7 @@ import beers from "./data/beers";
 
 const App = () => {
   // const [beers, setBeers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   // const addBeers = async () => {
   //   const apiBeers = await fetchBeers();
@@ -39,17 +40,6 @@ const App = () => {
         <div className={styles.content}>
           <Main />
         </div>
-
-        {/* {beers.map((beer) => {
-        return (
-          <>
-            <h1 key={beer.id}>{beer.name}</h1>
-            <img src={beer.image_url} alt="Beer" />
-            <p>{beer.tagline}</p>
-            <h2>{beer.abv}%</h2>
-          </>
-        );
-      })} */}
       </div>
     <Footer />
     </>

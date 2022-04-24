@@ -1,6 +1,6 @@
 @import "../../variables.module.scss";
 
-.main {
+.grid {
   // background-image: linear-gradient(to bottom right, $dk-blue, $aqua);
   max-width: 85vw;
   display: flex;
@@ -21,4 +21,8 @@
     height: 455px;
     width: 300px;
   }
+}
+
+.main {
+  display: flex;
 }

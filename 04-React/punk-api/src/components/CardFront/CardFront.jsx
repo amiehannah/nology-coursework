@@ -12,7 +12,6 @@ const CardFront = (props) => {
     <section className={styles.beerDetails}>
       <p>{tagline}</p>
       <h3>{abv} %</h3>
-      {/* <button>Discover More</button> */}
     </section>
   </div>
   )

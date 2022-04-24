@@ -1,16 +1,15 @@
 @import "../../variables.module.scss";
 
 .button {
-    font-size: 14px;
-    height: 30px;
-    width: 100px;
-    border-radius: $base-spacing * 10;
-    border: 1px solid $grey;
-    flex: inline-flex;
-    cursor: pointer;
+  font-size: 14px;
+  height: 30px;
+  width: 100px;
+  border-radius: $base-spacing * 10;
+  border: 1px solid $grey;
+  flex: inline-flex;
+  cursor: pointer;
 
-    &:hover{
-    background-color:white;
-    // color: white;
-    }
-    }
+  &:hover {
+    background-color: white;
+  }
+}
