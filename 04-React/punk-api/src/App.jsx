@@ -11,19 +11,21 @@ import Footer from "./components/Footer";
 import beers from "./data/beers";
 
 const App = (props) => {
-  const {beers} = props;
-  
+  const { beers } = props;
+
   const [searchText, setSearchText] = useState("");
 
+  const [isActive, setIsActive] = useState(false);
 
+  const showSideBar = isActive ? <NavBar /> : null;
 
   return (
     <>
       <div className={styles.main}>
-        <Header />
+        <Header showSideBar={showSideBar} />
         <div className={styles.content}>
-          <NavBar searchTerm={searchText} setSearchText={setSearchText} />
-          <Main />
+          <NavBar searchText={searchText} setSearchText={setSearchText}/>
+          <Main searchText={searchText} />
         </div>
       </div>
       <Footer />

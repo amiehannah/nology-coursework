@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./NavBar.module.scss";
 // import SearchBar from "../SearchBar";
 
+import beers from "../../data/beers"
+
 const NavBar = (props) => {
   const { searchText, setSearchText } = props;
-
+  
   return (
     <>
       <section className={styles.nav}>

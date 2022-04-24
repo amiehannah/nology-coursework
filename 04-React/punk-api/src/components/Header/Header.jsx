@@ -4,14 +4,22 @@ import logo from "../../assets/Brewdog-Logo-Background-PNG-Image-1.png";
 import Button from "../Button";
 
 const Header = (props) => {
-  const { clicked } = props;
+  const { showSideBar } = props;
 
+
+const handleClick = () => {
+  showSideBar();
+}
+  // const checkClick = () => {
+  //   console.log("i've been clicked")
+
+  // }
   
   return (
     <>
       <section className={styles.header}>
         <div className={styles.btnWrapper}>
-         <Button clicked={clicked}/>
+         <Button clicked={handleClick} />
         </div>
 
         <div className={styles.title}>
