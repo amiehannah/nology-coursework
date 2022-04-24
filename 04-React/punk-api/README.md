@@ -16,3 +16,6 @@
   //   console.log("I will only run once");
   //   addBeers();
   // }, []);
+
+
+  Testing using Enzyme, Jest.

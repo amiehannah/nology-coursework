@@ -10,22 +10,37 @@ import Footer from "./components/Footer";
 
 import beers from "./data/beers";
 
-const App = (props) => {
-  const { beers } = props;
+const App = () => {
+  const [beers, setBeers] = useState([]);
 
-  const [searchText, setSearchText] = useState("");
+  const addBeers = async () => {
+    const apiBeers = await fetchBeers();
+    setBeers(apiBeers);
+    // console.log(beers);
+  };
+
+  useEffect(() => {
+    console.log("I will only run once");
+    addBeers();
+  }, []);
+
 
   // const [isActive, setIsActive] = useState(false);
 
   // const showSideBar = isActive ? <NavBar /> : null;
 
+  const [searchText, setSearchText] = useState("");
   return (
     <>
       <div className={styles.main}>
-        <Header   />
+        <Header />
         <div className={styles.content}>
-          <NavBar searchText={searchText} setSearchText={setSearchText} />
-          <Main searchText={searchText} />
+          <NavBar
+            searchText={searchText}
+            setSearchText={setSearchText}
+            beers={beers}
+          />
+          <Main beers={beers} searchText={searchText} />
         </div>
       </div>
       <Footer />

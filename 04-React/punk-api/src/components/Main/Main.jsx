@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Main.module.scss";
-import beers from "../../data/beers";
+// import beers from "../../data/beers";
 
 import CardList from "../CardList";
 import FeedbackPanel from "../FeedbackPanel"
 
 const Main = (props) => {
-  const { searchText } = props;
+  const { beers, searchText } = props;
 
 
   const filterByBeer = beers.filter((beer)=> {
@@ -26,7 +26,6 @@ const Main = (props) => {
   return (
     <>
       <div className={styles.main}>
-        {/* <CardList beers={filterByBeer} /> */}
         {contentJsx}
       </div>
     </>
