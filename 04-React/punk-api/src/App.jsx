@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
-import beers from "./data/beers";
+// import beers from "./data/beers";
 
 const App = () => {
   const [beers, setBeers] = useState([]);
@@ -25,20 +25,21 @@ const App = () => {
   }, []);
 
 
-  // const [isActive, setIsActive] = useState(false);
+  const [isNavBar, setIsNavBar] = useState(false);
 
-  // const showSideBar = isActive ? <NavBar /> : null;
 
   const [searchText, setSearchText] = useState("");
   return (
     <>
       <div className={styles.main}>
-        <Header />
+        <Header isNavBar = {isNavBar} setIsNavBar={setIsNavBar} />
         <div className={styles.content}>
           <NavBar
             searchText={searchText}
             setSearchText={setSearchText}
             beers={beers}
+            isNavBar = {isNavBar}
+            setIsNavBar={setIsNavBar}
           />
           <Main beers={beers} searchText={searchText} />
         </div>

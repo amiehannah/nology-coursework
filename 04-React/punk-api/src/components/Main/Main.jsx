@@ -22,7 +22,6 @@ const Main = (props) => {
       text="None of our beers matched that search"/>
     )
 
-
   return (
     <>
       <div className={styles.main}>

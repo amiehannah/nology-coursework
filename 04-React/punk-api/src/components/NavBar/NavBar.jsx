@@ -4,14 +4,14 @@ import styles from "./NavBar.module.scss";
 import FilterList from "../../containers/FilterList/FilterList";
 
 const NavBar = (props) => {
-  const { searchText, setSearchText, beers } = props;
-  const [isActive, setIsActive] = useState(false);
+  const { searchText, setSearchText, beers, isNavBar, setIsNavBar } = props;
 
-  const toggleNav = isActive ? toggleNav : "";
+  const renderNav = isNavBar ? styles.nav : styles.navHidden;
 
   return (
     <>
-      <section className={`${styles.nav} ${toggleNav}`}>
+      <section className={`${styles.nav} ${renderNav}`}>
+        
         <div className={styles.search}>
           <input
             className={styles.inputBar}
@@ -20,7 +20,7 @@ const NavBar = (props) => {
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-         <FilterList beers={beers} />
+          <FilterList beers={beers} />
         </div>
       </section>
     </>

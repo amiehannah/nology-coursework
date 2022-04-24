@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-top: $base-spacing * 12; //215px if you want to add hero image
+    margin-top: $base-spacing * 26; //215px if you want to add hero image
     margin-bottom: $base-spacing * 20;
   
     display: grid;
@@ -17,6 +17,10 @@
     min-height: 100%;
     //   padding: $base-spacing * 2;
   
+
+    @media only screen and (min-width: 768px) {
+      margin-top:$base-spacing * 30;
+    }
     .card {
       height: 455px;
       width: 300px;
