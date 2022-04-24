@@ -8,12 +8,10 @@ const Header = (props) => {
 
 
 const handleClick = () => {
-  showSideBar();
+  console.log("i've been clicked")
+  // showSideBar();
 }
-  // const checkClick = () => {
-  //   console.log("i've been clicked")
 
-  // }
   
   return (
     <>

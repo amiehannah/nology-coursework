@@ -3,6 +3,7 @@ import styles from "./Main.module.scss";
 import beers from "../../data/beers";
 
 import CardList from "../CardList";
+import FeedbackPanel from "../FeedbackPanel"
 
 const Main = (props) => {
   const { searchText } = props;
@@ -13,11 +14,20 @@ const Main = (props) => {
     return beerName.includes(searchText.toLowerCase());
   })
 
+  const contentJsx = filterByBeer.length ? (
+    <CardList beers={filterByBeer} /> 
+    ) : (
+      <FeedbackPanel 
+      header="No Matches"
+      text="None of our beers matched that search"/>
+    )
+
 
   return (
     <>
       <div className={styles.main}>
-        <CardList beers={filterByBeer} />
+        {/* <CardList beers={filterByBeer} /> */}
+        {contentJsx}
       </div>
     </>
   );

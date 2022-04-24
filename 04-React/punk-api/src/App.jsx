@@ -15,16 +15,16 @@ const App = (props) => {
 
   const [searchText, setSearchText] = useState("");
 
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
 
-  const showSideBar = isActive ? <NavBar /> : null;
+  // const showSideBar = isActive ? <NavBar /> : null;
 
   return (
     <>
       <div className={styles.main}>
-        <Header showSideBar={showSideBar} />
+        <Header   />
         <div className={styles.content}>
-          <NavBar searchText={searchText} setSearchText={setSearchText}/>
+          <NavBar searchText={searchText} setSearchText={setSearchText} />
           <Main searchText={searchText} />
         </div>
       </div>
