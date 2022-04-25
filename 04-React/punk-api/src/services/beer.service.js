@@ -10,3 +10,23 @@ export const fetchBeers = () => {
         console.log(error);
       });
   };
+
+
+export const FILTER_DATA = [
+  {
+    name: 'High ABV (> 6.0%)',
+    id: 'abv',
+    checked: true,
+  },
+  {
+    name: 'Classic Range',
+    id: 'classic',
+    checked: false,
+  },
+  {
+    name: 'Acidic (ph < 4)',
+    id: 'acidic',
+    checked: false,
+  },
+];
+

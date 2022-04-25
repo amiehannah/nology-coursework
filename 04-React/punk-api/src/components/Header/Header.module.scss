@@ -22,15 +22,19 @@
   padding-right: $base-spacing * 17;
 
   @media only screen and (min-width: 768px) {
-      padding-right: $base-spacing * 26;
-    }
+    padding-right: $base-spacing * 26;
+  }
 }
 
 .logo {
   max-width: 140px;
+
+  @media only screen and (max-width: 600px) {
+    width: 155px;
+  }
   @media only screen and (min-width: 768px) {
-     max-width: 175px;
-    }
+    max-width: 175px;
+  }
 }
 
 .btnWrapper {
@@ -39,10 +43,10 @@
   justify-content: center;
   align-items: center;
   padding-left: $base-spacing * 4;
+
   @media only screen and (min-width: 768px) {
     padding-left: $base-spacing * 6;
   }
-
 }
 
 .button {
@@ -54,11 +58,17 @@
   flex: inline-flex;
   cursor: pointer;
 
+  @media only screen and (max-width: 600px) {
+    width: 85px;
+    height: 30px;
+    font-size: 14px;
+  }
+
   @media only screen and (min-width: 768px) {
-   width: 100px;
-   height: 30px;
-   font-size: 14px;;
-   }
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+  }
 
   &:hover {
     background-color: white;

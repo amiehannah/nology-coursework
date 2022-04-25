@@ -1,0 +1,9 @@
+@import "../../variables.module.scss";
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 14px;
+    padding: $base-spacing * 2;
+  }

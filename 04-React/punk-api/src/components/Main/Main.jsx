@@ -15,7 +15,7 @@ const Main = (props) => {
   })
 
   const contentJsx = filterByBeer.length ? (
-    <CardList beers={filterByBeer} /> 
+    <CardList beers={filterByBeer}/> 
     ) : (
       <FeedbackPanel 
       header="No Matches"

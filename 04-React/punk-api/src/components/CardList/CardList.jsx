@@ -4,7 +4,7 @@ import styles from "./CardList.module.scss";
 import Card from "../Card";
 
 const CardList = (props) => {
-  const { beers, searchText } = props;
+  const { beers } = props;
 
   const getCardJsx = (beer) => (
     <div className={styles.card} key={beer.id}>

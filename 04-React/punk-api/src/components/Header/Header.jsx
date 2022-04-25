@@ -1,15 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Header.module.scss";
 import logo from "../../assets/Brewdog-Logo-Background-PNG-Image-1.png";
 
 const Header = (props) => {
-  const { isNavBar, setIsNavBar, renderNav } = props;
-
-  // const handleClick = (e) => {
-  //   // console.log("This happens in the handle click");
-  //   // setisNavBar(!false);
-  //   renderNav(isNavBar);
-  // };
+  const { isNavBar, setIsNavBar } = props;
 
   return (
     <>
