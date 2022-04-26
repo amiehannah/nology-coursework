@@ -1,46 +1,20 @@
-const API_URL = "https://api.punkapi.com/v2/beers"
+const API_URL = "https://api.punkapi.com/v2/beers";
 
-export const fetchBeers = () => {
-    return fetch(`${API_URL}`)
+// const BREWED_BEFORE = "brewed_before=01-2010"
+// const ABV = "abv_gt=6"
+// Parameters are passed in as a query string and can be chained together.
+
+
+  export const fetchBeers = (getABVBeers, getClassicBeers) => {
+    return fetch(`${API_URL}${getABVBeers}${getClassicBeers}`)
       .then((response) => response.json())
       .then((jsonResponse) => {
-          return jsonResponse;
+        return jsonResponse;
       })
+  
       .catch((error) => {
         console.log(error);
       });
   };
-
-
-export const FILTER_DATA = [
-  {
-    name: 'High ABV (> 6.0%)',
-    id: 'abv',
-    checked: false,
-    handleFilter(checked) {
-      console.log(checked)
-      checked = !checked
-      console.log(checked)
-      return checked
-    }
-  },
-  {
-    name: 'Classic Range',
-    id: 'classic',
-    checked: false,
-    handleFilter() {
-      console.log(this)
-      return this.checked = !this.checked
-    }
-  },
-  {
-    name: 'Acidic (ph < 4)',
-    id: 'acidic',
-    checked: false,
-    handleFilter() {
-      console.log(this)
-      return this.checked = !this.checked
-    }
-  },
-];
+  
 

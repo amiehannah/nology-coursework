@@ -1,13 +1,11 @@
 import React from "react";
 import styles from "./Main.module.scss";
-// import beers from "../../data/beers";
 
 import CardList from "../CardList";
 import FeedbackPanel from "../FeedbackPanel"
 
 const Main = (props) => {
-  const { beers, searchText } = props;
-
+  const { beers, searchText, acidicBeers, filteredBeers } = props;
 
   const filterByBeer = beers.filter((beer)=> {
     const beerName = beer.name.toLowerCase();
@@ -15,7 +13,7 @@ const Main = (props) => {
   })
 
   const contentJsx = filterByBeer.length ? (
-    <CardList beers={filterByBeer}/> 
+    <CardList beers={filterByBeer} phBeers={filteredBeers} acidicBeers={acidicBeers}/> 
     ) : (
       <FeedbackPanel 
       header="No Matches"
