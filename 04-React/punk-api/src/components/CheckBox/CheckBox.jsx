@@ -2,8 +2,13 @@ import React from "react";
 import styles from "./CheckBox.module.scss";
 
 const CheckBox = (props) => {
-  const { name, checked, id, toggleFilterBoxes } = props;
+  const { name, checked, id, handleFilter } = props;
 
+  // const handleFilter =() => {
+  //   console.log("hi")
+  // }
+
+  // console.log(props)
   return (
     <>
       <li>
@@ -12,7 +17,7 @@ const CheckBox = (props) => {
             type="checkbox"
             name={id}
             defaultChecked={checked}
-            // onChange={() => toggleFilterBoxes(id)}
+            onChange={handleFilter}
           />
           {name}
         </label>
