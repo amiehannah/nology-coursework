@@ -1,15 +1,15 @@
-// import React from "react";
-// import Footer from "./Footer";
+import React from "react";
+import Footer from "./Footer";
+import {shallow} from 'enzyme';
 
 
-
-// describe("NotFound Tests", () => {
-//     let component;
+describe("Footer Tests", () => {
+    let component;
   
-//     beforeEach(() => {
-//       component = shallow(<Footer />);
-//     })
-//     it("Should render", () => {
-//       expect(component).toBeTruthy();
-//     })
-//   })
+    beforeEach(() => {
+      component = shallow(<Footer />);
+    })
+    it("Should render", () => {
+      expect(component).toBeTruthy();
+    })
+  })

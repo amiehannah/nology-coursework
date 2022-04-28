@@ -8,7 +8,7 @@ const CardList = (props) => {
 
   const acidicBeerList = phBeers.map((beer) => {
     return (
-      <div className={styles.card}>
+      <div className={styles.card} key={beer.id}>
         <Card beer={beer} />
       </div>
     );
@@ -16,7 +16,7 @@ const CardList = (props) => {
 
   const allBeersList = beers.map((beer) => {
     return (
-      <div className={styles.card}>
+      <div className={styles.card} key={beer.id}>
         <Card beer={beer} />
       </div>
     );

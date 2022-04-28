@@ -13,7 +13,7 @@ const FilterItem = (props) => {
 
   return (
     <>
-      <ul>
+      <ul className={styles.filter}>
         <li>
           <label htmlFor="highABV" className={styles.checkbox}>
             <input

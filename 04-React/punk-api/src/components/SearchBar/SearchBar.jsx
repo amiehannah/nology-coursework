@@ -3,6 +3,7 @@ import styles from "./SearchBar.module.scss";
 
 const SearchBar = (props) => {
   const { searchText, setSearchText } = props;
+
   return (
     <>
       <input

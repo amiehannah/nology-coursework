@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
+
 const App = () => {
   const [beers, setBeers] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -41,6 +42,13 @@ const App = () => {
 
   const filteredBeers = beers.filter((beer) => beer.ph < 4);
 
+  //   const filterBySearchTerm = beers.filter((beer)=> {
+  //     const beerName = beer.name.toLowerCase();
+  //     return beerName.includes(searchText.toLowerCase());
+  //   })
+
+  // const getBeersBySearchTerm = searchText ? filterBySearchTerm : "";
+
   return (
     <>
       <div className={styles.main}>
@@ -64,6 +72,7 @@ const App = () => {
             filteredBeers={filteredBeers}
             acidicBeers={acidicBeers}
             searchText={searchText}
+            // getBeersBySearchTerm={getBeersBySearchTerm}
           />
         </div>
       </div>

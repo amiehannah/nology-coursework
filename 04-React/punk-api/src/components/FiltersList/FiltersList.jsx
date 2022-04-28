@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./FiltersList.module.scss"
 import FilterItem from "../FilterItem";
 
 const FiltersList = (props) => {
@@ -7,7 +8,7 @@ const FiltersList = (props) => {
     props;
   return (
     <>
-      <form action="">
+      <form action="" className={styles.form}>
         <FilterItem
           beersWithHighABV={beersWithHighABV}
           setBeersWithHighABV={setBeersWithHighABV}

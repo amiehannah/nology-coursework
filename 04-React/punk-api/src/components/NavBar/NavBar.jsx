@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./NavBar.module.scss";
 
 import SearchBar from "../SearchBar/SearchBar";
-import FiltersList from "../../containers/FiltersList";
+import FiltersList from "../FiltersList";
 
 const NavBar = (props) => {
   const {
@@ -36,7 +36,7 @@ const NavBar = (props) => {
         </div>
       </section>
     </>
-  );
+  ); 
 };
 
 export default NavBar;
