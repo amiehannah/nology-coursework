@@ -1,16 +1,22 @@
 import React from "react";
 import NavBar from "./NavBar";
 import SearchBar from "../SearchBar/SearchBar";
-import { shallow } from "enzyme";
-import beerData from "../../data/beers";
+import FiltersList from "../FiltersList";
+import { mount } from "enzyme";
 
 describe("NavBar Tests", () => {
   let component;
   let searchText;
   let setSearchText;
+  let beersWithHighABV;
+  let setBeersWithHighABV;
+  let beersBrewedBefore;
+  let setBeersBrewedBefore;
+  let acidicBeers;
+  let setAcidicBeers;
 
   beforeEach(() => {
-    component = shallow(<NavBar />);
+    component = mount(<NavBar />);
   });
   it("Should render", () => {
     expect(component).toBeTruthy();
@@ -21,12 +27,27 @@ describe("NavBar Tests", () => {
     expect(element.hasClass("navHidden")).toBe(true);
   });
 
-  it("Should render it's child components", () => {
+  it("Should render it's SearchBar child component", () => {
     expect(
       component.containsMatchingElement(
         <SearchBar searchText={searchText} setSearchText={setSearchText} />
       )
-    ).to.equal(true);
+    ).toBeTruthy();
+  });
+
+  it("Should render it's FiltersList child component", () => {
+    expect(
+      component.containsMatchingElement(
+        <FiltersList
+          beersWithHighABV={beersWithHighABV}
+          setBeersWithHighABV={setBeersWithHighABV}
+          beersBrewedBefore={beersBrewedBefore}
+          setBeersBrewedBefore={setBeersBrewedBefore}
+          acidicBeers={acidicBeers}
+          setAcidicBeers={setAcidicBeers}
+        />
+      )
+    ).toBeTruthy();
   });
 
   // it("Should toggle NavBar component open and close based on change in state", () => {

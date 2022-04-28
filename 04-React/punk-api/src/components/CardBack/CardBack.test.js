@@ -19,7 +19,7 @@ describe("CardBack Panel Tests", () => {
   it("Should render the correct array of food pairings for each beer passed in as props", () => {
     const beerFoodPairings = testBeer.food_pairing;
     const element = component.find(".food");
-    console.log(beerFoodPairings[1]);
+    // console.log(beerFoodPairings[1]);
     expect(element.text()).toContain(beerFoodPairings[1]);
   });
 });
