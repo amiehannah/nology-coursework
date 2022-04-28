@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styles from "./App.module.scss";
 
 import { fetchBeers } from "./services/beer.service";
@@ -6,8 +6,7 @@ import { fetchBeers } from "./services/beer.service";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Main from "./components/Main";
-import Footer from "./components/Footer";
-
+import FeedbackPanel from "./components/FeedbackPanel";
 
 const App = () => {
   const [beers, setBeers] = useState([]);
@@ -18,8 +17,8 @@ const App = () => {
   const [beersBrewedBefore, setBeersBrewedBefore] = useState(false);
   const [acidicBeers, setAcidicBeers] = useState(false);
 
-  const BREWED_BEFORE = "?brewed_before=01-2010";
-  const ABV = "?abv_gt=6";
+  const BREWED_BEFORE = "brewed_before=01-2010";
+  const ABV = "abv_gt=6";
 
   const getBeersWithHighABV = beersWithHighABV ? ABV : "";
   const getClassicBeers = beersBrewedBefore ? BREWED_BEFORE : "";
@@ -42,12 +41,18 @@ const App = () => {
 
   const filteredBeers = beers.filter((beer) => beer.ph < 4);
 
-  //   const filterBySearchTerm = beers.filter((beer)=> {
-  //     const beerName = beer.name.toLowerCase();
-  //     return beerName.includes(searchText.toLowerCase());
-  //   })
+  const getNoMatches =
+    (acidicBeers && beersWithHighABV && beersBrewedBefore) ||
+    (acidicBeers && beersBrewedBefore) ? (
+      <FeedbackPanel
+        header="No Matches"
+        text="None of our beers matched that search"
+      />
+    ) : (
+      ""
+    );
 
-  // const getBeersBySearchTerm = searchText ? filterBySearchTerm : "";
+  //   const
 
   return (
     <>
@@ -72,11 +77,10 @@ const App = () => {
             filteredBeers={filteredBeers}
             acidicBeers={acidicBeers}
             searchText={searchText}
-            // getBeersBySearchTerm={getBeersBySearchTerm}
           />
+          {getNoMatches}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

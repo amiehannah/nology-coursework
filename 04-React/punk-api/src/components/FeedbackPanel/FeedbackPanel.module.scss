@@ -2,13 +2,15 @@
 
 .background {
   margin: 0 auto;
-  height: 79vh;
+  // min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
 
   .feedback {
+    position: absolute;
+    top: 300px;
     border-radius: 0.5rem;
     background-color: $soft-grey;
     border: 2px solid $soft-grey;
