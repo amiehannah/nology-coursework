@@ -1,4 +1,4 @@
-Task:
+**Task:**
 Build a website in React that uses the Punk API data.
 
 User Story:
