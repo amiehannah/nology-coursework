@@ -1,4 +1,4 @@
-**Task:**
+\*Task: <br/>
 Build a website in React that uses the Punk API data.
 
 User Story:
@@ -37,30 +37,27 @@ Saving each unique end point in a variable, I could use a ternary operator to re
 There was no predetermined filter for the pHLevel search condition, so I had to manually filter beers returning those that contained a pHLevel less than 4. I then conditionally rendered the beers based on whether the acidicBeer state was true (display only those beers that have a pHLevel < 4) or false (instead displaying all beers on the page).
 Mapping over the data and rendering a card for each beer.
 
-
-
-- Fetching from the API 
+- Fetching from the API
 - Using the Punk API data for the React app.
 - useEffect - WHY AND HOW I'VE USED THIS
-default state for the API request was set to all beers from the Brewdog data.
+  default state for the API request was set to all beers from the Brewdog data.
 - Built out a service to hold the fetch request - WHY?
-
-
-
-
 
 - Testing:
 - Unit tested the components using the enzyme testing library.
-I've tested for the following things:
+  I've tested for the following things:
 - Basic rendering, including rendering nested child components.
 - Testing state changes on components and the associated side effect/behaviours
 - Testing props have been successfully passed down to components
 - Using mock functions to test my functions.
 
 ######
+
 [checking the api?]
 [checking the filters?]
+
 #####
 
 Next Steps:
+
 - To refactor my approach, relook at containers vs. components to try to split out the logic from the presentational components more clearly.
