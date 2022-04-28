@@ -1,4 +1,5 @@
 # Task: <br/>
+
 Build a website in React that uses the Punk API data.
 
 User Story: <br/>
@@ -11,7 +12,7 @@ The app should fulfill the following stories:
 - Classic Range (was first brewed before 2010)
 - High Acidity (pH lower than 4)
 
-Approach: <br/>
+## Approach: <br/>
 
 - Initially I started by breaking down the webpage, creating the components based on a component tree.
 
@@ -43,7 +44,8 @@ Mapping over the data and rendering a card for each beer.
   default state for the API request was set to all beers from the Brewdog data.
 - Built out a service to hold the fetch request - WHY?
 
-- Testing: <br/>
+## - Testing: <br/>
+
 - Unit tested the components using the enzyme testing library.
   I've tested for the following things:
 - Basic rendering, including rendering nested child components.
@@ -55,8 +57,6 @@ Mapping over the data and rendering a card for each beer.
 
 [checking the api?]
 [checking the filters?]
-
-#####
 
 Next Steps: <br/>
 
