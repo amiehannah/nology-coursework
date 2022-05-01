@@ -1,16 +1,10 @@
 /* SET UP COLOUR VARIABLES */
 $orange: rgba(255, 121, 102, 1);
-$green: #295f59;
-$teal: #346b6d;
-$claret: #a90b44;
-$wine: #950b3e;
-$lilac: #f7d1f7;
+$lilac: #f0cee3;
 $lilac-2: #e0bbce;
 $lemon: rgba(237, 238, 180, 1);
-$navy: #082e45;
-$raspberry: #841e62;
+$navy: #020d1c;
 $off-white: #ffffff;
-$black: #141414;
 
 /* GLOBAL RESET*/
 * {
@@ -25,13 +19,9 @@ $black: #141414;
 
 body {
   background-color: $navy;
-  // width: 100vw;
-
-  /* IMAGE ALTERNTATIVE BACKGROUND*/
-  // background-image: url(/outline-mixed-01.svg);
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 header {
@@ -42,7 +32,6 @@ header {
   flex-wrap: wrap;
   height: 10vh;
   width: 100%;
-  // margin: 1rem 1rem 1rem 1rem;
   margin: 0 auto;
   padding-top: 40px;
 
@@ -62,9 +51,6 @@ header h1 {
   font-weight: 200;
   letter-spacing: 0.1rem;
   text-align: center;
-  // text-decoration-line: underline;
-  // text-decoration-style: wavy;
-  // text-decoration-color: $lemon;
   @media screen and (min-width: 414px) {
     font-size: 24px;
   }
@@ -83,23 +69,22 @@ header h1 {
 }
 
 section p {
-  //   font-family: "Amatic SC", cursive;
   font-weight: 300;
-  font-size: 11px;
+  font-size: 12px;
   padding-left: 20px;
   padding-right: 20px;
 
   //media queries
-   //iphone 5/SE
-   @media screen and (min-width: 375px) {
-    font-size: 12px;
+  //iphone 5/SE
+  @media screen and (min-width: 375px) {
+    font-size: 14px;
   }
 
-    //iphone 6/7/8 plus
-    @media screen and (min-width: 414px) {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
+  //iphone 6/7/8 plus
+  @media screen and (min-width: 414px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   // ipad
   @media screen and (min-width: 768px) {
@@ -111,16 +96,12 @@ section p {
 
 header h1:hover {
   box-shadow: inset 0 -6px 0 rgba(237, 238, 180, 1);
-  /*rgba(255, 121, 102, 0.9)*/
 }
 
-.instructions {
-  display: flex;
-}
 
 p.no__underline {
   box-shadow: none;
-  font-size: 9px;
+  font-size: 12px;
   text-align: center;
   text-transform: uppercase;
   padding-top: 40px;
@@ -132,7 +113,7 @@ p.no__underline {
   //mediaqueries
   // ipad
   @media screen and (min-width: 768px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -191,15 +172,7 @@ button:hover {
 .grid__footer {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
-
-  //media queries
-
-  //iphone 6/7/8 plus
-  @media screen and (min-width: 414px) {
-    margin-top: 30px;
-  }
-
+  margin-top: 30px;
 }
 
 .game__container {
@@ -209,88 +182,64 @@ button:hover {
   @media screen and (min-width: 375px) {
     margin-top: 20px;
   }
-
 }
 
 .grid__container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 360px;
+  height: 360px;
+  grid-gap: 6px;
   margin: 0px auto;
-  margin-top: 10px;
-  width: 275px;
-  height: 300px;
-  padding: 8px;
-  background-color: $orange;
-
-  //media queries
-  //iphone 5/SE
-  @media screen and (min-width: 375px) {
-    width: 325px;
-    height: 350px;
-    grid-gap: 10px;
-    padding: 10px;
-  }
-
-  //iphone 6/7/8 plus
-  @media screen and (min-width: 414px) {
-    width: 375px;
-    height: 400px;
-  }
-
-  //ipad
-  @media screen and (min-width: 550px) {
-    width: 450px;
-    height: 475px;
-    padding: 15px;
-    grid-gap: 15px;
-  }
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: $navy;
+  perspective: 800px;
 
   // desktop
   @media screen and (min-width: 768px) {
-    width: 475px;
-    height: 500px;
-    padding: 15px;
-    grid-gap: 15px;
+    width: 400px;
+    height: 400px;
+    grid-gap: 10px;
   }
 }
 
-img {
+
+.face,
+.back {
+  width: 82.5px;
+  height: 82.5px;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 2px;
+  
+
+  // desktop
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.face {
   background-color: $lilac;
-  border-radius: 4px;
-  display: flex;
+  // background-color: $lemon;
 }
-
-
-.central {
-  // display: flex;
-  border-radius: 4px;
+.back {
+  backface-visibility: hidden;
   background-color: $navy;
-  cursor: default;
 }
-
-
-
-// TOGGLE CARD ELEMENTS HIDDEN/VISIBLE
-// visibility: visible;
-// visibility: hidden;
-
-.hidden {
-  // display: none;
-  visibility: hidden;
-}
-
-.visible {
-  visibility: visible;
-}
-
-// img {
-//   // background-color: $;
-// }
-
-img:hover {
-  background-color: $lemon;
-  transition: 0.5s;
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 1s;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
+}
+
+.toggleCard {
+  transform: rotateY(180deg);
 }
