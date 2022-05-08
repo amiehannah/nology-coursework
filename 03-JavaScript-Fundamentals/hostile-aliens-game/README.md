@@ -1,10 +1,10 @@
 # Task: <br/>
 
-To create a simple text only game loosely based on Space Invaders. </br>
-The game should contain a single button that hits a random alien ship in the fleet. </br>
-Each time the button is pressed, a random alien ship is hit and its hit points are reduced. </br>
-Once an alien ships points have hit zero the ship is destroyed and can’t be hit again. </br>
-The game is over once all alien ships have been destroyed. For best results, approach this challenge with an OOP mindset although some functions may be needed. </br>
+- To create a simple text only game loosely based on Space Invaders. </br>
+- The game should contain a single button that hits a random alien ship in the fleet. </br>
+- Each time the button is pressed, a random alien ship is hit and its hit points are reduced. </br>
+- Once an alien ships points have hit zero the ship is destroyed and can’t be hit again. </br>
+- The game is over once all alien ships have been destroyed. For best results, approach this challenge with an OOP mindset although some functions may be needed. </br>
 
 ## Rules: <br/>
 
@@ -12,16 +12,16 @@ The game is over once all alien ships have been destroyed. For best results, app
 • Some text visualisation of the ships and their hit points
 • The game should have the following Alien ships:
 
-o 1xMothership-
+o 1 x Mothership-
 ▪ 100 Hit Points -
 ▪ Loses 9 hit points every time it is hit -
 ▪ All ships are destroyed if the Mother ship is destroyed
 
-o 5xDefenceship-
+o 5 x Defenceship -
 ▪ Each one starts with 80 hit points -
 ▪ Each one Loses 10 hit points each time it is hit
 
-o 8xAttackship
+o 8 x Attackship -
 ▪ Each starts with 45 hit points
 ▪ Each loses 12 hit points each time it is hit.
 
