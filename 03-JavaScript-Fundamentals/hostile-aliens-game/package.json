@@ -1,0 +1,16 @@
+{
+  "name": "hostile-aliens-game",
+  "version": "1.0.0",
+  "description": "To create a simple text only game loosely based on Space Invaders.  The game should contain a single button that hits a random alien ship in the fleet.  Each time the button is pressed, a random alien ship is hit and its hit points are reduced.  Once an alien ships points have hit zero the ship is destroyed and can’t be hit again.  The game is over once all alien ships have been destroyed. For best results, approach this challenge with an OOP mindset although some functions may be needed.",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Amie Edwards",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
+    "jest": "^28.1.0"
+  }
+}

@@ -4,83 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./script.js" async defer></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/vvo3bbu.css" />
     <title>Hostile Aliens Game</title>
   </head>
   <body>
-    <main>
-      <header>
+    <!-- GAME SECTION BUILD WITH JS -->
+    <div class="game-container">
+      <div class="title-container">
         <h1>Hostile Aliens Game</h1>
-        <h2> 🚀👾 Shoot to attack the Alien ships 👾🚀 </h2>
-      </header>
-
-      <!-- MODAL INTRO SECTION -->
-     <dialog class="modal" id="modal">
-      <h5 class="modal-title">play</h5>
-      <h5 class="modal-title">hostile aliens</h5>
-      <h5>*** score table ***</h5>
-      <div>
-        <p>mothership = 9 points</p>
-        <p>defence ship = 10 points</p>
-        <p>attack ship = 12 points</p>
+        <h2>🚀👾 Shoot to attack the Alien ships 👾🚀</h2>
       </div>
-      <h5 class="warning-msg">all ships are destroyed if the mothership is destroyed</h5>
-      <button class="start-button">click to play</button>
-    </dialog>
+      <!-- <div class="message-container"></div> -->
+      <div class="score-container"></div>
+      <div class="alien-container"></div>
+    </div>
 
+    <div class="button-container">
+      <button class="shoot">Shoot! 🚀</button>
+    </div>
 
-      <!-- GRID FOR SCORE BOARD -->
-      <section class="grid-container">
-        <div class="grid-item grid-item-1">*** scores ***</div>
-        <div class="grid-item grid-item-2">mothership</div>
-        <div class="grid-item grid-item-3">defence ship</div>
-        <div class="grid-item grid-item-4">attack ship</div>
-        <div class="grid-item grid-item-5" id="m-ship-score">100</div>
-        <div class="grid-item grid-item-6" id="d-ship-score">80</div>
-        <div class="grid-item grid-item-7" id="a-ship-score">45</div>
-      </section>
-
-
-
-      <!-- GAME SECTION -->
-      <section class="game-section">
-        <section class="mothership-section">
-          <h3 class="mother-ship" id="1">mothership</h3>
-        </section>
-
-        <section class="defence-section">
-          <h3 class="defence-ship" id="2">defence ship</h3>
-          <h3 class="defence-ship" id="3">defence ship</h3>
-          <h3 class="defence-ship" id="4">defence ship</h3>
-          <h3 class="defence-ship" id="5">defence ship</h3>
-          <h3 class="defence-ship" id="6">defence ship</h3>
-        </section>
-
-        <section class="attack-section">
-          <h3 class="attack-ship" id="7">attack ship</h3>
-          <h3 class="attack-ship" id="8">attack ship</h3>
-          <h3 class="attack-ship" id="9">attack ship</h3>
-          <h3 class="attack-ship" id="10">attack ship</h3>
-          <h3 class="attack-ship" id="11">attack ship</h3>
-          <h3 class="attack-ship" id="12">attack ship</h3>
-          <h3 class="attack-ship" id="13">attack ship</h3>
-          <h3 class="attack-ship" id="14">attack ship</h3>
-        </section>
-      </section>
-     
-      <div class="gameContainer"></div>
-
-      <div class="button-container">
-        <button class="shoot">Shoot! 🚀</button>
-      </div>
-
-      <!-- MODAL GAMEOVER SECTION -->
-      <dialog class ="game-over">
-        <h6 class="game-over-text">g<span class="oddcol">a</span>m<span class="oddcol">e</span> o<span class="oddcol">v</span>e<span class="oddcol">r</span>!</h6>
+    <!-- MODAL GAMEOVER SECTION -->
+    <dialog class="game-over">
+      <h6 class="game-over-text">
+        g<span class="oddcol">a</span>m<span class="oddcol">e</span> o<span
+          class="oddcol"
+          >v</span
+        >e<span class="oddcol">r</span>!
+      </h6>
       <button class="restart-button">restart game</button>
-      </dialog>
-    </main>
+    </dialog>
+    <script src="./app.js"></script>
   </body>
 </html>
