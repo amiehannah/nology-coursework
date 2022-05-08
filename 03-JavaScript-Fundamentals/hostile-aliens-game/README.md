@@ -27,7 +27,7 @@ o 8 x Attackship -
 
 ## Approach: <br/>
 
-1. Using an OOP approach, created a class of AlienShip which contained the following methods getCurrentScore(), reduceShipPoints(), gameOver()
+1. Using an OOP approach, I created a class of AlienShip which contained the following methods getCurrentScore(), reduceShipPoints(), gameOver()
 
 2. Dynamically created the alien fleet, gameboard and score board. </br>
    Pushed all alien ships into a blank array, ready to start the game. </br>
@@ -46,6 +46,6 @@ o 8 x Attackship -
 7. Once, the motherships current points are equal to 0 - OR - if the attackShip score and defenceShip scores are both equal to 0 (whichever happens first), this then triggers the gameOver() method. </br>
    The gameOver modal is then visible to the user and values are reset ready to start the game again.
 
-### Testing: </br>
+## Testing: </br>
 
 I used Jest to test the alien class, extracting it into a separate js file, to check that the properties and methods on the class are working correctly.
